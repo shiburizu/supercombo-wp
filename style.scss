@@ -4,6 +4,22 @@ Author: Shiburizu
 Author URI: https://shib.live
 Version: 1.0
  */
+
+$dark-color: #0D0D0D;
+$primary-color: #1d80ae;
+$bg-color: lighten(#0D0D0D,10%);
+
+@font-face {
+    font-family: BebasNeue;
+    src: url('font/BebasNeue-Regular.ttf') format('truetype');
+}
+h1,h2,h3,h4,h5,h6,.navbar * {
+    font-family: BebasNeue;
+    font-weight: 500;
+}
+.navbar .form-input {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif
+}
 .sc-bg {
     background-image: url('images/bg.png');
     background-size: cover;
@@ -11,15 +27,24 @@ Version: 1.0
 .navbar {
     max-width: 1400px;
     width: 100%;
-    height: 5vh;
+}
+.navbar-center {
+    flex: 1 0 0 !important;
 }
 .navbar-container {
     display: flex;
     justify-content: center;
 }
+.navbar-parent {
+    box-shadow: $primary-color 0px 20px 50px 0px;
+}
 body > .container {
     max-width: 1400px;
     min-height: 80vh;
+}
+body > .container > .columns > .column > div {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-top: 2px solid $primary-color;
 }
 footer {
     min-height: 15vh;
@@ -29,8 +54,7 @@ h2 > a:visited,h3 > a:visited,h4 > a:visited,h5 > a:visited,h6 > a:visited { tex
 h2 > a:hover,h3 > a:hover,h4 > a:hover,h5 > a:hover,h6 > a:hover { text-decoration: none; }
 h2 > a:active,h3 > a:active,h4 > a:active,h5 > a:active,h6 > a:active { text-decoration: none; }
 
-$dark-color: #0D0D0D;
-$primary-color: #1d80ae;
+
 
 @import "spectre/src/spectre";
 

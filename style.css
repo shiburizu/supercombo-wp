@@ -5,6 +5,19 @@ Author: Shiburizu
 Author URI: https://shib.live
 Version: 1.0
  */
+@font-face {
+  font-family: BebasNeue;
+  src: url("font/BebasNeue-Regular.ttf") format("truetype");
+}
+h1, h2, h3, h4, h5, h6, .navbar * {
+  font-family: BebasNeue;
+  font-weight: 500;
+}
+
+.navbar .form-input {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+
 .sc-bg {
   background-image: url("images/bg.png");
   background-size: cover;
@@ -13,7 +26,10 @@ Version: 1.0
 .navbar {
   max-width: 1400px;
   width: 100%;
-  height: 5vh;
+}
+
+.navbar-center {
+  flex: 1 0 0 !important;
 }
 
 .navbar-container {
@@ -21,9 +37,18 @@ Version: 1.0
   justify-content: center;
 }
 
+.navbar-parent {
+  box-shadow: #1d80ae 0px 20px 50px 0px;
+}
+
 body > .container {
   max-width: 1400px;
   min-height: 80vh;
+}
+
+body > .container > .columns > .column > div {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-top: 2px solid #1d80ae;
 }
 
 footer {
@@ -674,13 +699,13 @@ html:lang(ko),
   text-align: left;
 }
 .table.table-striped tbody tr:nth-of-type(odd) {
-  background: #cccccc;
+  background: #272727;
 }
 .table tbody tr.active, .table.table-striped tbody tr.active {
-  background: #c5c5c5;
+  background: #1f1f1f;
 }
 .table.table-hover tbody tr:hover {
-  background: #c5c5c5;
+  background: #1f1f1f;
 }
 .table.table-scroll {
   display: block;
@@ -850,7 +875,7 @@ html:lang(ko),
   width: 1rem;
 }
 .btn.btn-clear:focus, .btn.btn-clear:hover {
-  background: rgba(204, 204, 204, 0.5);
+  background: rgba(39, 39, 39, 0.5);
   opacity: 0.95;
 }
 .btn.btn-clear::before {
@@ -1111,7 +1136,7 @@ textarea.form-input, textarea.form-input.input-lg, textarea.form-input.input-sm 
 }
 .form-checkbox input:active + .form-icon,
 .form-radio input:active + .form-icon {
-  background: #c5c5c5;
+  background: #1f1f1f;
 }
 
 .form-checkbox .form-icon {
@@ -1191,14 +1216,14 @@ textarea.form-input, textarea.form-input.input-lg, textarea.form-input.input-sm 
   left: 14px;
 }
 .form-switch input:active + .form-icon::before {
-  background: #cccccc;
+  background: #272727;
 }
 
 .input-group {
   display: flex;
 }
 .input-group .input-group-addon {
-  background: #cccccc;
+  background: #272727;
   border: 0.05rem solid #999999;
   border-radius: 0.1rem;
   line-height: 1.2rem;
@@ -1322,17 +1347,17 @@ textarea.form-input, textarea.form-input.input-lg, textarea.form-input.input-sm 
 .form-input:disabled, .form-input.disabled,
 .form-select:disabled,
 .form-select.disabled {
-  background-color: #c5c5c5;
+  background-color: #1f1f1f;
   cursor: not-allowed;
   opacity: 0.5;
 }
 
 .form-input[readonly] {
-  background-color: #cccccc;
+  background-color: #272727;
 }
 
 input:disabled + .form-icon, input.disabled + .form-icon {
-  background: #c5c5c5;
+  background: #1f1f1f;
   cursor: not-allowed;
   opacity: 0.5;
 }
@@ -1357,7 +1382,7 @@ input:disabled + .form-icon, input.disabled + .form-icon {
   border-radius: 0.1rem;
   line-height: 1.25;
   padding: 0.1rem 0.2rem;
-  background: #c5c5c5;
+  background: #1f1f1f;
   color: #272727;
   display: inline-block;
 }
@@ -1410,7 +1435,7 @@ code {
   top: 0.1rem;
 }
 .code code {
-  background: #cccccc;
+  background: #272727;
   color: inherit;
   display: block;
   line-height: 1.5;
@@ -2150,7 +2175,7 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .bar {
-  background: #c5c5c5;
+  background: #1f1f1f;
   border-radius: 0.1rem;
   display: flex;
   flex-wrap: nowrap;
@@ -2193,7 +2218,7 @@ summary.accordion-header::-webkit-details-marker {
   position: absolute;
 }
 .bar-slider .bar-item:not(:last-child):first-child {
-  background: #c5c5c5;
+  background: #1f1f1f;
   z-index: 1;
 }
 .bar-slider .bar-slider-btn {
@@ -2250,7 +2275,7 @@ summary.accordion-header::-webkit-details-marker {
 
 .chip {
   align-items: center;
-  background: #c5c5c5;
+  background: #1f1f1f;
   border-radius: 5rem;
   display: inline-flex;
   font-size: 90%;
@@ -2306,7 +2331,7 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .empty {
-  background: #cccccc;
+  background: #272727;
   border-radius: 0.1rem;
   color: #4d4d4d;
   text-align: center;
@@ -2399,7 +2424,7 @@ summary.accordion-header::-webkit-details-marker {
   z-index: 400;
 }
 .modal:target .modal-overlay, .modal.active .modal-overlay {
-  background: rgba(204, 204, 204, 0.75);
+  background: rgba(39, 39, 39, 0.75);
   bottom: 0;
   cursor: default;
   display: block;
@@ -2951,7 +2976,8 @@ a.text-error:visited {
 }
 
 .bg-gray {
-  background: #cccccc !important;
+  background: #272727 !important;
+  color: #fff;
 }
 
 .bg-success {
