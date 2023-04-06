@@ -41,6 +41,10 @@ h1, h2, h3, h4, h5, h6, .navbar * {
   box-shadow: #1d80ae 0px 20px 50px 0px;
 }
 
+footer {
+  box-shadow: black 0 -50px 50px;
+}
+
 body > .container {
   max-width: 1400px;
   min-height: 80vh;
