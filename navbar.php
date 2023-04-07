@@ -5,15 +5,16 @@
                 <h3 class="my-0 ml-2"><a class="text-light" href="<?php echo home_url()?>"><b>SuperCombo.gg</b></a></h3>
                 <a href="#" class="btn text-light btn-lg btn-link">Subsites</a>
             </section>
-            <section class="navbar-center">
+            <section class="navbar-center hide-md">
                 <input class="form-input" type="text" id="search" placeholder="Search Articles, Events, Wikis...">
             </section>
             <section class="navbar-section">
-                <a href="#" class="btn text-light btn-lg btn-link">Games</a>
+                <a href="#" class="btn text-light btn-lg btn-link hide-md">Games</a>
+                <a href="#" class="btn text-light btn-lg btn-link show-md">Menu</a>
             </section>
     </header>
     </div>
-    <div class="navbar-container bg-gray">
+    <div class="navbar-container bg-gray hide-md">
     <header class="navbar">
             <section class="navbar-section">
                 <a href="#" class="text-light btn btn-lg btn-link">Category List</a>

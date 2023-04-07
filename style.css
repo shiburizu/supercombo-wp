@@ -7,20 +7,57 @@ Version: 1.0
  */
 @font-face {
   font-family: BebasNeue;
-  src: url("font/BebasNeue-Regular.ttf") format("truetype");
+  src: url("font/bebasneue/BebasNeue-Regular.ttf") format("truetype");
 }
-h1, h2, h3, h4, h5, h6, .navbar * {
+@font-face {
+  font-family: Roboto;
+  src: url("font/roboto/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: Roboto;
+  src: url("font/roboto/Roboto-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: Roboto;
+  src: url("font/roboto/Roboto-Italic.ttf");
+  font-style: italic;
+}
+@font-face {
+  font-family: Roboto;
+  src: url("font/roboto/Roboto-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+.bebas {
+  font-family: BebasNeue;
+}
+
+*::-webkit-scrollbar {
+  width: 1em;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #272727;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #404040;
+}
+
+h1, h2, h3, h4, h5, h6, .card-title, .navbar * {
   font-family: BebasNeue;
   font-weight: 500;
 }
 
 .navbar .form-input {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-family: Roboto;
 }
 
 .sc-bg {
+  background-color: black;
   background-image: url("images/bg.png");
-  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .navbar {
@@ -50,13 +87,64 @@ body > .container {
   min-height: 80vh;
 }
 
-body > .container > .columns > .column > div {
+body > .container > .columns {
+  position: relative;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-top: 2px solid #1d80ae;
 }
 
+.divider[data-content]::after, .divider-vert[data-content]::after {
+  background: #0D0D0D !important;
+}
+
 footer {
   min-height: 15vh;
+}
+
+.tile-subtitle {
+  font-size: 0.6rem;
+  line-height: 0.8rem !important;
+}
+
+.panel-body {
+  border-top: 1px solid #0D0D0D;
+}
+
+.panel-nav > .tab {
+  border: none !important;
+}
+
+.label-sm {
+  line-height: 1.5 !important;
+}
+
+.tournament-row {
+  justify-content: space-between !important;
+  flex-wrap: wrap;
+}
+
+.tournament-row > .column > a {
+  line-height: 1.7 !important;
+}
+
+.stream-box {
+  border-bottom: 1px solid #0D0D0D;
+}
+
+.twitter-sidebar {
+  width: 100%;
+  height: 600px !important;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.twitter-timeline {
+  width: 100% !important;
+  display: block;
+}
+
+.nav-item > a {
+  color: #fff !important;
 }
 
 h2 > a:link, h3 > a:link, h4 > a:link, h5 > a:link, h6 > a:link {
@@ -485,7 +573,7 @@ html {
 body {
   background: #fff;
   color: #1a1a1a;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-family: Roboto;
   font-size: 0.8rem;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
@@ -593,7 +681,7 @@ mark {
 }
 
 blockquote {
-  border-left: 0.1rem solid #b3b3b3;
+  border-left: 0.1rem solid #0D0D0D;
   margin-left: 0;
   padding: 0.4rem 0.8rem;
 }
@@ -719,7 +807,7 @@ html:lang(ko),
 }
 .table td,
 .table th {
-  border-bottom: 0.05rem solid #b3b3b3;
+  border-bottom: 0.05rem solid #0D0D0D;
   padding: 0.6rem 0.4rem;
 }
 .table th {
@@ -948,7 +1036,7 @@ legend {
   appearance: none;
   background: #fff;
   background-image: none;
-  border: 0.05rem solid #999999;
+  border: 0.05rem solid black;
   border-radius: 0.1rem;
   color: #1a1a1a;
   display: block;
@@ -1006,7 +1094,7 @@ textarea.form-input, textarea.form-input.input-lg, textarea.form-input.input-sm 
 
 .form-select {
   appearance: none;
-  border: 0.05rem solid #999999;
+  border: 0.05rem solid black;
   border-radius: 0.1rem;
   color: inherit;
   font-size: 0.8rem;
@@ -1111,7 +1199,7 @@ textarea.form-input, textarea.form-input.input-lg, textarea.form-input.input-sm 
 .form-checkbox .form-icon,
 .form-radio .form-icon,
 .form-switch .form-icon {
-  border: 0.05rem solid #999999;
+  border: 0.05rem solid black;
   cursor: pointer;
   display: inline-block;
   position: absolute;
@@ -1228,7 +1316,7 @@ textarea.form-input, textarea.form-input.input-lg, textarea.form-input.input-sm 
 }
 .input-group .input-group-addon {
   background: #272727;
-  border: 0.05rem solid #999999;
+  border: 0.05rem solid black;
   border-radius: 0.1rem;
   line-height: 1.2rem;
   padding: 0.25rem 0.4rem;
@@ -2243,7 +2331,7 @@ summary.accordion-header::-webkit-details-marker {
 
 .card {
   background: #fff;
-  border: 0.05rem solid #b3b3b3;
+  border: 0.05rem solid #0D0D0D;
   border-radius: 0.1rem;
   display: flex;
   flex-direction: column;
@@ -2553,7 +2641,7 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .panel {
-  border: 0.05rem solid #b3b3b3;
+  border: 0.05rem solid #0D0D0D;
   border-radius: 0.1rem;
   display: flex;
   flex-direction: column;
@@ -2666,18 +2754,18 @@ summary.accordion-header::-webkit-details-marker {
   border: 0.1rem solid #1d80ae;
 }
 .step .step-item.active ~ .step-item::before {
-  background: #b3b3b3;
+  background: #0D0D0D;
 }
 .step .step-item.active ~ .step-item a {
   color: #999999;
 }
 .step .step-item.active ~ .step-item a::before {
-  background: #b3b3b3;
+  background: #0D0D0D;
 }
 
 .tab {
   align-items: center;
-  border-bottom: 0.05rem solid #b3b3b3;
+  border-bottom: 0.05rem solid #0D0D0D;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -3093,7 +3181,7 @@ a.text-error:visited {
 }
 
 .divider {
-  border-top: 0.05rem solid #c7c7c7;
+  border-top: 0.05rem solid #212121;
   height: 0.05rem;
   margin: 0.4rem 0;
 }
@@ -3106,7 +3194,7 @@ a.text-error:visited {
   padding: 0.8rem;
 }
 .divider-vert::before {
-  border-left: 0.05rem solid #b3b3b3;
+  border-left: 0.05rem solid #0D0D0D;
   bottom: 0.4rem;
   content: "";
   display: block;

@@ -5,24 +5,62 @@ Author URI: https://shib.live
 Version: 1.0
  */
 
+@font-face {
+    font-family: BebasNeue;
+    src: url('font/bebasneue/BebasNeue-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: Roboto;
+    src: url('font/roboto/Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: Roboto;
+    src: url("font/roboto/Roboto-Bold.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: Roboto;
+    src: url("font/roboto/Roboto-Italic.ttf");
+    font-style: italic;
+}
+@font-face {
+    font-family: Roboto;
+    src: url("font/roboto/Roboto-BoldItalic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+.bebas {
+    font-family: BebasNeue
+}
 $dark-color: #0D0D0D;
 $primary-color: #1d80ae;
 $bg-color: lighten(#0D0D0D,10%);
+$border-color: $dark-color;
+$body-font-family: Roboto;
 
-@font-face {
-    font-family: BebasNeue;
-    src: url('font/BebasNeue-Regular.ttf') format('truetype');
+*::-webkit-scrollbar {
+    width: 1em;
 }
-h1,h2,h3,h4,h5,h6,.navbar * {
+   
+*::-webkit-scrollbar-track {
+    background-color: $bg-color
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: lighten($dark-color,20%)
+}
+
+h1,h2,h3,h4,h5,h6,.card-title, .navbar * {
     font-family: BebasNeue;
     font-weight: 500;
 }
 .navbar .form-input {
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif
+    font-family: $body-font-family;
 }
 .sc-bg {
+    background-color: black;
     background-image: url('images/bg.png');
-    background-size: cover;
+    background-repeat: no-repeat;
 }
 .navbar {
     max-width: 1400px;
@@ -45,19 +83,57 @@ body > .container {
     max-width: 1400px;
     min-height: 80vh;
 }
-body > .container > .columns > .column > div {
+body > .container > .columns {
+    position: relative;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-top: 2px solid $primary-color;
 }
+.divider[data-content]::after, .divider-vert[data-content]::after {
+    background: $dark-color !important;
+}
 footer {
     min-height: 15vh;
+}
+.tile-subtitle {
+    font-size: 0.6rem;
+    line-height: 0.8rem !important;
+}
+.panel-body {
+    border-top: 1px solid $dark-color;
+}
+.panel-nav > .tab {
+    border: none !important;
+}
+.label-sm {
+    line-height: 1.5 !important;
+}
+.tournament-row {
+    justify-content: space-between !important;
+    flex-wrap: wrap;
+}
+.tournament-row > .column > a {
+    line-height: 1.7 !important;
+}
+.stream-box {
+    border-bottom: 1px solid $dark-color;
+}
+.twitter-sidebar {
+    width: 100%;
+    height: 600px !important;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.twitter-timeline {
+    width: 100% !important;
+    display: block;
+}
+.nav-item > a {
+    color: #fff !important;
 }
 h2 > a:link,h3 > a:link,h4 > a:link,h5 > a:link,h6 > a:link { text-decoration: none; }
 h2 > a:visited,h3 > a:visited,h4 > a:visited,h5 > a:visited,h6 > a:visited { text-decoration: none; }
 h2 > a:hover,h3 > a:hover,h4 > a:hover,h5 > a:hover,h6 > a:hover { text-decoration: none; }
 h2 > a:active,h3 > a:active,h4 > a:active,h5 > a:active,h6 > a:active { text-decoration: none; }
-
-
 
 @import "spectre/src/spectre";
 
