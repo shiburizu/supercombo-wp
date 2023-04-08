@@ -16,7 +16,10 @@
         </div>
     </div>
 </div>
-<div class="panel-footer py-2">
-<button class="btn btn-sm btn-block btn-primary">Write a post!</button>
+<div class="panel-footer">
+    <div class="btn-group btn-group-block">
+        <button class="btn btn-sm btn-primary text-bold">Browse Topics</button>
+        <button class="btn btn-sm btn-primary text-bold">Write a post!</button>
+    </div>
 </div>
 </div>

@@ -1,6 +1,6 @@
 <body <?php body_class('sc-bg'); ?>>
 <?php get_header(); get_template_part( 'navbar' ); ?>
-<div class="container py-2">
+<div class="sc-body container">
     <div class="columns py-2 bg-dark">
         <div class="column col-3 hide-md">
             <?php get_header(); get_template_part( 'front-events' ); ?>

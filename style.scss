@@ -37,6 +37,7 @@ $primary-color: #1d80ae;
 $bg-color: lighten(#0D0D0D,10%);
 $border-color: $dark-color;
 $body-font-family: Roboto;
+$border-radius: 0px;
 
 *::-webkit-scrollbar {
     width: 1em;
@@ -63,7 +64,7 @@ h1,h2,h3,h4,h5,h6,.card-title, .navbar * {
     background-repeat: no-repeat;
 }
 .navbar {
-    max-width: 1400px;
+    max-width: 1500px;
     width: 100%;
 }
 .navbar-center {
@@ -73,20 +74,65 @@ h1,h2,h3,h4,h5,h6,.card-title, .navbar * {
     display: flex;
     justify-content: center;
 }
+@mixin admin-sticky-fix( $offset: 0 ) {
+    $narrow-offset: 46px;
+    $wide-offset: 32px;
+    @if $offset != 0 and type-of($offset) == 'number' {
+      $narrow-offset: $narrow-offset + $offset;
+      $wide-offset: $wide-offset + $offset;
+    }
+    .admin-bar & {
+      top: $narrow-offset;
+      @media screen and (min-width: 783px) {
+        top: $wide-offset;
+    }
+    }
+}
+@media screen and (max-width: 783px) {
+    #wpadminbar {
+        position: fixed !important;
+    }
+}
+@media screen and (max-width: 840px) {
+    .sc-body {
+        padding-top: 3rem;
+    }
+}
+@media screen and (min-width: 840px) {
+    .sc-body {
+        padding-top: 6rem;
+    }
+}
 .navbar-parent {
-    box-shadow: $primary-color 0px 20px 50px 0px;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    @include admin-sticky-fix;
 }
-footer {
-    box-shadow: black 0 -50px 50px;
-}
+
 body > .container {
-    max-width: 1400px;
+    max-width: 1500px;
     min-height: 80vh;
+}
+.top-shadow {
+    position: absolute;
+    top: 0;
+    width: 100% !important;
+    height: 1px !important;
+    box-shadow: $primary-color 0px 0px 100px 150px;
 }
 body > .container > .columns {
     position: relative;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 1;
     border-top: 2px solid $primary-color;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.sc-body {
+    margin-bottom: 50px;
+}
+.tournament-section {
+    background: lighten($dark-color,15%);
 }
 .divider[data-content]::after, .divider-vert[data-content]::after {
     background: $dark-color !important;
@@ -104,18 +150,12 @@ footer {
 .panel-nav > .tab {
     border: none !important;
 }
-.label-sm {
-    line-height: 1.5 !important;
-}
 .tournament-row {
     justify-content: space-between !important;
     flex-wrap: wrap;
 }
-.tournament-row > .column > a {
-    line-height: 1.7 !important;
-}
-.stream-box {
-    border-bottom: 1px solid $dark-color;
+.stream-box:nth-of-type(odd) {
+    background: lighten($dark-color,15%)
 }
 .twitter-sidebar {
     width: 100%;

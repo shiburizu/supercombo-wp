@@ -1,4 +1,4 @@
-<footer class="site-footer bg-dark text-center py-2 mt-1">
+<footer class="site-footer bg-dark text-center py-2 ">
     <p><?php bloginfo( 'name' ) ?></p>
     <p>Socials<p>
 </footer>

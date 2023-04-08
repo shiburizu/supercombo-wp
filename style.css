@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5, h6, .card-title, .navbar * {
 }
 
 .navbar {
-  max-width: 1400px;
+  max-width: 1500px;
   width: 100%;
 }
 
@@ -74,23 +74,62 @@ h1, h2, h3, h4, h5, h6, .card-title, .navbar * {
   justify-content: center;
 }
 
-.navbar-parent {
-  box-shadow: #1d80ae 0px 20px 50px 0px;
+@media screen and (max-width: 783px) {
+  #wpadminbar {
+    position: fixed !important;
+  }
 }
-
-footer {
-  box-shadow: black 0 -50px 50px;
+@media screen and (max-width: 840px) {
+  .sc-body {
+    padding-top: 3rem;
+  }
+}
+@media screen and (min-width: 840px) {
+  .sc-body {
+    padding-top: 6rem;
+  }
+}
+.navbar-parent {
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.admin-bar .navbar-parent {
+  top: 46px;
+}
+@media screen and (min-width: 783px) {
+  .admin-bar .navbar-parent {
+    top: 32px;
+  }
 }
 
 body > .container {
-  max-width: 1400px;
+  max-width: 1500px;
   min-height: 80vh;
+}
+
+.top-shadow {
+  position: absolute;
+  top: 0;
+  width: 100% !important;
+  height: 1px !important;
+  box-shadow: #1d80ae 0px 0px 100px 150px;
 }
 
 body > .container > .columns {
   position: relative;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 1;
   border-top: 2px solid #1d80ae;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.sc-body {
+  margin-bottom: 50px;
+}
+
+.tournament-section {
+  background: #333333;
 }
 
 .divider[data-content]::after, .divider-vert[data-content]::after {
@@ -114,21 +153,13 @@ footer {
   border: none !important;
 }
 
-.label-sm {
-  line-height: 1.5 !important;
-}
-
 .tournament-row {
   justify-content: space-between !important;
   flex-wrap: wrap;
 }
 
-.tournament-row > .column > a {
-  line-height: 1.7 !important;
-}
-
-.stream-box {
-  border-bottom: 1px solid #0D0D0D;
+.stream-box:nth-of-type(odd) {
+  background: #333333;
 }
 
 .twitter-sidebar {
@@ -664,7 +695,7 @@ abbr[title] {
 }
 
 kbd {
-  border-radius: 0.1rem;
+  border-radius: 0px;
   line-height: 1.25;
   padding: 0.1rem 0.2rem;
   background: #0D0D0D;
@@ -676,7 +707,7 @@ mark {
   background: #ffe9b3;
   color: #1a1a1a;
   border-bottom: 0.05rem solid #ffd367;
-  border-radius: 0.1rem;
+  border-radius: 0px;
   padding: 0.05rem 0.1rem 0;
 }
 
@@ -818,7 +849,7 @@ html:lang(ko),
   appearance: none;
   background: #fff;
   border: 0.05rem solid #1d80ae;
-  border-radius: 0.1rem;
+  border-radius: 0px;
   color: #1d80ae;
   cursor: pointer;
   display: inline-block;
@@ -1037,7 +1068,7 @@ legend {
   background: #fff;
   background-image: none;
   border: 0.05rem solid black;
-  border-radius: 0.1rem;
+  border-radius: 0px;
   color: #1a1a1a;
   display: block;
   font-size: 0.8rem;
@@ -1095,7 +1126,7 @@ textarea.form-input, textarea.form-input.input-lg, textarea.form-input.input-sm 
 .form-select {
   appearance: none;
   border: 0.05rem solid black;
-  border-radius: 0.1rem;
+  border-radius: 0px;
   color: inherit;
   font-size: 0.8rem;
   height: 1.8rem;
@@ -1232,7 +1263,7 @@ textarea.form-input, textarea.form-input.input-lg, textarea.form-input.input-sm 
 }
 
 .form-checkbox .form-icon {
-  border-radius: 0.1rem;
+  border-radius: 0px;
 }
 .form-checkbox input:checked + .form-icon::before {
   background-clip: padding-box;
@@ -1317,7 +1348,7 @@ textarea.form-input, textarea.form-input.input-lg, textarea.form-input.input-sm 
 .input-group .input-group-addon {
   background: #272727;
   border: 0.05rem solid black;
-  border-radius: 0.1rem;
+  border-radius: 0px;
   line-height: 1.2rem;
   padding: 0.25rem 0.4rem;
   white-space: nowrap;
@@ -1471,7 +1502,7 @@ input:disabled + .form-icon, input.disabled + .form-icon {
 }
 
 .label {
-  border-radius: 0.1rem;
+  border-radius: 0px;
   line-height: 1.25;
   padding: 0.1rem 0.2rem;
   background: #1f1f1f;
@@ -1505,7 +1536,7 @@ input:disabled + .form-icon, input.disabled + .form-icon {
 }
 
 code {
-  border-radius: 0.1rem;
+  border-radius: 0px;
   line-height: 1.25;
   padding: 0.1rem 0.2rem;
   background: #fcf2f2;
@@ -1514,7 +1545,7 @@ code {
 }
 
 .code {
-  border-radius: 0.1rem;
+  border-radius: 0px;
   color: #1a1a1a;
   position: relative;
 }
@@ -2268,7 +2299,7 @@ summary.accordion-header::-webkit-details-marker {
 
 .bar {
   background: #1f1f1f;
-  border-radius: 0.1rem;
+  border-radius: 0px;
   display: flex;
   flex-wrap: nowrap;
   height: 0.8rem;
@@ -2290,12 +2321,12 @@ summary.accordion-header::-webkit-details-marker {
   width: 0;
 }
 .bar .bar-item:first-child {
-  border-bottom-left-radius: 0.1rem;
-  border-top-left-radius: 0.1rem;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
 }
 .bar .bar-item:last-child {
-  border-bottom-right-radius: 0.1rem;
-  border-top-right-radius: 0.1rem;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
   flex-shrink: 1;
 }
 
@@ -2332,7 +2363,7 @@ summary.accordion-header::-webkit-details-marker {
 .card {
   background: #fff;
   border: 0.05rem solid #0D0D0D;
-  border-radius: 0.1rem;
+  border-radius: 0px;
   display: flex;
   flex-direction: column;
 }
@@ -2357,12 +2388,12 @@ summary.accordion-header::-webkit-details-marker {
   padding-top: 0;
 }
 .card .card-image:first-child img {
-  border-top-left-radius: 0.1rem;
-  border-top-right-radius: 0.1rem;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
 }
 .card .card-image:last-child img {
-  border-bottom-left-radius: 0.1rem;
-  border-bottom-right-radius: 0.1rem;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
 .chip {
@@ -2418,13 +2449,13 @@ summary.accordion-header::-webkit-details-marker {
   display: block;
 }
 .dropdown .btn-group .dropdown-toggle:nth-last-child(2) {
-  border-bottom-right-radius: 0.1rem;
-  border-top-right-radius: 0.1rem;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
 }
 
 .empty {
   background: #272727;
-  border-radius: 0.1rem;
+  border-radius: 0px;
   color: #4d4d4d;
   text-align: center;
   padding: 3.2rem 1.6rem;
@@ -2443,7 +2474,7 @@ summary.accordion-header::-webkit-details-marker {
 .menu {
   box-shadow: 0 0.05rem 0.2rem rgba(13, 13, 13, 0.3);
   background: #fff;
-  border-radius: 0.1rem;
+  border-radius: 0px;
   list-style: none;
   margin: 0;
   min-width: 180px;
@@ -2462,7 +2493,7 @@ summary.accordion-header::-webkit-details-marker {
   text-decoration: none;
 }
 .menu .menu-item > a {
-  border-radius: 0.1rem;
+  border-radius: 0px;
   color: inherit;
   display: block;
   margin: 0 -0.4rem;
@@ -2544,7 +2575,7 @@ summary.accordion-header::-webkit-details-marker {
 .modal-container {
   box-shadow: 0 0.2rem 0.5rem rgba(13, 13, 13, 0.3);
   background: #fff;
-  border-radius: 0.1rem;
+  border-radius: 0px;
   display: flex;
   flex-direction: column;
   max-height: 75vh;
@@ -2609,7 +2640,7 @@ summary.accordion-header::-webkit-details-marker {
   padding: 0.2rem 0.2rem;
 }
 .pagination .page-item a {
-  border-radius: 0.1rem;
+  border-radius: 0px;
   display: inline-block;
   padding: 0.2rem 0.4rem;
   text-decoration: none;
@@ -2642,7 +2673,7 @@ summary.accordion-header::-webkit-details-marker {
 
 .panel {
   border: 0.05rem solid #0D0D0D;
-  border-radius: 0.1rem;
+  border-radius: 0px;
   display: flex;
   flex-direction: column;
 }
@@ -2854,7 +2885,7 @@ summary.accordion-header::-webkit-details-marker {
   background: rgba(13, 13, 13, 0.95);
   border-color: #0D0D0D;
   border: 0.05rem solid #0D0D0D;
-  border-radius: 0.1rem;
+  border-radius: 0px;
   color: #fff;
   display: block;
   padding: 0.4rem;
@@ -2895,7 +2926,7 @@ summary.accordion-header::-webkit-details-marker {
 }
 .tooltip::after {
   background: rgba(13, 13, 13, 0.95);
-  border-radius: 0.1rem;
+  border-radius: 0px;
   bottom: 100%;
   color: #fff;
   content: attr(data-tooltip);
@@ -3471,7 +3502,7 @@ a.text-error:visited {
 }
 
 .s-rounded {
-  border-radius: 0.1rem;
+  border-radius: 0px;
 }
 
 .s-circle {

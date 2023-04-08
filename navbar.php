@@ -1,4 +1,5 @@
-<div class="navbar-parent">
+<div class="top-shadow"></div>
+<div class="navbar-parent mb-2 p-fixed">
     <div class="navbar-container bg-dark">
     <header class="navbar py-2">
             <section class="navbar-section">

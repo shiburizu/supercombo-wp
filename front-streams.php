@@ -23,6 +23,6 @@
     </div>
 </div>
 <div class="panel-footer">
-<button class="btn btn-sm btn-block btn-primary">FGC Streams Page</button>
+<button class="btn btn-sm btn-block btn-primary text-bold">FGC Streams Page</button>
 </div>
 </div>
