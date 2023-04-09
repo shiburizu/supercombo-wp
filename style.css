@@ -4,7 +4,7 @@ Theme Name: SuperCombo.gg
 Author: Shiburizu
 Author URI: https://shib.live
 Version: 1.0
- */
+*/
 @font-face {
   font-family: BebasNeue;
   src: url("font/bebasneue/BebasNeue-Regular.ttf") format("truetype");
@@ -31,6 +31,10 @@ Version: 1.0
 }
 .bebas {
   font-family: BebasNeue;
+}
+
+.roboto {
+  font-family: Roboto !important;
 }
 
 *::-webkit-scrollbar {
@@ -191,6 +195,33 @@ footer {
 
 .nav-item > a {
   color: #fff !important;
+}
+
+.dropdown-toggle:focus + .menu {
+  display: none;
+}
+
+.dropdown-toggle:hover + .menu {
+  display: block;
+}
+
+.navbar-icon:hover > .dropdown > .menu {
+  display: block;
+}
+
+.menu:hover {
+  display: block;
+}
+
+.menu {
+  transform: translateY(0rem) !important;
+}
+
+.dropdown {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
 }
 
 h2 > a:link, h3 > a:link, h4 > a:link, h5 > a:link, h6 > a:link {
