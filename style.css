@@ -45,6 +45,10 @@ Version: 1.0
   background-color: #404040;
 }
 
+button > a:hover {
+  text-decoration: none;
+}
+
 h1, h2, h3, h4, h5, h6, .card-title, .navbar * {
   font-family: BebasNeue;
   font-weight: 500;
@@ -58,6 +62,7 @@ h1, h2, h3, h4, h5, h6, .card-title, .navbar * {
   background-color: black;
   background-image: url("images/bg.png");
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .navbar {
@@ -151,6 +156,16 @@ footer {
 
 .panel-nav > .tab {
   border: none !important;
+}
+
+.game-dropdown > a {
+  max-width: 3rem;
+}
+
+.game-dropdown > a > img {
+  display: block;
+  height: 100%;
+  width: auto;
 }
 
 .tournament-row {

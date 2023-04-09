@@ -1,13 +1,41 @@
 <?php
-
 function custom_theme_assets() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
+    wp_enqueue_style( 'style-fa', get_template_directory_uri() . '/fontawesome/css/all.css' );
 	wp_enqueue_style( 'style-icons', get_template_directory_uri() . '/spectre/dist/spectre-icons.css' );
 }
+
+function menu_output($menu_name) {
+    if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
+        $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+
+        $menu_items = wp_get_nav_menu_items($menu->term_id);
+
+        $menu_list = '<div class"mx-2" id="menu-' . $menu_name . '">';
+
+        foreach ( (array) $menu_items as $key => $menu_item ) {
+            $title = $menu_item->title;
+            $url = $menu_item->url;
+            $menu_list .= '<a class="text-light mx-2 text-large" href="' . $url . '">' . $title . '</a>';
+        }
+        $menu_list .= '</div>';
+    } else {
+        $menu_list = 'Menu "' . $menu_name . '" not defined.';
+    }
+    echo $menu_list;
+}
+function register_my_menus() {
+    register_nav_menus(
+      array(
+        'sites-menu' => __( 'Sites Menu' ),
+        'category-menu' => __( 'Category Menu' )
+       )
+     );
+   }
+add_action( 'init', 'register_my_menus' );
 add_action( 'wp_enqueue_scripts', 'custom_theme_assets' );
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'front-thumb', 1080, 380, true);
-
 /**
  * @param WP_Query|null $wp_query
  * @param bool $echo

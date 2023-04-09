@@ -50,7 +50,9 @@ $border-radius: 0px;
 *::-webkit-scrollbar-thumb {
     background-color: lighten($dark-color,20%)
 }
-
+button > a:hover {
+    text-decoration: none;
+}
 h1,h2,h3,h4,h5,h6,.card-title, .navbar * {
     font-family: BebasNeue;
     font-weight: 500;
@@ -62,6 +64,7 @@ h1,h2,h3,h4,h5,h6,.card-title, .navbar * {
     background-color: black;
     background-image: url('images/bg.png');
     background-repeat: no-repeat;
+    background-position: center;
 }
 .navbar {
     max-width: 1500px;
@@ -150,6 +153,14 @@ footer {
 .panel-nav > .tab {
     border: none !important;
 }
+.game-dropdown > a {
+    max-width: 3rem;
+}
+.game-dropdown > a > img {
+    display: block;
+    height: 100%;
+    width: auto;
+}   
 .tournament-row {
     justify-content: space-between !important;
     flex-wrap: wrap;
