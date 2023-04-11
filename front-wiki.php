@@ -1,6 +1,6 @@
-<div class="panel bg-gray mb-2">
-<div class="panel-header pb-0 pt-2">
-    <h4 class="panel-title text-center mb-1">Wiki Edits</h4>
+<div class="panel sc-panel bg-gray">
+<div class="panel-header">
+    <h4 class="panel-title text-center mb-0 text-bold">Wiki Edits</h4>
 </div>
 <div class="panel-body">
     <div class="tile py-2">

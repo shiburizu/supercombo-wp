@@ -1,4 +1,4 @@
-<footer class="site-footer bg-dark text-center py-2">
+<footer class="site-footer bg-gray text-center py-2">
     <span class="bebas h2"><?php bloginfo( 'name' ) ?></span><br>
     <span class="bebas text-gray">The home of competitive fighting games.</span><br>
     <div class="p-2">

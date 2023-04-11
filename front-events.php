@@ -1,6 +1,6 @@
-<div class="panel mb-2 bg-gray">
-<div class="panel-header pb-0 pt-2">
-    <h4 class="panel-title text-center mb-1">Upcoming Events</h4>
+<div class="panel sc-panel bg-gray">
+<div class="panel-header">
+    <h4 class="panel-title text-center mb-0 text-bold">Upcoming Events</h4>
 </div>
 <div class="panel-body px-0" style="overflow-y:visible;">
 <h5 class="mb-1 mt-1 px-2">Featured</h4>
