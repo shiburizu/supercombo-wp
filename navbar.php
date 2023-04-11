@@ -50,10 +50,10 @@
             </section>
             <section class="navbar-section text-large">
                 <span class="text-gray mx-2 mt-1">Join our community</span>
+                <a href="https://supercombo.gg/discord"><span class="mx-2 text-light fab fa-discord "></span></a>
                 <a href="https://twitch.com/supercombogg"><span class="mx-2 text-light fab fa-twitch"></span></a>
                 <a href="https://twitter.com/supercombogg"><span class="mx-2 text-light fab fa-twitter"></span></a>
                 <a href="https://youtube.com/@supercombogg"><span class="mx-2 text-light fab fa-youtube"></span></a>
-                <a href="https://supercombo.gg/discord"><span class="mx-2 text-light fab fa-discord "></span></a>
                 <button class="mr-2 btn btn-primary"><a class="text-light text-large" style="line-height: 1.5;" href="https://supercombo.gg/patreon">Become a Patron</a></button>
             </section>
     </header>

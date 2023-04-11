@@ -1,5 +1,5 @@
 <?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<div class="card bg-gray mb-2">
+<div class="card bg-gray mb-2 sc-article p-centered">
     <div class="card-image">
         <a href="<?php the_permalink() ?>"><?php the_post_thumbnail('front-thumb',['class' => 'img-responsive'])?></a>
     </div>

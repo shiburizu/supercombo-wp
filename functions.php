@@ -4,7 +4,28 @@ function custom_theme_assets() {
     wp_enqueue_style( 'style-fa', get_template_directory_uri() . '/fontawesome/css/all.css' );
 	wp_enqueue_style( 'style-icons', get_template_directory_uri() . '/spectre/dist/spectre-icons.css' );
 }
-
+function category_labels() {
+    $categories = get_the_category();
+    $separator = ' ';
+    $output = '';
+    if ( ! empty( $categories ) ) {
+        foreach( $categories as $category ) {
+            $output .= '<a class="label label-primary text-small" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+        }
+        echo trim( $output, $separator );
+    }
+}
+function tag_labels() {
+    $categories = get_the_tags();
+    $separator = ' ';
+    $output = '';
+    if ( ! empty( $categories ) ) {
+        foreach( $categories as $category ) {
+            $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">#' . esc_html( $category->name ) . '</a>' . $separator;
+        }
+        echo trim( $output, $separator );
+    }
+}
 function menu_output($menu_name) {
     if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
         $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
@@ -26,12 +47,24 @@ function menu_output($menu_name) {
 }
 function register_my_menus() {
     register_nav_menus(
-      array(
-        'sites-menu' => __( 'Sites Menu' ),
-        'category-menu' => __( 'Category Menu' )
-       )
-     );
-   }
+        array(
+            'sites-menu' => __( 'Sites Menu' ),
+            'category-menu' => __( 'Category Menu' )
+        )
+    );
+}
+
+//Loads template customtemplate.php from your theme folder on page 2+ of the 'main page'
+function my_second_main_template($template){
+    if (is_home() && is_paged()){
+         $alternate_template = locate_template( 'index.php');
+         if(!empty($alternate_template))
+              $template =$alternate_template;
+    }
+    return $template;
+}
+add_filter('template_include','my_second_main_template');
+
 add_action( 'init', 'register_my_menus' );
 add_action( 'wp_enqueue_scripts', 'custom_theme_assets' );
 add_theme_support( 'post-thumbnails' );

@@ -9,32 +9,39 @@ Version: 1.0
     font-family: BebasNeue;
     src: url('font/bebasneue/BebasNeue-Regular.ttf') format('truetype');
 }
+
 @font-face {
     font-family: Roboto;
     src: url('font/roboto/Roboto-Regular.ttf') format('truetype');
 }
+
 @font-face {
     font-family: Roboto;
     src: url("font/roboto/Roboto-Bold.ttf");
     font-weight: bold;
 }
+
 @font-face {
     font-family: Roboto;
     src: url("font/roboto/Roboto-Italic.ttf");
     font-style: italic;
 }
+
 @font-face {
     font-family: Roboto;
     src: url("font/roboto/Roboto-BoldItalic.ttf");
     font-weight: bold;
     font-style: italic;
 }
+
 .bebas {
-    font-family: BebasNeue
+    font-family: BebasNeue !important;
 }
+
 .roboto {
     font-family: Roboto !important;
 }
+
 $dark-color: #0D0D0D;
 $primary-color: #1d80ae;
 $bg-color: lighten(#0D0D0D,10%);
@@ -53,33 +60,41 @@ $border-radius: 0px;
 *::-webkit-scrollbar-thumb {
     background-color: lighten($dark-color,20%)
 }
+
 button > a:hover {
     text-decoration: none;
 }
+
 h1,h2,h3,h4,h5,h6,.card-title, .navbar * {
     font-family: BebasNeue;
     font-weight: 500;
 }
+
 .navbar .form-input {
     font-family: $body-font-family;
 }
+
 .sc-bg {
     background-color: black;
-    background-image: url('images/bg.png');
+    background-image: url("images/bg.png");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position-x: center;
+    background-position-y: top;
 }
 .navbar {
     max-width: 1500px;
     width: 100%;
 }
+
 .navbar-center {
     flex: 1 0 0 !important;
 }
+
 .navbar-container {
     display: flex;
     justify-content: center;
 }
+
 @mixin admin-sticky-fix( $offset: 0 ) {
     $narrow-offset: 46px;
     $wide-offset: 32px;
@@ -94,21 +109,25 @@ h1,h2,h3,h4,h5,h6,.card-title, .navbar * {
     }
     }
 }
+
 @media screen and (max-width: 783px) {
     #wpadminbar {
         position: fixed !important;
     }
 }
+
 @media screen and (max-width: 840px) {
     .sc-body {
         padding-top: 3rem;
     }
 }
+
 @media screen and (min-width: 840px) {
     .sc-body {
         padding-top: 6rem;
     }
 }
+
 .navbar-parent {
     top: 0;
     width: 100%;
@@ -121,6 +140,7 @@ body > .container {
     max-width: 1500px;
     min-height: 80vh;
 }
+
 .top-shadow {
     position: absolute;
     top: 0;
@@ -128,87 +148,146 @@ body > .container {
     height: 1px !important;
     box-shadow: $primary-color 0px 0px 100px 150px;
 }
-body > .container > .columns {
+
+.sc-front-columns, .sc-article {
     position: relative;
     z-index: 1;
-    border-top: 2px solid $primary-color;
+    border-top: 4px solid $primary-color !important;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+.sc-article {
+    max-width: 1080px;
+    border: none !important;
+}
+
+.sc-page {
+    max-width: 1080px;
+    position: relative;
+    z-index: 1;
+    border-top: 4px solid $primary-color !important;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.sc-thumb-categories {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    min-height: 190px;
+}
+
+.sc-thumb-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.sc-article > .sc-banner {
+    border-top: 4px solid $primary-color !important;
+}
+
 .sc-body {
     margin-bottom: 50px;
 }
+
 .tournament-section {
     background: lighten($dark-color,15%);
 }
+
 .divider[data-content]::after, .divider-vert[data-content]::after {
     background: $dark-color !important;
 }
+
 footer {
     min-height: 15vh;
 }
+
 .tile-subtitle {
     font-size: 0.6rem;
     line-height: 0.8rem !important;
 }
-.panel-body {
-    border-top: 1px solid $dark-color;
+
+.panel {
+    border: none !important;
 }
+
+.panel-body {
+    border-top: 2px solid $dark-color;
+    border-bottom: 2px solid $dark-color;
+}
+
 .panel-nav > .tab {
     border: none !important;
 }
+
 .game-dropdown > a {
     max-width: 3rem;
 }
+
 .game-dropdown > a > img {
     display: block;
     height: 100%;
     width: auto;
 }   
+
 .tournament-row {
     justify-content: space-between !important;
     flex-wrap: wrap;
 }
+
 .stream-box:nth-of-type(odd) {
     background: lighten($dark-color,15%)
 }
+
 .twitter-sidebar {
     width: 100%;
     height: 600px !important;
     overflow-y: scroll;
     overflow-x: hidden;
 }
+
 .twitter-timeline {
     width: 100% !important;
     display: block;
 }
+
 .nav-item > a {
     color: #fff !important;
 }
+
 .dropdown-toggle:focus + .menu {
     display: none;
 }
+
 .dropdown-toggle:hover + .menu {
     display: block;
 }
+
 .navbar-icon:hover > .dropdown > .menu {
     display: block;
 }
+
 .menu:hover {
     display: block;
 }
+
 .menu {
     transform: translateY(0rem) !important;
 }
+
 .dropdown {
     display: flex;
     position: relative;
     flex-direction: column;
     justify-content: center;
 }
+
 h2 > a:link,h3 > a:link,h4 > a:link,h5 > a:link,h6 > a:link { text-decoration: none; }
 h2 > a:visited,h3 > a:visited,h4 > a:visited,h5 > a:visited,h6 > a:visited { text-decoration: none; }
 h2 > a:hover,h3 > a:hover,h4 > a:hover,h5 > a:hover,h6 > a:hover { text-decoration: none; }
 h2 > a:active,h3 > a:active,h4 > a:active,h5 > a:active,h6 > a:active { text-decoration: none; }
 
 @import "spectre/src/spectre";
-

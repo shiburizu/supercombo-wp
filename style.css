@@ -30,7 +30,7 @@ Version: 1.0
   font-style: italic;
 }
 .bebas {
-  font-family: BebasNeue;
+  font-family: BebasNeue !important;
 }
 
 .roboto {
@@ -66,7 +66,8 @@ h1, h2, h3, h4, h5, h6, .card-title, .navbar * {
   background-color: black;
   background-image: url("images/bg.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position-x: center;
+  background-position-y: top;
 }
 
 .navbar {
@@ -126,11 +127,44 @@ body > .container {
   box-shadow: #1d80ae 0px 0px 100px 150px;
 }
 
-body > .container > .columns {
+.sc-front-columns, .sc-article {
   position: relative;
   z-index: 1;
-  border-top: 2px solid #1d80ae;
+  border-top: 4px solid #1d80ae !important;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.sc-article {
+  max-width: 1080px;
+  border: none !important;
+}
+
+.sc-page {
+  max-width: 1080px;
+  position: relative;
+  z-index: 1;
+  border-top: 4px solid #1d80ae !important;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.sc-thumb-categories {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  min-height: 190px;
+}
+
+.sc-thumb-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.sc-article > .sc-banner {
+  border-top: 4px solid #1d80ae !important;
 }
 
 .sc-body {
@@ -154,8 +188,13 @@ footer {
   line-height: 0.8rem !important;
 }
 
+.panel {
+  border: none !important;
+}
+
 .panel-body {
-  border-top: 1px solid #0D0D0D;
+  border-top: 2px solid #0D0D0D;
+  border-bottom: 2px solid #0D0D0D;
 }
 
 .panel-nav > .tab {

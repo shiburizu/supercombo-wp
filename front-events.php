@@ -60,11 +60,11 @@
         </div>
     </div>
 </div>
+</div>
 <div class="panel-footer">
     <div class="btn-group btn-group-block">
         <button class="btn btn-sm btn-primary text-bold">Browse Events</button>
         <button class="btn btn-sm btn-primary text-bold">Add Your Event!</button>
     </div>
-</div>
 </div>
 </div>

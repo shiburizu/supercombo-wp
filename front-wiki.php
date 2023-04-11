@@ -3,7 +3,7 @@
     <h4 class="panel-title text-center mb-1">Wiki Edits</h4>
 </div>
 <div class="panel-body">
-    <div class="tile pt-2">
+    <div class="tile py-2">
         <div class="tile-content">
             <p class="tile-title mb-1">Page Title</p>
             <p class="tile-subtitle text-gray mb-1">Editor</p>
