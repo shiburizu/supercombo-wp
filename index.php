@@ -5,7 +5,6 @@
         <div class="column col-3 hide-md">
             <?php get_template_part( 'front-events' ); ?>
             <?php get_template_part( 'front-forums' ); ?>
-            <?php get_template_part( 'front-wiki' ); ?>
         </div>
         <div class="column col-6 col-md-12 sc-posts" id="sc-posts">
             <?php get_template_part( 'front-boxes' ); ?>
@@ -15,8 +14,7 @@
         </div>
         <div class="column col-3 hide-md">  
             <?php get_template_part( 'front-streams' ); ?>
-            <?php get_template_part( 'front-twitter' ); ?>
-            <?php get_template_part( 'front-resources' ); ?>
+            <?php get_template_part( 'front-wiki' ); ?>
         </div>
     </div>
 </div>

@@ -70,12 +70,12 @@ button > a:hover {
 }
 @media screen and (max-width: 960px) {
   .sc-body {
-    padding-top: 3rem;
+    padding-top: 3.5rem;
   }
 }
 @media screen and (min-width: 960px) {
   .sc-body {
-    padding-top: 5.4rem;
+    padding-top: 5.5rem;
   }
 }
 .navbar-parent {
@@ -127,7 +127,6 @@ body > .container {
 
 .sc-article-box {
   margin-bottom: 0.8rem !important;
-  border-bottom: 0.15rem solid #272727;
   flex-wrap: wrap-reverse !important;
   min-height: 125px;
 }
@@ -148,7 +147,7 @@ body > .container {
 }
 @media (min-width: 840px) {
   .sc-article-body {
-    padding: 2rem !important;
+    padding: 0.8rem 2rem !important;
   }
 }
 
@@ -280,14 +279,13 @@ footer {
 }
 
 .sc-rounded {
-  border-radius: 8px !important;
-}
-
-.sc-highlight:hover {
-  outline: 1px solid #a6a6a6 !important;
-  outline-offset: 0.2rem;
+  outline: 1px solid #272727;
+  border-radius: 8px;
   transition: 0.2s;
-  border-bottom-color: #a6a6a6;
+}
+.sc-rounded:hover {
+  outline: 1px solid #404040;
+  transition: 0.2s;
 }
 
 @media (min-width: 1280px) {
@@ -307,11 +305,6 @@ footer {
   .sc-rounded-right {
     border-top-right-radius: 8px !important;
     border-bottom-right-radius: 8px !important;
-  }
-}
-@media (max-width: 1280px) {
-  .sc-rounded-right {
-    border-radius: 8px !important;
   }
 }
 
