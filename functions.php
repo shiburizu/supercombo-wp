@@ -4,7 +4,12 @@ function custom_theme_assets() {
     wp_enqueue_style( 'style-fa', get_template_directory_uri() . '/fontawesome/css/all.css' );
 	wp_enqueue_style( 'style-icons', get_template_directory_uri() . '/spectre/dist/spectre-icons.css' );
 }
-
+function wcount(){
+    ob_start();
+    the_content();
+    $content = ob_get_clean();
+    return sizeof(explode(" ", $content));
+}
 function category_labels() {
     $categories = get_the_category();
     $separator = ' ';
@@ -58,7 +63,7 @@ function register_my_menus() {
 //Loads template customtemplate.php from your theme folder on page 2+ of the 'main page'
 function my_second_main_template($template){
     if (is_home() && is_paged()){
-         $alternate_template = locate_template( 'index-paged.php');
+         $alternate_template = locate_template( 'archive.php');
          if(!empty($alternate_template))
               $template =$alternate_template;
     }
@@ -68,7 +73,7 @@ add_filter('template_include','my_second_main_template');
 add_action( 'init', 'register_my_menus' );
 add_action( 'wp_enqueue_scripts', 'custom_theme_assets' );
 add_theme_support( 'post-thumbnails' );
-add_image_size( 'front-thumb', 1080, 380, true);
+add_image_size( 'front-thumb', 1200, 630, true);
 /**
  * @param WP_Query|null $wp_query
  * @param bool $echo

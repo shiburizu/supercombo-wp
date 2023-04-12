@@ -94,15 +94,15 @@ button > a:hover {
     }
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 960px) {
     .sc-body {
-        padding-top: 4rem;
+        padding-top: 3rem;
     }
 }
 
-@media screen and (min-width: 840px) {
+@media screen and (min-width: 960px) {
     .sc-body {
-        padding-top: 5.25rem;
+        padding-top: 5.4rem;
     }
 }
 
@@ -127,18 +127,32 @@ body > .container {
 }
 
 .sc-article {
-    max-width: 1080px;
     border: none !important;
     margin-bottom: 0.8rem !important;
 }
 
+.sc-article-titling {
+    @media (max-width: 840px) {
+        text-align: center;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sc-article-box a {
+    text-decoration: none !important;
+}
+
 .sc-article-box {
     margin-bottom: 0.8rem !important;
+    border-bottom: 0.15rem solid $bg-color;
     flex-wrap: wrap-reverse !important;
     min-height: 125px;
-    &:hover {
-        cursor: pointer;
-    }
+}
+
+.sc-article-box p {
+    margin-bottom: 0.4rem !important;
 }
 
 .sc-article-box-title {
@@ -148,12 +162,18 @@ body > .container {
     height: 100%;
 }
 
+.sc-article-body {
+    @media (min-width: 840px) {
+        padding: 2rem !important;
+    }
+    line-height: 1.8;
+}
+
 .sc-panel {
     margin-bottom: 0.8rem !important;
 }
 
 .sc-page {
-    max-width: 1080px;
     position: relative;
     z-index: 1;
     border-top: 0.2rem solid $primary-color !important;
@@ -162,7 +182,7 @@ body > .container {
 .sc-thumb-bg {
     background-position: center !important;
     background-size: cover !important;
-    @media (max-width: 840px) {
+    @media (max-width: 1280px) {
         min-height: 150px;
     }
 }
@@ -279,28 +299,27 @@ footer {
 }
 
 .sc-highlight:hover {
-    background: lighten($bg-color,5%) !important;
+    background: $bg-color !important;
 }
 
 .sc-rounded-left {
-    @media (min-width: 840px) {
+    @media (min-width: 1280px) {
         border-top-left-radius: $border-radius !important;
         border-bottom-left-radius: $border-radius !important;
     }
-    @media (max-width: 840px) {
+    @media (max-width: 1280px) {
         border-bottom-left-radius: $border-radius !important;
         border-bottom-right-radius: $border-radius !important;
     }
 }
 
 .sc-rounded-right {
-    @media (min-width: 840px) {
+    @media (min-width: 1280px) {
         border-top-right-radius: $border-radius !important;
         border-bottom-right-radius: $border-radius !important;
     }
-    @media (max-width: 840px) {
-        border-top-left-radius: $border-radius !important;
-        border-top-right-radius: $border-radius !important;
+    @media (max-width: 1280px) {
+        border-radius: $border-radius !important;
     }
 }
 
@@ -314,4 +333,12 @@ h2 > a:active,h3 > a:active,h4 > a:active,h5 > a:active,h6 > a:active { text-dec
 
 .twitter-tweet {
     @extend .p-centered;
+}
+
+.aligncenter {
+    @extend .p-centered;
+}
+
+.wp-caption-text {
+    @extend .text-small, .text-center, .py-2;
 }

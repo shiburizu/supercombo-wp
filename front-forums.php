@@ -4,11 +4,6 @@
 </div>
 <div class="panel-body">
     <div class="tile py-2">
-        <div class="tile-icon bg-dark p-2">
-            <div class="example-tile-icon">
-            <i class="icon icon-people centered"></i>
-            </div>
-        </div>
         <div class="tile-content">
             <p class="tile-title mb-1">Forum Thread</p>
             <p class="tile-subtitle text-gray mb-1">Post Author</p>
@@ -17,7 +12,7 @@
     </div>
 </div>
 <div class="panel-footer">
-    <div class="btn-group btn-group-block">
+    <div class="btn-group btn-group-block hide-xl">
         <button class="btn btn-sm btn-primary text-bold">Browse Topics</button>
         <button class="btn btn-sm btn-primary text-bold">Write a post!</button>
     </div>

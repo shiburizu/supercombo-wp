@@ -62,7 +62,7 @@
 </div>
 </div>
 <div class="panel-footer">
-    <div class="btn-group btn-group-block">
+    <div class="btn-group btn-group-block hide-xl">
         <button class="btn btn-sm btn-primary text-bold">Browse Events</button>
         <button class="btn btn-sm btn-primary text-bold">Add Your Event!</button>
     </div>

@@ -48,7 +48,7 @@
                 <?php menu_output('category-menu') ?>
             </section>
             <section class="navbar-section text-large">
-                <span class="text-gray mx-2">Join our community</span>
+                <span class="text-gray mx-2 hide-xl">Join our community</span>
                 <a href="https://supercombo.gg/discord"><span class="mx-2 text-light fab fa-discord "></span></a>
                 <a href="https://twitch.com/supercombogg"><span class="mx-2 text-light fab fa-twitch"></span></a>
                 <a href="https://twitter.com/supercombogg"><span class="mx-2 text-light fab fa-twitter"></span></a>

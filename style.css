@@ -68,14 +68,14 @@ button > a:hover {
     position: fixed !important;
   }
 }
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 960px) {
   .sc-body {
-    padding-top: 4rem;
+    padding-top: 3rem;
   }
 }
-@media screen and (min-width: 840px) {
+@media screen and (min-width: 960px) {
   .sc-body {
-    padding-top: 5.25rem;
+    padding-top: 5.4rem;
   }
 }
 .navbar-parent {
@@ -106,18 +106,34 @@ body > .container {
 }
 
 .sc-article {
-  max-width: 1080px;
   border: none !important;
   margin-bottom: 0.8rem !important;
 }
 
+.sc-article-titling {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 840px) {
+  .sc-article-titling {
+    text-align: center;
+  }
+}
+
+.sc-article-box a {
+  text-decoration: none !important;
+}
+
 .sc-article-box {
   margin-bottom: 0.8rem !important;
+  border-bottom: 0.15rem solid #272727;
   flex-wrap: wrap-reverse !important;
   min-height: 125px;
 }
-.sc-article-box:hover {
-  cursor: pointer;
+
+.sc-article-box p {
+  margin-bottom: 0.4rem !important;
 }
 
 .sc-article-box-title {
@@ -127,12 +143,20 @@ body > .container {
   height: 100%;
 }
 
+.sc-article-body {
+  line-height: 1.8;
+}
+@media (min-width: 840px) {
+  .sc-article-body {
+    padding: 2rem !important;
+  }
+}
+
 .sc-panel {
   margin-bottom: 0.8rem !important;
 }
 
 .sc-page {
-  max-width: 1080px;
   position: relative;
   z-index: 1;
   border-top: 0.2rem solid #1d80ae !important;
@@ -142,7 +166,7 @@ body > .container {
   background-position: center !important;
   background-size: cover !important;
 }
-@media (max-width: 840px) {
+@media (max-width: 1280px) {
   .sc-thumb-bg {
     min-height: 150px;
   }
@@ -260,32 +284,31 @@ footer {
 }
 
 .sc-highlight:hover {
-  background: #333333 !important;
+  background: #272727 !important;
 }
 
-@media (min-width: 840px) {
+@media (min-width: 1280px) {
   .sc-rounded-left {
     border-top-left-radius: 8px !important;
     border-bottom-left-radius: 8px !important;
   }
 }
-@media (max-width: 840px) {
+@media (max-width: 1280px) {
   .sc-rounded-left {
     border-bottom-left-radius: 8px !important;
     border-bottom-right-radius: 8px !important;
   }
 }
 
-@media (min-width: 840px) {
+@media (min-width: 1280px) {
   .sc-rounded-right {
     border-top-right-radius: 8px !important;
     border-bottom-right-radius: 8px !important;
   }
 }
-@media (max-width: 840px) {
+@media (max-width: 1280px) {
   .sc-rounded-right {
-    border-top-left-radius: 8px !important;
-    border-top-right-radius: 8px !important;
+    border-radius: 8px !important;
   }
 }
 
@@ -3419,7 +3442,7 @@ a.text-error:visited {
   position: sticky !important;
 }
 
-.p-centered, .twitter-tweet {
+.p-centered, .aligncenter, .twitter-tweet {
   display: block;
   float: none;
   margin-left: auto;
@@ -3607,7 +3630,7 @@ a.text-error:visited {
   padding-right: 0.4rem !important;
 }
 
-.py-2 {
+.py-2, .wp-caption-text {
   padding-bottom: 0.4rem !important;
   padding-top: 0.4rem !important;
 }
@@ -3628,7 +3651,7 @@ a.text-error:visited {
   text-align: right;
 }
 
-.text-center {
+.text-center, .wp-caption-text {
   text-align: center;
 }
 
@@ -3664,7 +3687,7 @@ a.text-error:visited {
   font-size: 1.2em;
 }
 
-.text-small {
+.text-small, .wp-caption-text {
   font-size: 0.9em;
 }
 

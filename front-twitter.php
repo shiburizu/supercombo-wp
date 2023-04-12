@@ -1,4 +1,4 @@
-<div class="panel sc-panel bg-gray">
+<div class="panel sc-panel bg-gray hide-xl">
 <div class="panel-header">
     <h4 class="panel-title text-center mb-0 text-bold">@SuperComboGG</h4>
 </div>
