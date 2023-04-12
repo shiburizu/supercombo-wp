@@ -284,7 +284,10 @@ footer {
 }
 
 .sc-highlight:hover {
-  background: #272727 !important;
+  outline: 1px solid #a6a6a6 !important;
+  outline-offset: 0.2rem;
+  transition: 0.2s;
+  border-bottom-color: #a6a6a6;
 }
 
 @media (min-width: 1280px) {
@@ -1701,7 +1704,7 @@ code {
   width: 100%;
 }
 
-.img-responsive {
+.img-responsive, .wp-caption {
   display: block;
   height: auto;
   max-width: 100%;
