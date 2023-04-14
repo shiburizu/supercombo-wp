@@ -49,12 +49,12 @@ function menu_output($menu_name) {
 
         $menu_items = wp_get_nav_menu_items($menu->term_id);
 
-        $menu_list = '<div class"mx-2" id="menu-' . $menu_name . '">';
+        $menu_list = '<div id="menu-' . $menu_name . '">';
 
         foreach ( (array) $menu_items as $key => $menu_item ) {
             $title = $menu_item->title;
             $url = $menu_item->url;
-            $menu_list .= '<a class="text-light mx-2" href="' . $url . '">' . $title . '</a>';
+            $menu_list .= '<a class="text-light mr-2" href="' . $url . '">' . $title . '</a>';
         }
         $menu_list .= '</div>';
     } else {

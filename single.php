@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 <?php endif; ?>
-                <div class="card bg-dark sc-article-body">
+                <div class="card bg-dark sc-article-body p-centered">
                     <div class="card-header pt-0 text-center mb-2">
                     <?php if ( ! has_post_thumbnail() ): ?>
                             <h2 class="my-2 pb-2"><a class="text-light text-bold" href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
@@ -42,7 +42,7 @@
                             <div class="text-gray"><?php category_labels(); ?></div>
                             <div><?php tag_labels(); ?></div>
                     <?php endif ?>
-                        <div class="text-center my-2">
+                        <div class="text-center my-2 pb-2">
                             <button class="btn btn-primary btn-action s-circle mr-1">
                                 <a title="Share this on Twitter" href="https://twitter.com/intent/tweet?text=<?php echo get_the_title() ?>&via=SuperComboGG&url=<?php echo urlencode( get_permalink() ); ?>" title='Tweet Me'><span class="mx-2 text-light fab fa-twitter"></span></a>
                             </button>

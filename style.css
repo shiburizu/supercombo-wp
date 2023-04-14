@@ -49,48 +49,18 @@ button > a:hover {
   background-color: #0D0D0D;
 }
 
-.navbar {
-  max-width: 1640px;
+.navbar-outer {
+  max-width: 1610px;
   width: 100%;
+}
+@media only screen and (max-width: 1610px) {
+  .navbar-outer {
+    padding: 0rem 0.8rem !important;
+  }
 }
 
 .navbar-center {
   flex: 1 0 0 !important;
-}
-
-.navbar-container {
-  display: flex;
-  justify-content: center;
-}
-
-@media screen and (max-width: 783px) {
-  #wpadminbar {
-    position: fixed !important;
-  }
-}
-@media screen and (max-width: 960px) {
-  .sc-body {
-    padding-top: 3.5rem;
-  }
-}
-@media screen and (min-width: 960px) {
-  .sc-body {
-    padding-top: 5.5rem;
-  }
-}
-.navbar-parent {
-  top: 0;
-  width: 100%;
-  z-index: 2;
-  border-bottom: 0.15rem solid #1d80ae;
-}
-.admin-bar .navbar-parent {
-  top: 46px;
-}
-@media screen and (min-width: 783px) {
-  .admin-bar .navbar-parent {
-    top: 32px;
-  }
 }
 
 body > .container {
@@ -115,7 +85,7 @@ body > .container {
   flex-direction: column;
   justify-content: center;
 }
-@media (max-width: 1280px) {
+@media only screen and (max-width: 1280px) {
   .sc-article-titling {
     text-align: center;
   }
@@ -144,13 +114,14 @@ body > .container {
 
 .sc-article-body {
   line-height: 1.8;
+  max-width: 840px;
 }
-@media (min-width: 840px) {
+@media only screen and (min-width: 840px) {
   .sc-article-body {
     padding-top: 0.4rem !important;
   }
 }
-@media (max-width: 840px) {
+@media only screen and (max-width: 840px) {
   .sc-article-body {
     padding-top: 0rem !important;
   }
@@ -170,13 +141,13 @@ body > .container {
   background-position: center !important;
   background-size: cover !important;
 }
-@media (max-width: 1280px) {
+@media only screen and (max-width: 1280px) {
   .sc-thumb-bg, .sc-thumb-bg-big {
     min-height: 150px;
   }
 }
 
-@media (min-width: 1280px) {
+@media only screen and (min-width: 1280px) {
   .sc-thumb-bg-big {
     min-height: 250px;
   }
@@ -200,10 +171,16 @@ body > .container {
 
 .sc-body {
   margin-bottom: 50px;
+  padding-top: 0.4rem !important;
+}
+@media only screen and (max-width: 840px) {
+  .sc-body {
+    padding-top: 4.4rem !important;
+  }
 }
 
 .tournament-section {
-  background: #333333;
+  background: #272727;
 }
 
 .divider[data-content]::after, .divider-vert[data-content]::after {
@@ -243,7 +220,7 @@ footer {
 }
 
 .stream-box:nth-of-type(odd) {
-  background: #333333;
+  background: #272727;
 }
 
 .twitter-sidebar {
@@ -299,26 +276,26 @@ footer {
   transition: 0.2s;
 }
 
-@media (min-width: 1280px) {
+@media only screen and (min-width: 1280px) {
   .sc-rounded-left {
     border-top-left-radius: 8px !important;
     border-bottom-left-radius: 8px !important;
   }
 }
-@media (max-width: 1280px) {
+@media only screen and (max-width: 1280px) {
   .sc-rounded-left {
     border-bottom-left-radius: 8px !important;
     border-bottom-right-radius: 8px !important;
   }
 }
 
-@media (min-width: 1280px) {
+@media only screen and (min-width: 1280px) {
   .sc-rounded-right {
     border-top-right-radius: 8px !important;
     border-bottom-right-radius: 8px !important;
   }
 }
-@media (max-width: 1280px) {
+@media only screen and (max-width: 1280px) {
   .sc-rounded-right {
     border-top-left-radius: 8px !important;
     border-top-right-radius: 8px !important;
@@ -3744,12 +3721,31 @@ a.text-error:visited {
   word-wrap: break-word;
 }
 
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (max-width: 840px) {
+  .navbar-container {
+    border-bottom: 1px solid #1d80ae;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    background: #0D0D0D;
+  }
+}
+
 .twitter-tweet {
   max-width: 460px !important;
 }
 
 a.text-primary:visited {
   color: #24a0da !important;
+}
+
+.tab {
+  border-bottom: 1px solid #272727;
 }
 
 /*# sourceMappingURL=style.css.map */

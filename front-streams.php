@@ -1,4 +1,4 @@
-<div class="panel sc-panel bg-gray">
+<div class="panel sc-panel bg-dark sc-rounded">
 <div class="panel-header">
     <h4 class="panel-title text-center mb-0 text-bold">FGC Streaming</h4>
 </div>
