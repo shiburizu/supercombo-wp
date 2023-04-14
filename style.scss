@@ -35,6 +35,9 @@ $bg-color: lighten(#0D0D0D,10%);
 $border-color: $dark-color;
 $body-font-family: Poppins;
 $border-radius: 8px;
+$link-color: lighten($primary-color,10%);
+$link-color-dark: lighten($primary-color,10%);
+$link-color-light: lighten($primary-color,10%);
 
 *::-webkit-scrollbar {
     width: 1em;
@@ -151,7 +154,7 @@ body > .container {
 }
 
 .sc-article-box p {
-    margin-bottom: 0.4rem !important;
+    margin-bottom: 0.4rem;
 }
 
 .sc-article-box-title {
@@ -321,6 +324,9 @@ footer {
     }
 }
 
+a:focus {
+    box-shadow: none !important;
+}
 
 h2 > a:link,h3 > a:link,h4 > a:link,h5 > a:link,h6 > a:link { text-decoration: none; }
 h2 > a:visited,h3 > a:visited,h4 > a:visited,h5 > a:visited,h6 > a:visited { text-decoration: none; }
@@ -343,4 +349,12 @@ h2 > a:active,h3 > a:active,h4 > a:active,h5 > a:active,h6 > a:active { text-dec
 
 .wp-caption {
     @extend .img-responsive;
+}
+
+a.text-primary:visited {
+    color: $link-color !important;
+}
+
+.bg-dark table {
+    @extend .bg-dark;
 }
