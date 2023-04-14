@@ -221,8 +221,8 @@ footer {
     flex-wrap: wrap;
 }
 
-.stream-box:nth-of-type(odd) {
-    background: $bg-color;
+.stream-box {
+    border-radius: $border-radius;
 }
 
 .twitter-sidebar {

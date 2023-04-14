@@ -219,8 +219,8 @@ footer {
   flex-wrap: wrap;
 }
 
-.stream-box:nth-of-type(odd) {
-  background: #272727;
+.stream-box {
+  border-radius: 8px;
 }
 
 .twitter-sidebar {
