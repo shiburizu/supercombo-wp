@@ -135,7 +135,7 @@ body > .container {
 }
 
 .sc-article-titling {
-    @media (max-width: 840px) {
+    @media (max-width: 1280px) {
         text-align: center;
     }
     display: flex;
@@ -166,7 +166,10 @@ body > .container {
 
 .sc-article-body {
     @media (min-width: 840px) {
-        padding: 0.8rem 2rem !important;
+        padding-top: 0.4rem !important;
+    }
+    @media (max-width: 840px) {
+        padding-top: 0rem !important;
     }
     line-height: 1.8;
 }
@@ -186,6 +189,13 @@ body > .container {
     background-size: cover !important;
     @media (max-width: 1280px) {
         min-height: 150px;
+    }
+}
+
+.sc-thumb-bg-big {
+    @extend .sc-thumb-bg;
+    @media (min-width: 1280px) {
+        min-height: 250px;
     }
 }
 
@@ -322,8 +332,21 @@ footer {
         border-top-right-radius: $border-radius !important;
         border-bottom-right-radius: $border-radius !important;
     }
+    @media (max-width: 1280px) {
+        border-top-left-radius: $border-radius !important;
+        border-top-right-radius: $border-radius !important;
+    }
 }
 
+.sc-rounded-top {
+    border-top-left-radius: $border-radius !important;
+    border-top-right-radius: $border-radius !important;
+}
+
+.sc-rounded-bottom {
+    border-bottom-left-radius: $border-radius !important;
+    border-bottom-right-radius: $border-radius !important;
+}
 a:focus {
     box-shadow: none !important;
 }
@@ -337,6 +360,7 @@ h2 > a:active,h3 > a:active,h4 > a:active,h5 > a:active,h6 > a:active { text-dec
 
 .twitter-tweet {
     @extend .p-centered;
+    max-width: 460px !important;
 }
 
 .aligncenter {

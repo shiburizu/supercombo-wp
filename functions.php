@@ -16,7 +16,18 @@ function category_labels() {
     $output = '';
     if ( ! empty( $categories ) ) {
         foreach( $categories as $category ) {
-            $output .= '<a class="text-primary text-uppercase" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+            $output .= '<a class="text-uppercase text-bold" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+        }
+        echo trim( $output, $separator );
+    }
+}
+function category_titles() {
+    $categories = get_the_category();
+    $separator = ', ';
+    $output = '';
+    if ( ! empty( $categories ) ) {
+        foreach( $categories as $category ) {
+            $output .= '<a class="text-bold h4" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
         }
         echo trim( $output, $separator );
     }
@@ -27,7 +38,7 @@ function tag_labels() {
     $output = '';
     if ( ! empty( $categories ) ) {
         foreach( $categories as $category ) {
-            $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">#' . esc_html( $category->name ) . '</a>' . $separator;
+            $output .= '<a class="text-bold text-small" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">#' . esc_html( $category->name ) . '</a>' . $separator;
         }
         echo trim( $output, $separator );
     }
@@ -105,7 +116,11 @@ function bootstrap_pagination( \WP_Query $wp_query = null, $echo = true, $params
     if ( null === $wp_query ) {
         global $wp_query;
     }
-
+    if (is_home() && !is_paged()){
+        echo "<div class='p-2 text-bold text-center h4'>" . get_next_posts_link('More Stories') . "</div>";
+        return null;
+    }
+    
     $add_args = [];
 
     //add query (GET) parameters to generated page URLs

@@ -8,7 +8,7 @@
                 </div>
             </section>
             <section class="navbar-center hide-lg">
-                <input class="form-input ml-2 bg-gray" type="text" id="search" placeholder="Search Articles, Events, Wikis...">
+                <?php get_search_form(); ?>
             </section>
             <section class="navbar-section">
                 <div class="dropdown game-dropdown dropdown-right hide-lg">

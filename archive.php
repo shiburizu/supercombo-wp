@@ -2,9 +2,9 @@
 <?php get_header(); get_template_part( 'navbar' ); ?>
 <div class="sc-body container sc-front-columns">
     <div class="columns">
-        <div class="column col-2 col-lg-1 hide-md">
+        <div class="column col-3 col-lg-1 hide-md">
         </div>
-        <div class="column col-8 col-lg-10 col-md-12 p-centered">
+        <div class="column col-6 col-lg-10 col-md-12 p-centered">
             <div class="bg-gray pt-1 px-2 sc-rounded" style="margin-bottom: 0.7rem;">
             <?php if ( !is_front_page() ) : ?>
             <h2 class="pt-2 mb-0 text-center text-bold"><?php echo get_archive_title(); ?></h2> 
@@ -18,7 +18,7 @@
             <?php echo bootstrap_pagination(); ?>
             </div>
         </div>
-        <div class="column col-2 col-lg-1 hide-md">  
+        <div class="column col-3 col-lg-1 hide-md">  
         </div>
     </div>
 </div>
