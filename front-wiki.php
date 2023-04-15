@@ -1,4 +1,4 @@
-<div class="panel sc-panel bg-dark sc-rounded">
+<div class="panel sc-panel bg-dark">
 <div class="panel-header">
     <h4 class="panel-title text-center mb-0 text-bold">Wiki Edits</h4>
 </div>

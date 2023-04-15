@@ -62,13 +62,6 @@ button > a:hover {
 .sc-bg {
     background-color: $dark-color;
 }
-.navbar-outer {
-    max-width: 1610px;
-    width: 100%;
-    @media only screen and (max-width: 1610px) {
-        padding: 0rem 0.8rem !important;
-    }
-}
 
 .navbar-center {
     flex: 1 0 0 !important;
@@ -130,10 +123,6 @@ body > .container {
     }
     line-height: 1.8;
     max-width: 840px;
-}
-
-.sc-panel {
-    margin-bottom: 0.8rem !important;
 }
 
 .sc-page {
@@ -324,6 +313,8 @@ h2 > a:active,h3 > a:active,h4 > a:active,h5 > a:active,h6 > a:active { text-dec
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-bottom: 1px solid $primary-color;
+
     @media only screen and (max-width: 840px) {
         border-bottom: 1px solid $primary-color;
         position: fixed;
@@ -331,6 +322,10 @@ h2 > a:active,h3 > a:active,h4 > a:active,h5 > a:active,h6 > a:active { text-dec
         width: 100%;
         background: $dark-color;
     }
+}
+.navbar {
+    max-width: 1640px;
+    width: 100%;
 }
 
 .twitter-tweet {
@@ -360,4 +355,10 @@ a.text-primary:visited {
 
 .tab {
     border-bottom: 1px solid $bg-color;
+}
+
+.sc-panel {
+    border-top: 1px solid $bg-color !important;
+    margin-bottom: 0.8rem !important;
+    border-radius: 0px;
 }

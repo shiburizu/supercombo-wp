@@ -2,7 +2,7 @@
 <div class="panel-header">
     <h4 class="panel-title text-center mb-0 text-bold">FGC Streaming</h4>
 </div>
-<div class="panel-body px-0">
+<div class="panel-body">
     <div class="stream-box bg-gray mb-2 columns col-gapless">
         <div class="column col-4 col-xl-12 p-2">
             <img src="<?php echo get_template_directory_uri() . '/images/thumb.jpg' ?>" class="sc-rounded img-fit-contain img-responsive">
