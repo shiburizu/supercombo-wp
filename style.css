@@ -3722,6 +3722,11 @@ a.text-error:visited {
     background: #0D0D0D;
   }
 }
+@media only screen and (min-width: 840px) {
+  .navbar-container {
+    margin-bottom: 0.4rem !important;
+  }
+}
 
 .navbar {
   max-width: 1640px;

@@ -322,6 +322,10 @@ h2 > a:active,h3 > a:active,h4 > a:active,h5 > a:active,h6 > a:active { text-dec
         width: 100%;
         background: $dark-color;
     }
+
+    @media only screen and (min-width: 840px) {
+        margin-bottom: 0.4rem !important;
+    }
 }
 .navbar {
     max-width: 1640px;
