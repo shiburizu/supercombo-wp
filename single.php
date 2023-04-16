@@ -8,12 +8,12 @@
             <?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <article class="sc-article p-centered">
                 <?php if ( has_post_thumbnail() ): ?>
+                <h2 class="card-title my-2 text-center"><a class="text-light text-bold" href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
                 <div class="columns pt-2 mt-2">
-                    <div class="column col-7 col-xl-12"><a href="<?php the_permalink() ?>"><?php the_post_thumbnail('front-thumb',['class'=>'img-responsive sc-rounded'])?></a></div>
-                    <div class="column col-5 col-xl-12 pt-2 my-0 sc-article-titling">
-                        <h2 class="card-title my-2"><a class="text-light text-bold" href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
+                    <div class="column col-7 col-xl-12" style="display: flex; flex-direction: column; justify-content: center;"><a href="<?php the_permalink() ?>"><?php the_post_thumbnail('front-thumb',['class'=>'img-responsive sc-rounded'])?></a></div>
+                    <div class="column col-5 col-xl-12 my-0 sc-article-titling">
                         <?php if ( has_excerpt() ): ?>
-                        <p class="card-subtitle text-light mb-2"><?php echo get_the_excerpt() ?></p>
+                        <p class="card-subtitle text-light my-2"><?php echo get_the_excerpt() ?></p>
                         <?php endif; ?>
                         <span class="mb-2">
                             <figure class="avatar mr-1" data-initial="SC" style="background-color: black;">

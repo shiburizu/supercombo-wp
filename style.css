@@ -54,7 +54,7 @@ button > a:hover {
 }
 
 body > .container {
-  max-width: 1640px;
+  max-width: 1280px;
   min-height: 80vh;
   padding-left: 0.8rem;
   padding-right: 0.8rem;
@@ -123,19 +123,31 @@ body > .container {
   border-top: 0.2rem solid #1d80ae !important;
 }
 
-.sc-thumb-bg, .sc-thumb-bg-big {
+.sc-thumb-bg {
   background-position: center !important;
   background-size: cover !important;
+  border-top-right-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
 }
 @media only screen and (max-width: 1280px) {
-  .sc-thumb-bg, .sc-thumb-bg-big {
-    min-height: 150px;
+  .sc-thumb-bg {
+    min-height: 160px;
   }
 }
 
+.sc-thumb-bg-big {
+  background-position: center !important;
+  background-size: cover !important;
+  border-top-right-radius: 8px !important;
+}
+@media only screen and (max-width: 1280px) {
+  .sc-thumb-bg-big {
+    min-height: 160px;
+  }
+}
 @media only screen and (min-width: 1280px) {
   .sc-thumb-bg-big {
-    min-height: 250px;
+    min-height: 315px;
   }
 }
 
@@ -157,12 +169,7 @@ body > .container {
 
 .sc-body {
   margin-bottom: 50px;
-  padding-top: 0.4rem !important;
-}
-@media only screen and (max-width: 840px) {
-  .sc-body {
-    padding-top: 4.4rem !important;
-  }
+  padding-top: 0.8rem !important;
 }
 
 .tournament-section {
@@ -174,7 +181,7 @@ body > .container {
 }
 
 footer {
-  min-height: 15vh;
+  min-height: 25vh;
 }
 
 .tile-subtitle {
@@ -252,40 +259,14 @@ footer {
   justify-content: center;
 }
 
-.sc-rounded {
+.sc-rounded, .sc-panel {
   outline: 1px solid #272727;
   border-radius: 8px;
   transition: 0.2s;
 }
-.sc-rounded:hover {
+.sc-rounded:hover, .sc-panel:hover {
   outline: 1px solid #404040;
   transition: 0.2s;
-}
-
-@media only screen and (min-width: 1280px) {
-  .sc-rounded-left {
-    border-top-left-radius: 8px !important;
-    border-bottom-left-radius: 8px !important;
-  }
-}
-@media only screen and (max-width: 1280px) {
-  .sc-rounded-left {
-    border-bottom-left-radius: 8px !important;
-    border-bottom-right-radius: 8px !important;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  .sc-rounded-right {
-    border-top-right-radius: 8px !important;
-    border-bottom-right-radius: 8px !important;
-  }
-}
-@media only screen and (max-width: 1280px) {
-  .sc-rounded-right {
-    border-top-left-radius: 8px !important;
-    border-top-right-radius: 8px !important;
-  }
 }
 
 .sc-rounded-top {
@@ -3432,7 +3413,7 @@ a.text-error:visited {
   position: sticky !important;
 }
 
-.p-centered, .aligncenter, .twitter-tweet {
+.p-centered, .wp-block-embed iframe, .aligncenter, .twitter-tweet {
   display: block;
   float: none;
   margin-left: auto;
@@ -3713,24 +3694,15 @@ a.text-error:visited {
   align-items: center;
   border-bottom: 1px solid #1d80ae;
 }
-@media only screen and (max-width: 840px) {
-  .navbar-container {
-    border-bottom: 1px solid #1d80ae;
-    position: fixed;
-    z-index: 2;
-    width: 100%;
-    background: #0D0D0D;
-  }
-}
-@media only screen and (min-width: 840px) {
-  .navbar-container {
-    margin-bottom: 0.4rem !important;
-  }
+
+.topnav {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0rem 0.8rem !important;
 }
 
-.navbar {
-  max-width: 1640px;
-  width: 100%;
+.subnav {
+  margin-bottom: 0.8rem !important;
 }
 
 .twitter-tweet {
@@ -3743,12 +3715,12 @@ a.text-primary:visited {
 
 .tab {
   border-bottom: 1px solid #272727;
+  cursor: pointer;
 }
 
 .sc-panel {
-  border-top: 1px solid #272727 !important;
-  margin-bottom: 0.8rem !important;
-  border-radius: 0px;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */

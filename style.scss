@@ -68,7 +68,7 @@ button > a:hover {
 }
 
 body > .container {
-    max-width: 1640px;
+    max-width: 1280px;
     min-height: 80vh;
     padding-left: 0.8rem;
     padding-right: 0.8rem;
@@ -134,15 +134,22 @@ body > .container {
 .sc-thumb-bg {
     background-position: center !important;
     background-size: cover !important;
+    border-top-right-radius: $border-radius !important;
+    border-bottom-right-radius: $border-radius !important;
     @media only screen and (max-width: 1280px) {
-        min-height: 150px;
+        min-height: 160px;
     }
 }
 
 .sc-thumb-bg-big {
-    @extend .sc-thumb-bg;
+    background-position: center !important;
+    background-size: cover !important;
+    border-top-right-radius: $border-radius !important;
+    @media only screen and (max-width: 1280px) {
+        min-height: 160px;
+    }
     @media only screen and (min-width: 1280px) {
-        min-height: 250px;
+        min-height: 315px;
     }
 }
 
@@ -164,10 +171,7 @@ body > .container {
 
 .sc-body {
     margin-bottom: 50px;
-    padding-top: 0.4rem !important;
-    @media only screen and (max-width: 840px) {
-        padding-top: 4.4rem !important;
-    }
+    padding-top: 0.8rem !important;
 }
 
 .tournament-section {
@@ -179,7 +183,7 @@ body > .container {
 }
 
 footer {
-    min-height: 15vh;
+    min-height: 25vh;
 }
 
 .tile-subtitle {
@@ -267,28 +271,6 @@ footer {
     }
 }
 
-.sc-rounded-left {
-    @media only screen and (min-width: 1280px) {
-        border-top-left-radius: $border-radius !important;
-        border-bottom-left-radius: $border-radius !important;
-    }
-    @media only screen and (max-width: 1280px) {
-        border-bottom-left-radius: $border-radius !important;
-        border-bottom-right-radius: $border-radius !important;
-    }
-}
-
-.sc-rounded-right {
-    @media only screen and (min-width: 1280px) {
-        border-top-right-radius: $border-radius !important;
-        border-bottom-right-radius: $border-radius !important;
-    }
-    @media only screen and (max-width: 1280px) {
-        border-top-left-radius: $border-radius !important;
-        border-top-right-radius: $border-radius !important;
-    }
-}
-
 .sc-rounded-top {
     border-top-left-radius: $border-radius !important;
     border-top-right-radius: $border-radius !important;
@@ -314,22 +296,16 @@ h2 > a:active,h3 > a:active,h4 > a:active,h5 > a:active,h6 > a:active { text-dec
     flex-direction: column;
     align-items: center;
     border-bottom: 1px solid $primary-color;
-
-    @media only screen and (max-width: 840px) {
-        border-bottom: 1px solid $primary-color;
-        position: fixed;
-        z-index: 2;
-        width: 100%;
-        background: $dark-color;
-    }
-
-    @media only screen and (min-width: 840px) {
-        margin-bottom: 0.4rem !important;
-    }
 }
-.navbar {
-    max-width: 1640px;
+
+.topnav {
+    max-width: 1280px;
     width: 100%;
+    padding: 0rem 0.8rem !important;
+}
+
+.subnav {
+    margin-bottom: 0.8rem !important;
 }
 
 .twitter-tweet {
@@ -359,10 +335,15 @@ a.text-primary:visited {
 
 .tab {
     border-bottom: 1px solid $bg-color;
+    cursor: pointer;
 }
 
 .sc-panel {
-    border-top: 1px solid $bg-color !important;
-    margin-bottom: 0.8rem !important;
-    border-radius: 0px;
+    @extend .sc-rounded;
+    border-radius: $border-radius;
+    margin-bottom: 0.8rem;
+}
+
+.wp-block-embed iframe {
+    @extend .p-centered;
 }

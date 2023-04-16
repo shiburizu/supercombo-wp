@@ -19,22 +19,18 @@ $post_age = date('U') - get_post_time('U');
                         <p class="text-small text-gray d-inline mb-1"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>" class="text-bold"><?php the_author() ?></a> | <?php echo get_the_date() ?></p>
                     <?php endif; ?>
                 </span>
-                <h2 class="h3 my-2"><a class="text-light text-bold" href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
-                <span class="text-gray"><?php category_labels(); ?></span>
+                <h2 class="h4 my-2"><a class="text-light text-bold" href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
                 <?php if ( has_excerpt() ) : ?>
-                <div class="mt-2">
                     <a class="text-light" href="<?php the_permalink() ?>"><?php echo get_the_excerpt() ?></a>
-                </div>
                 <?php endif; ?>
             </div>
         </div>
         <a href="<?php the_permalink() ?>" class="column col-12 sc-rounded-top sc-thumb-bg-big" style="background: url('<?php echo get_the_post_thumbnail_url(get_the_ID(),'large') ?>')">
         </a>
     </article>
-    <?php $i++; ?>
     <?php else : ?>
     <article class="sc-article-box sc-rounded columns col-gapless">
-        <div class="column col-7 col-xl-12 p-2 sc-rounded-left bg-dark">
+        <div class="column col-8 p-2 bg-dark">
             <div class="px-2 py-2 sc-article-box-title">
                 <span>
                     <figure class="avatar avatar-sm mr-1" data-initial="SC" style="background-color: black;">
@@ -46,16 +42,13 @@ $post_age = date('U') - get_post_time('U');
                         <p class="text-small text-gray d-inline mb-1"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>" class="text-bold"><?php the_author() ?></a> | <?php echo get_the_date() ?></p>
                     <?php endif; ?>
                 </span>
-                <h2 class="h3 my-2"><a class="text-light text-bold" href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
-                <span class="text-gray"><?php category_labels(); ?></span>
+                <h2 class="h4 my-2"><a class="text-light text-bold" href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
                 <?php if ( has_excerpt() ) : ?>
-                <div class="mt-2">
                     <a class="text-light" href="<?php the_permalink() ?>"><?php echo get_the_excerpt() ?></a>
-                </div>
                 <?php endif; ?>
             </div>
         </div>
-        <a href="<?php the_permalink() ?>" class="column col-5 col-xl-12 sc-rounded-right sc-thumb-bg" style="background: url('<?php echo get_the_post_thumbnail_url(get_the_ID(),'large') ?>')">
+        <a href="<?php the_permalink() ?>" class="column col-4 sc-thumb-bg" style="background: url('<?php echo get_the_post_thumbnail_url(get_the_ID(),'large') ?>')">
         </a>
     </article>
     <?php endif; ?>
@@ -72,8 +65,7 @@ $post_age = date('U') - get_post_time('U');
                 <p class="text-small text-gray d-inline mb-1"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>" class="text-bold"><?php the_author() ?></a> | <?php echo get_the_date() ?></p>
             <?php endif; ?>
         </span>
-        <h2 class="h3 my-2"><a class="text-light text-bold" href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
-        <span class="text-gray"><?php category_labels(); ?></span>
+        <h2 class="h4 my-2"><a class="text-light text-bold" href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
         <div class="mt-2 text-light">
             <?php if ( wcount() >= 250 and has_excerpt() ) : ?>
             <a  class="text-light" href="<?php the_permalink() ?>"><?php echo get_the_excerpt() ?></a>
@@ -84,6 +76,7 @@ $post_age = date('U') - get_post_time('U');
     </div>
 </article>
 <?php endif; ?>
+<?php $i++; ?>
 <?php endwhile; ?>
 <?php else : ?>
 <div>
