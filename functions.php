@@ -47,34 +47,14 @@ function tag_labels() {
         echo trim( $output, $separator );
     }
 }
-function menu_output($menu_name) {
-    if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
-        $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
-
-        $menu_items = wp_get_nav_menu_items($menu->term_id);
-
-        $menu_list = '<div id="menu-' . $menu_name . '">';
-
-        foreach ( (array) $menu_items as $key => $menu_item ) {
-            $title = $menu_item->title;
-            $url = $menu_item->url;
-            $menu_list .= '<a class="text-light mr-2" href="' . $url . '">' . $title . '</a>';
-        }
-        $menu_list .= '</div>';
-    } else {
-        $menu_list = 'Menu "' . $menu_name . '" not defined.';
-    }
-    echo $menu_list;
-}
 function register_my_menus() {
     register_nav_menus(
         array(
             'sites-menu' => __( 'Sites Menu' ),
-            'category-menu' => __( 'Category Menu' )
+            'footer-menu' => __( 'Footer Menu' )
         )
     );
 }
-
 //Loads template customtemplate.php from your theme folder on page 2+ of the 'main page'
 function my_second_main_template($template){
     if (is_home() && is_paged()){
@@ -88,6 +68,7 @@ add_filter('template_include','my_second_main_template');
 add_action( 'init', 'register_my_menus' );
 add_action( 'wp_enqueue_scripts', 'custom_theme_assets' );
 add_theme_support( 'post-thumbnails' );
+add_theme_support( 'custom-logo' );
 add_image_size( 'front-thumb', 1200, 630, true);
 /**
  * @param WP_Query|null $wp_query
@@ -168,7 +149,6 @@ function bootstrap_pagination( \WP_Query $wp_query = null, $echo = true, $params
 
     return null;
 }
-
 /**
  * Notes:
  * AJAX:
@@ -210,7 +190,7 @@ function get_archive_title() {
 	} elseif ( is_author() ) {
 		the_post();
 		$prefix = __( 'Author Archive:' );
-		$title = '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>';
+		$title = '<span><a href="' . esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>';
 		rewind_posts();
 	} elseif ( is_day() ) {
 		$prefix = __( 'Daily Archives:' );
