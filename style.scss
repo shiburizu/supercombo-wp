@@ -84,6 +84,7 @@ button > a:hover {
 .sc-menu > li {  
     margin: 0px !important;
     padding: 0.6rem 0.6rem 0.6rem 0.6rem !important;
+    border-color: $primary-color;
     &::marker{
         content: "";
     }
@@ -100,8 +101,8 @@ button > a:hover {
     box-sizing: border-box !important;
     &:hover {
         transition: border-bottom 0.2s;
-        padding-bottom: 0.45rem !important;
-        border-bottom: 0.15rem solid $primary-color;
+        padding-bottom: 0.4rem !important;
+        border-bottom: 0.2rem solid $primary-color;
     }
 }
 
@@ -199,8 +200,18 @@ body > .container {
     border-bottom-right-radius: $border-radius !important;
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
     @media only screen and (max-width: 1280px) {
+        border-top-left-radius: $border-radius !important;
+        border-bottom-right-radius: 0px !important;
         min-height: 160px;
     }
+}
+
+.sc-thumb-top {
+    background-position: center !important;
+    background-size: cover !important;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
+    min-height: 75px;
+    border-radius: $border-radius;
 }
 
 .sc-thumb-bg-big {
@@ -214,6 +225,11 @@ body > .container {
     @media only screen and (min-width: 1280px) {
         min-height: 300px;
     }
+}
+
+.sc-featured-border {
+    border-left: 4px solid $primary-color;
+    border-radius: $border-radius;
 }
 
 .sc-thumb-categories {
@@ -248,10 +264,6 @@ body > .container {
 
 .divider[data-content]::after, .divider-vert[data-content]::after {
     background: $dark-color !important;
-}
-
-footer {
-    min-height: 25vh;
 }
 
 .tile-subtitle {
@@ -333,10 +345,6 @@ footer {
     outline: 1px solid $bg-color;
     border-radius: $border-radius;
     transition: 0.2s;
-    &:hover {
-        outline: 1px solid lighten($bg-color,10%);
-        transition: 0.2s;
-    }
 }
 
 .sc-rounded-top {
@@ -344,10 +352,16 @@ footer {
     border-top-right-radius: $border-radius !important;
 }
 
+.sc-rounded-left {
+    border-top-left-radius: $border-radius !important;
+    border-bottom-left-radius: $border-radius !important;
+}
+
 .sc-rounded-bottom {
     border-bottom-left-radius: $border-radius !important;
     border-bottom-right-radius: $border-radius !important;
 }
+
 a:focus {
     box-shadow: none !important;
 }
@@ -418,6 +432,19 @@ a.text-primary:visited {
     margin-bottom: 0.8rem;
 }
 
-.wp-block-embed iframe {
-    @extend .p-centered;
+p > iframe, .wp-block-embed-youtube > .wp-block-embed__wrapper > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+p:has(iframe), .wp-block-embed-youtube > .wp-block-embed__wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }

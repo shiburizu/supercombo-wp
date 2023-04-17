@@ -9,7 +9,7 @@ $post_age = date('U') - get_post_time('U');
         <?php $first = True; ?>
     <?php else : ?>
     <article class="sc-article-box sc-rounded columns col-gapless">
-        <div class="column col-8 p-2 bg-dark">
+        <div class="column col-8 col-md-12 p-2 bg-dark">
             <div class="px-2 py-2 sc-article-box-title">
                 <span>
                     <figure class="avatar avatar-sm mr-1" data-initial="SC" style="background-color: black;">
@@ -23,11 +23,11 @@ $post_age = date('U') - get_post_time('U');
                 </span>
                 <h2 class="h4 my-2"><a class="text-light text-bold" href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
                 <?php if ( has_excerpt() ) : ?>
-                    <a class="text-light" href="<?php the_permalink() ?>"><?php echo get_the_excerpt() ?></a>
+                    <a class="mb-2 text-light text-small" href="<?php the_permalink() ?>"><?php echo get_the_excerpt() ?></a>
                 <?php endif; ?>
             </div>
         </div>
-        <a href="<?php the_permalink() ?>" class="column col-4 sc-thumb-bg" style="background: url('<?php echo get_the_post_thumbnail_url(get_the_ID(),'large') ?>')">
+        <a href="<?php the_permalink() ?>" class="column col-4 col-md-12 sc-thumb-bg" style="background: url('<?php echo get_the_post_thumbnail_url(get_the_ID(),'large') ?>')">
         </a>
     </article>
     <?php endif; ?>
@@ -45,9 +45,9 @@ $post_age = date('U') - get_post_time('U');
             <?php endif; ?>
         </span>
         <h2 class="h4 my-2"><a class="text-light text-bold" href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
-        <div class="mt-2 text-light">
+        <div class="pt-1 text-light">
             <?php if ( wcount() >= 250 and has_excerpt() ) : ?>
-            <a  class="text-light" href="<?php the_permalink() ?>"><?php echo get_the_excerpt() ?></a>
+            <a class="text-light" href="<?php the_permalink() ?>"><?php echo get_the_excerpt() ?></a>
             <?php else : ?>
             <?php the_content() ?>
             <?php endif; ?>
