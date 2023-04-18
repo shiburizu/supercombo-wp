@@ -164,9 +164,14 @@ body > .container {
   height: 100%;
 }
 
+.sc-post-thumb {
+  max-height: 441;
+  width: auto;
+}
+
 .sc-article-body {
   line-height: 1.8;
-  max-width: 840px;
+  max-width: 960px;
 }
 @media only screen and (min-width: 840px) {
   .sc-article-body {
@@ -221,7 +226,7 @@ body > .container {
 }
 @media only screen and (min-width: 1280px) {
   .sc-thumb-bg-big {
-    min-height: 300px;
+    min-height: 340px;
   }
 }
 
@@ -377,6 +382,10 @@ h2 > a:hover, h3 > a:hover, h4 > a:hover, h5 > a:hover, h6 > a:hover {
 }
 
 h2 > a:active, h3 > a:active, h4 > a:active, h5 > a:active, h6 > a:active {
+  text-decoration: none;
+}
+
+a:has(.bg-gray):hover {
   text-decoration: none;
 }
 

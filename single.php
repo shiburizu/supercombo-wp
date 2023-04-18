@@ -5,8 +5,8 @@
     <article class="sc-article p-centered">
         <div class="card bg-dark sc-article-body p-centered">
             <div class="card-header px-0 mb-2">
-                <h2 class="mb-2"><a class="text-light text-bold" href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
-                <?php the_post_thumbnail('front-thumb',['class'=>'img-responsive sc-rounded'])?>
+                <h2 class="mb-2 pb-2 text-center"><a class="text-light text-bold" href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
+                <?php the_post_thumbnail('front-thumb',['class'=>'img-responsive sc-rounded sc-post-thumb p-centered'])?>
                 <?php if ( has_excerpt() ): ?>
                 <p class="p-2 mt-2 mb-0 sc-featured-border text-light"><?php echo get_the_excerpt() ?></p>
                 <?php endif; ?> 
@@ -23,12 +23,15 @@
                 </div>
                 </div>
                 <div class="divider"></div>
+                <button class="btn btn-primary btn-action s-circle mx-1">
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode( get_permalink() ); ?>" class="fb-xfbml-parse-ignore"><span class="mx-2 text-light fab fa-facebook"></span></a>
+                </button>    
                 <button class="btn btn-primary btn-action s-circle mr-1">
                     <a title="Share this on Twitter" href="https://twitter.com/intent/tweet?text=<?php echo get_the_title() ?>&via=SuperComboGG&url=<?php echo urlencode( get_permalink() ); ?>" title='Tweet Me'><span class="mx-2 text-light fab fa-twitter"></span></a>
                 </button>
-                <button class="btn btn-primary btn-action s-circle ml-1">
-                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode( get_permalink() ); ?>" class="fb-xfbml-parse-ignore"><span class="mx-2 text-light fab fa-facebook"></span></a>
-                </button>        
+                <button class="btn btn-primary btn-action s-circle">
+                    <a target="_blank" href="https://www.reddit.com/submit?url=<?php echo urlencode( get_permalink() ); ?>"><span class="mx-2 text-light fab fa-reddit-alien    "></span></a>
+                </button>  
                 <div class="divider pb-2"></div>
             </div>
             <div class="card-body <?php if (wcount() <= 250) : echo "bg-gray sc-rounded pb-2"; else: echo "p-0"; endif;?>">

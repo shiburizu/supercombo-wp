@@ -5,7 +5,7 @@ $timelimit=1 * 86400; //days * seconds per day
 $post_age = date('U') - get_post_time('U');
 ?>
 <?php if ( has_post_thumbnail() and is_front_page() and $first == False and !is_paged() ) : ?>
-    <div class="columns bg-dark">
+    <div class="columns bg-dark" style="align-items: center;">
         <div class="column col-7 col-lg-12">
             <article class="sc-article-box columns col-gapless">
                 <div class="col-12 p-2 mx-2">

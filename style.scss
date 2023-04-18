@@ -176,6 +176,11 @@ body > .container {
     height: 100%;
 }
 
+.sc-post-thumb {
+    max-height: 441;
+    width: auto;
+}
+
 .sc-article-body {
     @media only screen and (min-width: 840px) {
         padding-top: 0.4rem !important;
@@ -184,7 +189,7 @@ body > .container {
         padding-top: 0rem !important;
     }
     line-height: 1.8;
-    max-width: 840px;
+    max-width: 960px;
 }
 
 .sc-page {
@@ -223,7 +228,7 @@ body > .container {
         min-height: 200px;
     }
     @media only screen and (min-width: 1280px) {
-        min-height: 300px;
+        min-height: 340px;
     }
 }
 
@@ -370,6 +375,9 @@ h2 > a:link,h3 > a:link,h4 > a:link,h5 > a:link,h6 > a:link { text-decoration: n
 h2 > a:visited,h3 > a:visited,h4 > a:visited,h5 > a:visited,h6 > a:visited { text-decoration: none; }
 h2 > a:hover,h3 > a:hover,h4 > a:hover,h5 > a:hover,h6 > a:hover { text-decoration: none; }
 h2 > a:active,h3 > a:active,h4 > a:active,h5 > a:active,h6 > a:active { text-decoration: none; }
+a:has(.bg-gray):hover {
+    text-decoration: none;
+}
 
 @import "spectre/src/spectre";
 

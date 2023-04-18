@@ -3,18 +3,8 @@
 <div class="sc-body container sc-front-columns">
     <div class="columns">
         <div class="column col-lg-10 col-md-12 p-centered">
-            <div class="text-light" style="margin-bottom: 0.7rem;">
-            <?php if ( !is_front_page() ) : ?>
-            <h2 class="pt-2 text-center text-bold"><?php echo get_archive_title(); ?></h2> 
-            <?php else: ?>
-            <h2 class="pt-2 text-center text-bold">All Posts</h2> 
-            <?php endif; ?>
-            <?php echo bootstrap_pagination(); ?>
-            </div>
+            <h1 class="pt-2 text-center text-bold text-light">404 Not Found</h2> 
             <?php get_template_part( 'front-boxes' ); ?>
-            <div class="text-light">
-            <?php echo bootstrap_pagination() ?>
-            </div>
         </div>
         <div class="column col-4 col-md-12">
             <?php get_template_part( 'sidebar-top' ); ?>

@@ -57,7 +57,7 @@ $post_age = date('U') - get_post_time('U');
 <?php endif; ?>
 <?php endwhile; ?>
 <?php else : ?>
-<div>
-    <p>There's nothing here.</p>
+<div class="text-center text-light">
+    <p>Nothing here!</p>
 </div>
 <?php endif; ?>

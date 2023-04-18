@@ -97,13 +97,21 @@ add_image_size( 'front-thumb', 1200, 630, true);
  *       echo bootstrap_pagination($query);
  *     ?>
  */
+
+function atom_excerpt( $content, $length = 40, $more = '...' ) {
+	$excerpt = strip_tags( trim( $content ) );
+	$words = str_word_count( $excerpt, 2 );
+	if ( count( $words ) > $length ) {
+		$words = array_slice( $words, 0, $length, true );
+		end( $words );
+		$position = key( $words ) + strlen( current( $words ) );
+		$excerpt = substr( $excerpt, 0, $position ) . $more;
+	}
+	return $excerpt;
+}
 function bootstrap_pagination( \WP_Query $wp_query = null, $echo = true, $params = [] ) {
     if ( null === $wp_query ) {
         global $wp_query;
-    }
-    if (is_home() && !is_paged()){
-        echo "<div class='p-2 text-bold text-center h4'>" . get_next_posts_link('More Stories') . "</div>";
-        return null;
     }
     
     $add_args = [];
@@ -132,7 +140,7 @@ function bootstrap_pagination( \WP_Query $wp_query = null, $echo = true, $params
 
     if ( is_array( $pages ) ) {
         //$current_page = ( get_query_var( 'paged' ) == 0 ) ? 1 : get_query_var( 'paged' );
-        $pagination = '<nav aria-label="Page navigation"><ul class="pagination" style="justify-content: center;">';
+        $pagination = '<nav aria-label="Page navigation"><ul class="pagination p-2 bg-gray sc-rounded" style="justify-content: center;">';
 
         foreach ( $pages as $page ) {
             $pagination .= '<li class="page-item' . (strpos($page, 'current') !== false ? ' active' : '') . '"> ' . str_replace('page-numbers', 'page-link', $page) . '</li>';
