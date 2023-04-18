@@ -195,7 +195,7 @@ body > .container {
   background-size: cover !important;
   border-top-right-radius: 8px !important;
   border-bottom-right-radius: 8px !important;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1);
 }
 @media only screen and (max-width: 1280px) {
   .sc-thumb-bg {
@@ -208,7 +208,7 @@ body > .container {
 .sc-thumb-top {
   background-position: center !important;
   background-size: cover !important;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1);
   min-height: 75px;
   border-radius: 8px;
 }
@@ -217,7 +217,7 @@ body > .container {
   background-position: center !important;
   background-size: cover !important;
   border-radius: 8px !important;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1);
 }
 @media only screen and (max-width: 1280px) {
   .sc-thumb-bg-big {
@@ -3836,6 +3836,10 @@ p:has(iframe), .wp-block-embed-youtube > .wp-block-embed__wrapper {
   overflow: hidden;
   width: 100%;
   padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+blockquote {
+  border-color: #5a5a5a;
 }
 
 /*# sourceMappingURL=style.css.map */

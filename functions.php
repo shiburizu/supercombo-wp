@@ -98,7 +98,7 @@ add_image_size( 'front-thumb', 1200, 630, true);
  *     ?>
  */
 
-function atom_excerpt( $content, $length = 40, $more = '...' ) {
+function atom_excerpt( $content, $length = 60, $more = '...' ) {
 	$excerpt = strip_tags( trim( $content ) );
 	$words = str_word_count( $excerpt, 2 );
 	if ( count( $words ) > $length ) {

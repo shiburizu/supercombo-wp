@@ -1,6 +1,6 @@
 <div class="panel sc-panel bg-dark">
 <div class="panel-header px-0 pb-0">
-    <h4 class="panel-title text-center mb-0 text-bold">Community</h4>
+    <h4 class="panel-title text-center mb-2 text-bold">Community</h4>
     <ul class="tab tab-block">
         <li class="tab-item active" onclick="openTab(event, 'discussions')">
             <a>Discussions</a>
@@ -10,7 +10,7 @@
         </li>
     </ul>
 </div>
-<div class="panel-body py-2 mb-2">
+<div class="panel-body py-2 px-0">
 <div id="discussions" class="tab-content">
     <?php get_template_part( 'front-forums' ); ?>
 </div>
