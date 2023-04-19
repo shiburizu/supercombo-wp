@@ -3937,7 +3937,7 @@ blockquote {
 }
 
 .modal-container {
-  max-height: 80vh;
+  max-height: 80vh !important;
 }
 
 body {
