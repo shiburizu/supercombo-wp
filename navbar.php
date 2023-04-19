@@ -4,7 +4,7 @@
                 <a class="text-light" href="<?php echo home_url()?>"><img style="max-height: 32px;" class="img-responsive mr-2" src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'custom_logo' ) ) ); ?>"></a>
                 <?php
                 wp_nav_menu( array( 
-                    'theme_location' => 'sites-menu',
+                    'theme_location' => 'navbar-menu',
                     'container' => '',
                     'menu_class' => 'sc-menu hide-lg'
                     ) ); 

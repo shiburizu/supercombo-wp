@@ -70,15 +70,15 @@ footer {
     margin: 0.4rem 0 0.4rem 0.8rem;
 }
 
-#menu-sites-1 li {
+#menu-mobile li {
     list-style-type: none;
 }
 
-#menu-sites-1 {
+#menu-mobile {
     margin: 0px;
 }
 
-#menu-sites-1 .sub-menu {
+#menu-mobile .sub-menu {
     margin-top: 0.4rem;
     margin-bottom: 0.4rem;
     margin-left: 1.2rem;
@@ -87,7 +87,7 @@ footer {
     border-radius: $border-radius;
 }
 
-#menu-sites-1 a {
+#menu-mobile a {
     border-radius: $border-radius;
     background-color: $bg-color;
     width: 100%;
@@ -139,17 +139,17 @@ footer {
     flex: 1 0 0 !important;
 }
 
-#menu-sites {
+#menu-navbar {
     display: flex;
     position: relative;
     margin: 0px !important;
 }
 
-#menu-sites li:hover .sub-menu, #menu-sites .sub-menu:hover {
+#menu-navbar li:hover .sub-menu, #menu-navbar .sub-menu:hover {
     display: block;
 }
 
-#menu-sites > li {  
+#menu-navbar > li {  
     margin: 0px !important;
     padding: 0.6rem 0.6rem 0.6rem 0.6rem !important;
     border-color: $primary-color;
@@ -174,7 +174,7 @@ footer {
     }
 }
 
-#menu-sites li .sub-menu {
+#menu-navbar li .sub-menu {
     transform: translateX(-0.6rem);
     display: none;
     position: absolute;
@@ -184,7 +184,7 @@ footer {
     background: $bg-color ;
 }
 
-#menu-sites .sub-menu li {
+#menu-navbar .sub-menu li {
     margin: 0px !important;
     padding: 0.4rem 0.6rem 0.4rem 0.6rem;
     &::marker{

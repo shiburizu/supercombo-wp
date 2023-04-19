@@ -56,15 +56,15 @@ footer {
   margin: 0.4rem 0 0.4rem 0.8rem;
 }
 
-#menu-sites-1 li {
+#menu-mobile li {
   list-style-type: none;
 }
 
-#menu-sites-1 {
+#menu-mobile {
   margin: 0px;
 }
 
-#menu-sites-1 .sub-menu {
+#menu-mobile .sub-menu {
   margin-top: 0.4rem;
   margin-bottom: 0.4rem;
   margin-left: 1.2rem;
@@ -73,7 +73,7 @@ footer {
   border-radius: 8px;
 }
 
-#menu-sites-1 a {
+#menu-mobile a {
   border-radius: 8px;
   background-color: #2C2C2C;
   width: 100%;
@@ -81,7 +81,7 @@ footer {
   padding: 0.4rem;
   color: white;
 }
-#menu-sites-1 a:hover, #menu-sites-1 a :active {
+#menu-mobile a:hover, #menu-mobile a :active {
   color: white;
   text-decoration: none;
   background-color: #464646;
@@ -125,42 +125,42 @@ footer {
   flex: 1 0 0 !important;
 }
 
-#menu-sites {
+#menu-navbar {
   display: flex;
   position: relative;
   margin: 0px !important;
 }
 
-#menu-sites li:hover .sub-menu, #menu-sites .sub-menu:hover {
+#menu-navbar li:hover .sub-menu, #menu-navbar .sub-menu:hover {
   display: block;
 }
 
-#menu-sites > li {
+#menu-navbar > li {
   margin: 0px !important;
   padding: 0.6rem 0.6rem 0.6rem 0.6rem !important;
   border-color: #039BE5;
   box-sizing: border-box !important;
 }
-#menu-sites > li::marker {
+#menu-navbar > li::marker {
   content: "";
 }
-#menu-sites > li a {
+#menu-navbar > li a {
   color: white;
 }
-#menu-sites > li a:hover {
+#menu-navbar > li a:hover {
   text-decoration: none;
 }
-#menu-sites > li .sub-menu > li:hover {
+#menu-navbar > li .sub-menu > li:hover {
   background: #464646;
   transition: 0.2s;
 }
-#menu-sites > li:hover {
+#menu-navbar > li:hover {
   transition: border-bottom 0.2s;
   padding-bottom: 0.4rem !important;
   border-bottom: 0.2rem solid #039BE5;
 }
 
-#menu-sites li .sub-menu {
+#menu-navbar li .sub-menu {
   transform: translateX(-0.6rem);
   display: none;
   position: absolute;
@@ -170,11 +170,11 @@ footer {
   background: #2C2C2C;
 }
 
-#menu-sites .sub-menu li {
+#menu-navbar .sub-menu li {
   margin: 0px !important;
   padding: 0.4rem 0.6rem 0.4rem 0.6rem;
 }
-#menu-sites .sub-menu li::marker {
+#menu-navbar .sub-menu li::marker {
   content: "";
 }
 

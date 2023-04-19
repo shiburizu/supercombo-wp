@@ -47,7 +47,7 @@ function tag_labels() {
 function register_my_menus() {
     register_nav_menus(
         array(
-            'sites-menu' => __( 'Sites Menu' ),
+            'navbar-menu' => __( 'Navbar Menu' ),
             'footer-menu' => __( 'Footer Menu' ),
             'mobile-menu' => __( 'Mobile Menu' )
         )
