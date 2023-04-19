@@ -53,7 +53,7 @@
                     </div>
                 <?php endif; ?>
             </div>
-            <div class="card-body <?php if (wcount() < 250) : echo "sc-rounded py-2"; else: echo "px-0"; endif;?>">
+            <div class="card-body <?php if (wcount() < 250) : echo "sc-rounded pb-2"; else: echo "px-0"; endif;?>">
                 <?php the_content() ?>
                     <?php if ( !has_post_thumbnail() ): ?>
                         <div class="divider"></div>
