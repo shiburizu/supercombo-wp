@@ -1,10 +1,14 @@
+<?php get_header(); ?>
 <body <?php body_class('sc-bg'); ?>>
-<?php get_header(); get_template_part( 'navbar' ); ?>
+<?php get_template_part( 'navbar' ); ?>
 <div class="sc-body container">
     <div class="sc-featured">
     <?php get_template_part( 'front-featured' ); ?>
     </div>
-    <h2 class="text-light text-bold">Latest Stories</h2>
+    <?php if (is_home()) : ?>
+    <h2 class="text-bold text-light mb-0">Latest Stories</h2>
+    <p class="text-primary">Last updated <?php echo esc_html( human_time_diff( strtotime(get_lastpostdate()), current_time('timestamp') ) ) . ' ago'; ?></p>
+    <?php endif; ?>
     <div class="columns bg-dark sc-front-columns">
         <div class="column col-8 col-md-12 sc-posts mb-2 pb-2" id="sc-posts">
             <?php get_template_part( 'front-boxes' ); ?>

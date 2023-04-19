@@ -30,7 +30,7 @@ Version: 1.0
 }
 
 $dark-color: #121212;
-$primary-color: #0288D1;
+$primary-color: #039BE5;
 $bg-color: #2C2C2C;
 $border-color: $dark-color;
 $body-font-family: Poppins;
@@ -70,15 +70,15 @@ footer {
     margin: 0.4rem 0 0.4rem 0.8rem;
 }
 
-#menu-mobile li {
+#menu-sites-1 li {
     list-style-type: none;
 }
 
-#menu-mobile {
+#menu-sites-1 {
     margin: 0px;
 }
 
-#menu-mobile .sub-menu {
+#menu-sites-1 .sub-menu {
     margin-top: 0.4rem;
     margin-bottom: 0.4rem;
     margin-left: 1.2rem;
@@ -87,7 +87,7 @@ footer {
     border-radius: $border-radius;
 }
 
-#menu-mobile li > a {
+#menu-sites-1 a {
     border-radius: $border-radius;
     background-color: $bg-color;
     width: 100%;
@@ -106,12 +106,16 @@ footer {
     font-size: 0.8rem;
     transition: 0.2s
 }
+
 .sc-link:hover {
     color: $primary-color;
+    cursor: pointer;
 }
+
 .sc-link:not(.active)::after {
     content: "";
 }
+
 .sc-link.active::after {
     font-family: Poppins;
     font-size: 0.6rem;
@@ -246,12 +250,14 @@ body > .container {
 
 .sc-post-thumb {
     max-height: 380px;
+    min-height: 380px;
     width: auto;
     height: 100%;
     background-position: center;
     background-size: cover;
     @media only screen and (max-width: 840px) {
         max-height: 200px;
+        min-height: 200px;
     }
 }
 
@@ -298,10 +304,10 @@ body > .container {
     background-size: cover !important;
     border-radius: $border-radius !important;
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1);
-    @media only screen and (max-width: 1280px) {
+    @media only screen and (max-width: 840px) {
         min-height: 200px;
     }
-    @media only screen and (min-width: 1280px) {
+    @media only screen and (min-width: 840px) {
         min-height: 340px;
     }
 }
@@ -449,6 +455,7 @@ h2 > a:link,h3 > a:link,h4 > a:link,h5 > a:link,h6 > a:link { text-decoration: n
 h2 > a:visited,h3 > a:visited,h4 > a:visited,h5 > a:visited,h6 > a:visited { text-decoration: none; }
 h1 > a:hover, h2 > a:hover,h3 > a:hover,h4 > a:hover,h5 > a:hover,h6 > a:hover { text-decoration: none; }
 h2 > a:active,h3 > a:active,h4 > a:active,h5 > a:active,h6 > a:active { text-decoration: none; }
+
 a:has(.bg-gray):hover {
     text-decoration: none;
 }
@@ -536,4 +543,14 @@ p:has(iframe), .wp-block-embed-youtube > .wp-block-embed__wrapper {
 
 blockquote {
     border-color: lighten($bg-color,20%);
+}
+
+.modal-container {
+    max-height: 90vh;
+}
+
+body {
+    background-image: url(images/graffiti.webp);
+    background-position: top;
+    background-repeat: no-repeat;
 }

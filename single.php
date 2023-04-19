@@ -1,5 +1,6 @@
+<?php get_header(); ?>
 <body <?php body_class('sc-bg'); ?>>
-<?php get_header(); get_template_part( 'navbar' ); ?>
+<?php get_template_part( 'navbar' ); ?>
 <div class="sc-body container sc-front-columns">
     <?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <article class="sc-article p-centered">
@@ -50,7 +51,7 @@
                     </div>
                 <?php endif; ?>
             </div>
-            <div class="card-body <?php if (!has_post_thumbnail()) : echo "sc-rounded py-2"; endif;?>">
+            <div class="card-body <?php if (!has_post_thumbnail()) : echo "sc-rounded"; endif;?>">
                 <?php the_content() ?>
                     <?php if ( !has_post_thumbnail() ): ?>
                         <div class="divider"></div>

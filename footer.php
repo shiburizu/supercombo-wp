@@ -5,6 +5,7 @@
             <div class="text-gray">
                 <p class="my-2"><?php echo bloginfo( 'description' ); ?></p>
                 <p class="my-2 text-bold">Est. X.XXX.MMXXI</p>
+                <a href="https://shib.live">Made with 💙 by @shiburizu</a>
             </div>
         </div>
         <div class="column col-6 col-lg-12 d-flex p-2" style="flex-direction: column; justify-content: center;">

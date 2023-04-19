@@ -1,7 +1,7 @@
 <div class="modal modal-lg bg-dark" id="sc-modal">
   <a href="#close" class="modal-overlay bg-dark" aria-label="Close"></a>
   <div class="modal-container bg-dark">
-    <div class="modal-header py-0 bg-dark">
+    <div class="modal-header bg-dark">
         <img class="img-responsive p-2 mb-2 p-centered" style="max-width: 300px; width 100%;" src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'custom_logo' ) ) ); ?>">
         <div class="columns">
             <form role="search" class="pr-2" style="flex: 1;" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -15,8 +15,7 @@
             </div>
         </div>
     </div>
-    <div class="modal-body py-0 px-2">
-        <div class="divider"></div>
+    <div class="modal-body pt-2 sc-rounded">
         <div class="content">
             <?php wp_nav_menu( array( 
             'theme_location' => 'mobile-menu',
@@ -25,9 +24,8 @@
             ) ); 
             ?>
         </div>
-        <div class="divider"></div>
     </div>
-    <div class="modal-footer">
+    <div class="modal-footer py-0">
     </div>
   </div>
 </div>

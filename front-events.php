@@ -1,3 +1,4 @@
+<?php if ( is_user_logged_in() ) : ?>
 <div class="panel sc-panel bg-dark">
 <div class="panel-header">
     <h4 class="panel-title text-center mb-0 text-bold">Upcoming Events</h4>
@@ -68,3 +69,4 @@
     </div>
 </div>
 </div>
+<?php endif; ?>

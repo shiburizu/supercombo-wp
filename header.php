@@ -37,7 +37,6 @@
     <meta property="og:url" content="<?php global $wp; echo home_url(add_query_arg(array($_GET), $wp->request));?>" />
     <meta name="twitter:widgets:theme" content="dark">
     <meta name="twitter:widgets:conversation" content="none">
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title><?php wp_title(' - ',true,'right')?><?php bloginfo( 'name' ); ?></title>
     <?php wp_head() ?>

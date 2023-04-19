@@ -1,11 +1,12 @@
+<?php get_header(); ?>
 <body <?php body_class('sc-bg'); ?>>
-<?php get_header(); get_template_part( 'navbar' ); ?>
+<?php get_template_part( 'navbar' ); ?>
 <div class="sc-body container sc-front-columns">
     <div class="columns sc-archive">
         <div class="column col-lg-10 col-md-12 p-centered">
-            <div class="mt-2 text-light">
-                <div class="divider"></div>
-                <div class="tile pt-2">
+            <div class="text-light">
+                <div class="divider pb-2"></div>
+                <div class="tile">
                     <div class="tile-icon">
                         <figure class="avatar avatar-lg" data-initial="SC" style="background-color: black;">
                             <img src="<?php echo get_avatar_url( get_the_author_meta( 'ID' ) ); ?>" alt="...">
@@ -18,9 +19,7 @@
                 </div>
                 <div class="divider"></div>
             </div>
-            <div class="my-2 py-1">
-                <?php echo bootstrap_pagination(); ?>
-            </div>
+            <?php echo bootstrap_pagination(); ?>
             <?php get_template_part( 'front-boxes' ); ?>
             <div class="text-light">
             <?php echo bootstrap_pagination() ?>
