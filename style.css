@@ -6,22 +6,22 @@ Author URI: https://shib.live
 Version: 1.0
 */
 @font-face {
-  font-family: Poppins;
-  src: url("font/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-family: poppins;
+  src: url("font/poppins/poppins-Regular.ttf") format("truetype");
 }
 @font-face {
-  font-family: Poppins;
-  src: url("font/Poppins/Poppins-Bold.ttf");
+  font-family: poppins;
+  src: url("font/poppins/poppins-Bold.ttf");
   font-weight: bold;
 }
 @font-face {
-  font-family: Poppins;
-  src: url("font/Poppins/Poppins-Italic.ttf");
+  font-family: poppins;
+  src: url("font/poppins/poppins-Italic.ttf");
   font-style: italic;
 }
 @font-face {
-  font-family: Poppins;
-  src: url("font/Poppins/Poppins-BoldItalic.ttf");
+  font-family: poppins;
+  src: url("font/poppins/poppins-BoldItalic.ttf");
   font-weight: bold;
   font-style: italic;
 }
@@ -103,14 +103,14 @@ footer {
 }
 
 .sc-link.active::after {
-  font-family: Poppins;
+  font-family: poppins;
   font-size: 0.6rem;
   color: #acacac;
   content: " copied!";
 }
 
 .navbar .form-input {
-  font-family: Poppins;
+  font-family: poppins;
 }
 
 .sc-bg {
@@ -886,7 +886,7 @@ html {
 body {
   background: #fff;
   color: #1f1f1f;
-  font-family: Poppins;
+  font-family: poppins;
   font-size: 0.8rem;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;

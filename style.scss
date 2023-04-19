@@ -6,25 +6,25 @@ Version: 1.0
 */
 
 @font-face {
-    font-family: Poppins;
-    src: url('font/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-family: poppins;
+    src: url('font/poppins/poppins-Regular.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: Poppins;
-    src: url("font/Poppins/Poppins-Bold.ttf");
+    font-family: poppins;
+    src: url("font/poppins/poppins-Bold.ttf");
     font-weight: bold;
 }
 
 @font-face {
-    font-family: Poppins;
-    src: url("font/Poppins/Poppins-Italic.ttf");
+    font-family: poppins;
+    src: url("font/poppins/poppins-Italic.ttf");
     font-style: italic;
 }
 
 @font-face {
-    font-family: Poppins;
-    src: url("font/Poppins/Poppins-BoldItalic.ttf");
+    font-family: poppins;
+    src: url("font/poppins/poppins-BoldItalic.ttf");
     font-weight: bold;
     font-style: italic;
 }
@@ -33,7 +33,7 @@ $dark-color: #121212;
 $primary-color: #039BE5;
 $bg-color: #2C2C2C;
 $border-color: $dark-color;
-$body-font-family: Poppins;
+$body-font-family: poppins;
 $border-radius: 8px;
 $link-color: $primary-color;
 $link-color-dark: $primary-color;
@@ -117,7 +117,7 @@ footer {
 }
 
 .sc-link.active::after {
-    font-family: Poppins;
+    font-family: poppins;
     font-size: 0.6rem;
     color: lighten($bg-color,50%);
     content: " copied!";
