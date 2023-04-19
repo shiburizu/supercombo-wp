@@ -531,7 +531,7 @@ a.text-primary:visited {
     margin-bottom: 0.8rem;
 }
 
-p > iframe, .wp-block-embed-youtube > .wp-block-embed__wrapper {
+p:has(iframe), .wp-block-embed-youtube > .wp-block-embed__wrapper {
     @extend .video-responsive;
 }
 

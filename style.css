@@ -1865,24 +1865,24 @@ code {
   object-fit: contain;
 }
 
-.video-responsive, p > iframe, .wp-block-embed-youtube > .wp-block-embed__wrapper {
+.video-responsive, p:has(iframe), .wp-block-embed-youtube > .wp-block-embed__wrapper {
   display: block;
   overflow: hidden;
   padding: 0;
   position: relative;
   width: 100%;
 }
-.video-responsive::before, p > iframe::before, .wp-block-embed-youtube > .wp-block-embed__wrapper::before {
+.video-responsive::before, p:has(iframe)::before, .wp-block-embed-youtube > .wp-block-embed__wrapper::before {
   content: "";
   display: block;
   padding-bottom: 56.25%;
 }
-.video-responsive iframe, p > iframe iframe, .wp-block-embed-youtube > .wp-block-embed__wrapper iframe,
+.video-responsive iframe, p:has(iframe) iframe, .wp-block-embed-youtube > .wp-block-embed__wrapper iframe,
 .video-responsive object,
-p > iframe object,
+p:has(iframe) object,
 .wp-block-embed-youtube > .wp-block-embed__wrapper object,
 .video-responsive embed,
-p > iframe embed,
+p:has(iframe) embed,
 .wp-block-embed-youtube > .wp-block-embed__wrapper embed {
   border: 0;
   bottom: 0;
