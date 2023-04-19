@@ -29,15 +29,15 @@ Version: 1.0
     font-style: italic;
 }
 
-$dark-color: #131313;
-$primary-color: #1d80ae;
-$bg-color: lighten(#0D0D0D,10%);
+$dark-color: #121212;
+$primary-color: #0288D1;
+$bg-color: #2C2C2C;
 $border-color: $dark-color;
 $body-font-family: Poppins;
 $border-radius: 8px;
-$link-color: lighten($primary-color,10%);
-$link-color-dark: lighten($primary-color,10%);
-$link-color-light: lighten($primary-color,10%);
+$link-color: $primary-color;
+$link-color-dark: $primary-color;
+$link-color-light: $primary-color;
 
 *::-webkit-scrollbar {
     width: 1em;
@@ -53,6 +53,70 @@ $link-color-light: lighten($primary-color,10%);
 
 button > a:hover {
     text-decoration: none;
+}
+
+footer {
+    border-top: 1px solid $primary-color;
+}
+
+.sc-footer {
+    width: 100%;
+    max-width: 960px; 
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#menu-footer .sub-menu {
+    margin: 0.4rem 0 0.4rem 0.8rem;
+}
+
+#menu-mobile li {
+    list-style-type: none;
+}
+
+#menu-mobile {
+    margin: 0px;
+}
+
+#menu-mobile .sub-menu {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    margin-left: 1.2rem;
+    padding-left: 0.4rem;
+    border-left: 4px solid $primary-color;
+    border-radius: $border-radius;
+}
+
+#menu-mobile li > a {
+    border-radius: $border-radius;
+    background-color: $bg-color;
+    width: 100%;
+    display: block; 
+    padding: 0.4rem;
+    color: white;
+    &:hover,:active {
+        color: white;
+        text-decoration: none;
+        background-color: lighten($bg-color,10%);
+    }
+}
+
+.sc-link {
+    color: lighten($bg-color,20%);
+    font-size: 0.8rem;
+    transition: 0.2s
+}
+.sc-link:hover {
+    color: $primary-color;
+}
+.sc-link:not(.active)::after {
+    content: "";
+}
+.sc-link.active::after {
+    font-family: Poppins;
+    font-size: 0.6rem;
+    color: lighten($bg-color,50%);
+    content: " copied!";
 }
 
 .navbar .form-input {
@@ -71,17 +135,17 @@ button > a:hover {
     flex: 1 0 0 !important;
 }
 
-.sc-menu {
+#menu-sites {
     display: flex;
     position: relative;
     margin: 0px !important;
 }
 
-.sc-menu li:hover .sub-menu, .sub-menu:hover {
+#menu-sites li:hover .sub-menu, #menu-sites .sub-menu:hover {
     display: block;
 }
 
-.sc-menu > li {  
+#menu-sites > li {  
     margin: 0px !important;
     padding: 0.6rem 0.6rem 0.6rem 0.6rem !important;
     border-color: $primary-color;
@@ -106,7 +170,7 @@ button > a:hover {
     }
 }
 
-.sc-menu li .sub-menu {
+#menu-sites li .sub-menu {
     transform: translateX(-0.6rem);
     display: none;
     position: absolute;
@@ -116,7 +180,7 @@ button > a:hover {
     background: $bg-color ;
 }
 
-.sub-menu li {
+#menu-sites .sub-menu li {
     margin: 0px !important;
     padding: 0.4rem 0.6rem 0.4rem 0.6rem;
     &::marker{
@@ -138,6 +202,10 @@ body > .container {
 
 .sc-featured {
     margin-bottom: 0.8rem;
+    margin-top: 0.8rem;
+}
+
+.sc-archive {
     margin-top: 0.8rem;
 }
 
@@ -177,8 +245,14 @@ body > .container {
 }
 
 .sc-post-thumb {
-    max-height: 441;
+    max-height: 380px;
     width: auto;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    @media only screen and (max-width: 840px) {
+        max-height: 200px;
+    }
 }
 
 .sc-article-body {
@@ -373,7 +447,7 @@ a:focus {
 
 h2 > a:link,h3 > a:link,h4 > a:link,h5 > a:link,h6 > a:link { text-decoration: none; }
 h2 > a:visited,h3 > a:visited,h4 > a:visited,h5 > a:visited,h6 > a:visited { text-decoration: none; }
-h2 > a:hover,h3 > a:hover,h4 > a:hover,h5 > a:hover,h6 > a:hover { text-decoration: none; }
+h1 > a:hover, h2 > a:hover,h3 > a:hover,h4 > a:hover,h5 > a:hover,h6 > a:hover { text-decoration: none; }
 h2 > a:active,h3 > a:active,h4 > a:active,h5 > a:active,h6 > a:active { text-decoration: none; }
 a:has(.bg-gray):hover {
     text-decoration: none;
@@ -398,6 +472,9 @@ a:has(.bg-gray):hover {
     max-width: 1280px;
     width: 100%;
     padding: 0rem 0.8rem !important;
+    @media only screen and (max-width: 960px) {
+        padding: 0rem 0.4rem !important;
+    }
 }
 
 .subnav {

@@ -3,9 +3,6 @@ function custom_theme_assets() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
     wp_enqueue_style( 'style-fa', get_template_directory_uri() . '/fontawesome/css/all.css' );
 	wp_enqueue_style( 'style-icons', get_template_directory_uri() . '/spectre/dist/spectre-icons.css' );
-    wp_enqueue_style( 'jqui-style', get_template_directory_uri() . '/js/jquery-ui/jquery-ui.min.css' );
-    wp_enqueue_script( 'jq-script', get_template_directory_uri() . '/js/jquery-ui/external/jquery/jquery.js');
-    wp_enqueue_script( 'jqui-script', get_template_directory_uri() . '/js/jquery-ui/jquery-ui.min.js');
     wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js');
 }
 function wcount(){
@@ -51,7 +48,8 @@ function register_my_menus() {
     register_nav_menus(
         array(
             'sites-menu' => __( 'Sites Menu' ),
-            'footer-menu' => __( 'Footer Menu' )
+            'footer-menu' => __( 'Footer Menu' ),
+            'mobile-menu' => __( 'Mobile Menu' )
         )
     );
 }
@@ -140,7 +138,7 @@ function bootstrap_pagination( \WP_Query $wp_query = null, $echo = true, $params
 
     if ( is_array( $pages ) ) {
         //$current_page = ( get_query_var( 'paged' ) == 0 ) ? 1 : get_query_var( 'paged' );
-        $pagination = '<nav aria-label="Page navigation"><ul class="pagination p-2 bg-gray sc-rounded" style="justify-content: center;">';
+        $pagination = '<nav aria-label="Page navigation"><ul class="pagination p-2 bg-dark sc-rounded" style="justify-content: center;">';
 
         foreach ( $pages as $page ) {
             $pagination .= '<li class="page-item' . (strpos($page, 'current') !== false ? ' active' : '') . '"> ' . str_replace('page-numbers', 'page-link', $page) . '</li>';
@@ -177,57 +175,6 @@ function bootstrap_pagination( \WP_Query $wp_query = null, $echo = true, $params
  * ...
  * 'add_args'     => $args,
  */
-
-
-/**
- * Return the archive title depending on which page is being displayed.
- */
-function get_archive_title() {
-	global $wp_query;
-	$prefix = '';
-	$title = '';
-
-	if ( is_category() ) {
-		$prefix = __( 'Category Archives:' );
-		$title = '<span>' . single_cat_title( '', false ) . '</span>';
-
-	} elseif ( is_tag() ) {
-		$prefix = __( 'Tag Archives:' );
-		$title = '<span>' . single_tag_title( '', false ) . '</span>';
-
-	} elseif ( is_author() ) {
-		the_post();
-		$prefix = __( 'Author Archive:' );
-		$title = '<span><a href="' . esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>';
-		rewind_posts();
-	} elseif ( is_day() ) {
-		$prefix = __( 'Daily Archives:' );
-		$title = '<span>' . get_the_date() . '</span>';
-
-	} elseif ( is_month() ) {
-		$prefix = __( 'Monthly Archives:' );
-		$title = '<span>' . get_the_date( 'F Y' ) . '</span>';
-
-	} elseif ( is_year() ) {
-		$prefix = __( 'Yearly Archives:' );
-		$title = '<span>' . get_the_date( 'Y' ) . '</span>';
-
-	} elseif ( ! empty( $wp_query->query_vars['taxonomy'] ) ) {
-		$value = get_query_var( $wp_query->query_vars['taxonomy'] );
-		$term = get_term_by( 'slug',$value,$wp_query->query_vars['taxonomy'] );
-		$tax = get_taxonomy( $wp_query->query_vars['taxonomy'] );
-		$prefix = $tax->label . ':';
-		$title = $term->name;
-	}
-
-	if ( empty( $title ) ) {
-        $title = __( 'Archives' );
-	} else {
-        $title = $prefix . " " . $title;
-    }
-
-	return $title;
-}
 
 function get_most_viewed_posts() {
 	global $wpdb;

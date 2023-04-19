@@ -4,7 +4,9 @@
     <div class="columns">
         <div class="column col-lg-10 col-md-12 p-centered">
             <div class="text-light" style="margin-bottom: 0.7rem;">
+            <div class="divider"></div>
             <h2 class="pt-2 text-center text-bold">Search: <?php echo get_search_query(); ?></h2> 
+            <div class="divider pb-2"></div>
             <?php echo bootstrap_pagination(); ?>
             </div>
             <?php get_template_part( 'front-boxes' ); ?>

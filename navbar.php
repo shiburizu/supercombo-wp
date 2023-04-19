@@ -18,7 +18,8 @@
                 <a href="https://youtube.com/@supercombogg"><span class="hide-lg mx-2 text-light fab fa-youtube"></span></a>
                 <button class="hide-lg mx-2 btn btn-sm btn-primary"><a class="text-light text-bold" href="https://supercombo.gg/patreon">Become a Patron</a></button>
                 <div class="hide-lg"><?php get_search_form(); ?></div>
-                <a href="#" class="show-lg text-light mx-2">Menu</a>
+                <button class="show-lg btn btn-primary" onclick="openMenu()"><i class="px-1 fas fa-bars"></i></button> 
             </section>
     </header>
 </div>
+<?php get_template_part( 'mobile-menu' ); ?>
