@@ -51,7 +51,7 @@
                     </div>
                 <?php endif; ?>
             </div>
-            <div class="card-body <?php if (!has_post_thumbnail()) : echo "sc-rounded"; endif;?>">
+            <div class="card-body <?php if (!has_post_thumbnail()) : echo "sc-rounded"; else: echo "px-0"; endif;?>">
                 <?php the_content() ?>
                     <?php if ( !has_post_thumbnail() ): ?>
                         <div class="divider"></div>
