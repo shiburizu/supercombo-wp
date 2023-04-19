@@ -19,7 +19,7 @@
                         </figure>
                         <p class="text-gray d-inline"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>" class="text-bold">By <?php the_author() ?></a> | <?php echo esc_html( human_time_diff( get_the_time('U'), current_time('timestamp') ) ) . ' ago'; ?></p>
                     </span>
-                    <div class="column col-md-12 text-right" style="display: flex; flex-direction: column; justify-content: center;">
+                    <div class="column col-md-12 text-right text-gray" style="display: flex; flex-direction: column; justify-content: center;">
                         <div><?php category_labels(); ?></div>
                         <div><?php tag_labels(); ?></div>
                     </div>
