@@ -10,7 +10,7 @@ foreach($json as $key => $value): ?>
 <div class="stream-box columns col-gapless">
     <div class="column col-6 col-xl-12 pb-2">
         <a target="__blank" href="https://twitch.tv/<?php echo $key ?>">
-        <img src="<?php echo $value->thumb ?>" class="sc-rounded img-fit-contain img-responsive">
+        <img loading="lazy" src="<?php echo $value->thumb ?>" class="sc-rounded img-fit-contain img-responsive">
         </a>
     </div>
     <div class="column col-6 col-xl-12 px-2 pb-2">
