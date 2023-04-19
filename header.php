@@ -22,7 +22,7 @@
             <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/sc_ogp.png" />
         <?php endif; ?>
     <?php elseif (is_archive()) : ?>
-        <meta name="description" content="<?php echo wp_strip_all_tags(the_archive_description()) ?>">
+        <meta name="description" content='<?php echo wp_strip_all_tags(the_archive_description()) ?>'>
         <meta property="og:type" content="website" />
         <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/sc_ogp.png" />
     <?php else: ?>
