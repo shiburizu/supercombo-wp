@@ -172,10 +172,15 @@ footer {
 
 #menu-navbar .sub-menu li {
   margin: 0px !important;
-  padding: 0.4rem 0.6rem 0.4rem 0.6rem;
+  padding: 0px !important;
 }
 #menu-navbar .sub-menu li::marker {
   content: "";
+}
+#menu-navbar .sub-menu li a {
+  display: block;
+  width: 100%;
+  padding: 0.4rem 0.6rem 0.4rem 0.6rem;
 }
 
 body > .container {
