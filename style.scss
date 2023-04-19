@@ -7,24 +7,24 @@ Version: 1.0
 
 @font-face {
     font-family: poppins;
-    src: url('font/poppins/Poppins-Regular.ttf') format('truetype');
+    src: url('scfont/poppins/Poppins-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: poppins;
-    src: url("font/poppins/Poppins-Bold.ttf");
+    src: url("scfont/poppins/Poppins-Bold.ttf");
     font-weight: bold;
 }
 
 @font-face {
     font-family: poppins;
-    src: url("font/poppins/Poppins-Italic.ttf");
+    src: url("scfont/poppins/Poppins-Italic.ttf");
     font-style: italic;
 }
 
 @font-face {
     font-family: poppins;
-    src: url("font/poppins/Poppins-BoldItalic.ttf");
+    src: url("scfont/poppins/Poppins-BoldItalic.ttf");
     font-weight: bold;
     font-style: italic;
 }
