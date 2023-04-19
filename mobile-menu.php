@@ -2,7 +2,7 @@
   <a href="#close" class="modal-overlay bg-dark" aria-label="Close"></a>
   <div class="modal-container bg-dark">
     <div class="modal-header bg-dark">
-        <img class="img-responsive p-2 mb-2 p-centered" style="max-width: 300px; width 100%;" src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'custom_logo' ) ) ); ?>">
+        <img class="hide-md img-responsive p-2 mb-2 p-centered" style="max-width: 300px; width 100%;" src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'custom_logo' ) ) ); ?>">
         <div class="columns">
             <form role="search" class="pr-2" style="flex: 1;" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <div class="input-group">
