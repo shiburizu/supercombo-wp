@@ -11,7 +11,9 @@ $post_age = date('U') - get_post_time('U');
                 <div class="col-12 p-2 mx-2">
                     <div class="sc-article-box-title">
                     <h2 class="mt-2 mb-1"><a class="text-light text-bold" href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
+                    <?php if ( has_excerpt() ) : ?>
                     <a class="text-light" href="<?php the_permalink() ?>"><?php echo get_the_excerpt() ?></a>
+                    <?php endif; ?>
                     <span class="mt-2">
                         <figure class="avatar avatar-sm mr-1" data-initial="SC" style="background-color: black;">
                             <img src="<?php echo get_avatar_url( get_the_author_meta( 'ID' ) ); ?>" alt="...">
