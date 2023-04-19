@@ -535,6 +535,10 @@ p:has(iframe), .wp-block-embed-youtube > .wp-block-embed__wrapper {
     @extend .video-responsive;
 }
 
+iframe {
+    @extend .p-centered;
+}
+
 blockquote {
     border-color: lighten($bg-color,20%);
 }

@@ -3596,7 +3596,7 @@ a.text-error:visited {
   position: sticky !important;
 }
 
-.p-centered, .aligncenter, .twitter-tweet {
+.p-centered, iframe, .aligncenter, .twitter-tweet {
   display: block;
   float: none;
   margin-left: auto;
