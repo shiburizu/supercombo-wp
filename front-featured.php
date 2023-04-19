@@ -19,9 +19,9 @@ $post_age = date('U') - get_post_time('U');
                             <img src="<?php echo get_avatar_url( get_the_author_meta( 'ID' ) ); ?>" alt="...">
                         </figure>
                         <?php if ($post_age < $timelimit) : ?>
-                            <p class="text-small text-gray d-inline mb-1"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>" class="text-bold"><?php the_author() ?></a> | <?php echo esc_html( human_time_diff( get_the_time('U'), current_time('timestamp') ) ) . ' ago'; ?></p>
+                            <p class="text-tiny text-gray d-inline mb-1"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>" class="text-bold"><?php the_author() ?></a> | <?php echo esc_html( human_time_diff( get_the_time('U'), current_time('timestamp') ) ) . ' ago'; ?></p>
                         <?php else: ?>
-                            <p class="text-small text-gray d-inline mb-1"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>" class="text-bold"><?php the_author() ?></a> | <?php echo get_the_date() ?></p>
+                            <p class="text-tiny text-gray d-inline mb-1"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>" class="text-bold"><?php the_author() ?></a> | <?php echo get_the_date() ?></p>
                         <?php endif; ?>
                     </span>
                     </div>
@@ -41,9 +41,9 @@ $post_age = date('U') - get_post_time('U');
                     <h5 class="text-bold mb-0"><a class="text-light" href="<?php the_permalink($featured[$i]) ?>"><?php echo $featured[$i]->post_title; ?></a></h5>
                     <span class="mt-1">
                         <?php if ($post_age < $timelimit) : ?>
-                            <p class="text-small text-gray d-inline mb-1"><a href="<?php echo get_author_posts_url( $featured[$i]->post_author ) ?>" class="text-bold"><?php echo the_author_meta( 'display_name' , $featured[$i]->post_author ); ?></a> | <?php echo esc_html( human_time_diff( get_the_time('U', $featured[$i]), current_time('timestamp') ) ) . ' ago'; ?></p>
+                            <p class="text-tiny text-gray d-inline mb-1"><a href="<?php echo get_author_posts_url( $featured[$i]->post_author ) ?>" class="text-bold"><?php echo the_author_meta( 'display_name' , $featured[$i]->post_author ); ?></a> | <?php echo esc_html( human_time_diff( get_the_time('U', $featured[$i]), current_time('timestamp') ) ) . ' ago'; ?></p>
                         <?php else: ?>
-                            <p class="text-small text-gray d-inline mb-1"><a href="<?php echo get_author_posts_url( $featured[$i]->post_author ) ?>" class="text-bold"><?php echo the_author_meta( 'display_name' , $featured[$i]->post_author ); ?></a> | <?php echo get_the_date('',$featured[$i]) ?></p>
+                            <p class="text-tiny text-gray d-inline mb-1"><a href="<?php echo get_author_posts_url( $featured[$i]->post_author ) ?>" class="text-bold"><?php echo the_author_meta( 'display_name' , $featured[$i]->post_author ); ?></a> | <?php echo get_the_date('',$featured[$i]) ?></p>
                         <?php endif; ?>
                     </span>
                 </div>
