@@ -7,7 +7,6 @@
     </div>
     <?php if (is_home()) : ?>
     <h2 class="text-bold text-light mb-0">Latest Stories</h2>
-    <p class="text-primary">Last updated <?php echo esc_html( human_time_diff( strtotime(get_lastpostdate()), current_time('timestamp') ) ) . ' ago'; ?></p>
     <?php endif; ?>
     <div class="columns bg-dark sc-front-columns">
         <div class="column col-8 col-md-12 sc-posts mb-2 pb-2" id="sc-posts">
