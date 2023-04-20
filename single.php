@@ -7,7 +7,7 @@
         <div class="card bg-dark sc-article-body p-centered">
             <div class="card-header px-0 mb-2">
                 <h1 class="h2 mb-2 pb-2 text-center"><a class="text-light text-bold" href="<?php the_permalink() ?>"><?php the_title() ?></a></h1>
-                <?php if ( wcount() >= 300 ) : ?>
+                <?php if ( wcount() > 300 ) : ?>
                     <?php if ( has_post_thumbnail() ) : ?>
                     <div class="sc-post-thumb sc-rounded" style="background-image: url('<?php echo get_the_post_thumbnail_url(get_the_ID(),'post-thumb') ?>')"></div>
                     <?php endif; ?>
@@ -53,9 +53,9 @@
                     </div>
                 <?php endif; ?>
             </div>
-            <div class="card-body <?php if (wcount() < 300) : echo "sc-rounded pb-2"; else: echo "px-0"; endif;?>">
+            <div class="card-body <?php if ( wcount() =< 300 ) : echo "sc-rounded pb-2"; else: echo "px-0"; endif;?>">
                 <?php the_content() ?>
-                    <?php if ( !has_post_thumbnail() ): ?>
+                    <?php if ( wcount() =< 300 ): ?>
                         <div class="divider"></div>
                         <div class="columns pb-2">
                         <span class="column col-md-12">
