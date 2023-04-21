@@ -7,7 +7,7 @@
             <div class="text-light">
             <div class="divider pb-2"></div>
             <?php if ( !is_front_page() ) : ?>
-            <h1 class="h2 pt-2 text-bold"><?php echo get_the_archive_title() ?></h1>
+            <h1 class="h2 text-bold"><?php echo get_the_archive_title() ?></h1>
             <p><?php the_archive_description() ?></p>
             <?php else: ?>
             <h1 class="h2 pt-2 text-bold">All Posts</h2>
