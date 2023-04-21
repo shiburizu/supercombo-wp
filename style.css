@@ -3306,14 +3306,14 @@ a.text-secondary:visited {
   color: #b3e6fe;
 }
 
-.text-gray {
+.text-gray, .wp-element-caption {
   color: #9e9e9e !important;
 }
 
-a.text-gray:focus, a.text-gray:hover {
+a.text-gray:focus, a.wp-element-caption:focus, a.text-gray:hover, a.wp-element-caption:hover {
   color: #929292;
 }
-a.text-gray:visited {
+a.text-gray:visited, a.wp-element-caption:visited {
   color: #ababab;
 }
 
@@ -3805,7 +3805,7 @@ a.text-error:visited {
   text-align: right;
 }
 
-.text-center, .wp-caption-text {
+.text-center, .wp-element-caption, .wp-caption-text {
   text-align: center;
 }
 
