@@ -7,7 +7,7 @@
         <div class="card bg-dark sc-article-body p-centered">
             <div class="card-header px-0 mb-2">
                 <h1 class="h2 mb-2 pb-2 text-center"><a class="text-light text-bold" href="<?php the_permalink() ?>"><?php the_title() ?></a></h1>
-                <?php if ( wcount() > 300 ) : ?>
+                <?php if ( wcount() > 250 ) : ?>
                     <?php if ( has_post_thumbnail() ) : ?>
                     <div class="sc-post-thumb sc-rounded" style="background-image: url('<?php echo get_the_post_thumbnail_url(get_the_ID(),'post-thumb') ?>')"></div>
                     <?php endif; ?>
@@ -19,7 +19,7 @@
                         <figure class="avatar avatar-lg mr-1" data-initial="SC" style="background-color: black;">
                             <img src="<?php echo get_avatar_url( get_the_author_meta( 'ID' ) ); ?>" alt="...">
                         </figure>
-                        <p class="text-gray d-inline"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>" class="text-bold">By <?php the_author() ?></a> | <?php echo esc_html( human_time_diff( get_the_time('U'), current_time('timestamp') ) ) . ' ago'; ?></p>
+                        <p class="text-gray d-inline"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>" class="text-bold">By <?php the_author() ?></a> | <?php echo get_the_date() ?></p>
                     </span>
                     <div class="column col-md-12 text-right text-gray" style="display: flex; flex-direction: column; justify-content: center;">
                         <div><?php category_labels(); ?></div>
@@ -53,16 +53,16 @@
                     </div>
                 <?php endif; ?>
             </div>
-            <div class="card-body <?php if ( wcount() <= 300 ) : echo "sc-rounded pb-2"; else: echo "px-0"; endif;?>">
+            <div class="card-body <?php if ( wcount() <= 250 ) : echo "sc-rounded pb-2"; else: echo "px-0"; endif;?>">
                 <?php the_content() ?>
-                    <?php if ( wcount() <= 300 ): ?>
+                    <?php if ( wcount() <= 250 ): ?>
                         <div class="divider"></div>
-                        <div class="columns pb-2">
+                        <div class="columns">
                         <span class="column col-md-12">
                             <figure class="avatar avatar-lg mr-1" data-initial="SC" style="background-color: black;">
                                 <img src="<?php echo get_avatar_url( get_the_author_meta( 'ID' ) ); ?>" alt="...">
                             </figure>
-                            <p class="text-gray d-inline"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>" class="text-bold">By <?php the_author() ?></a> | <?php echo esc_html( human_time_diff( get_the_time('U'), current_time('timestamp') ) ) . ' ago'; ?></p>
+                            <p class="text-gray d-inline"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>" class="text-bold">By <?php the_author() ?></a> | <?php echo get_the_date() ?></p>
                         </span>
                         <div class="column col-md-12 text-right" style="display: flex; flex-direction: column; justify-content: center;">
                             <div><?php category_labels(); ?></div>
