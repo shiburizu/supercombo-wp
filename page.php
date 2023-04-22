@@ -72,9 +72,6 @@
                     <?php endif; ?>
             </div>
             <div class="card-footer px-0">
-            <?php if ( has_post_thumbnail() ): ?>
-            <div class="divider pb-2"></div>
-            <?php endif; ?>
             </div>
         </div>
     </article>
