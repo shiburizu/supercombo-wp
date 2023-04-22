@@ -78,8 +78,8 @@
             <div class="mb-2 pb-2">
                 <span class="text-light text-bold h4">Discuss with our community</span>
             </div>
-            <?php comments_template();?> 
-            <div class="pb-2"><?php get_template_part( 'related_posts' ); ?></div>
+            <div class="pb-2"><?php comments_template();?></div>
+            <?php get_template_part( 'related_posts' ); ?>
             </div>
         </div>
     </article>
