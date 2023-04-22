@@ -75,7 +75,6 @@
             <?php if ( has_post_thumbnail() ): ?>
             <div class="divider pb-2"></div>
             <?php endif; ?>
-            <?php get_template_part( 'related_posts' ); ?>
             </div>
         </div>
     </article>
