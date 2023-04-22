@@ -58,7 +58,7 @@
                     <?php if ( wcount() <= 250 ): ?>
                         <div class="divider"></div>
                         <div class="columns">
-                        <span class="column col-md-12">
+                        <span class="column col-md-12 py-2">
                             <figure class="avatar avatar-lg mr-1" data-initial="SC" style="background-color: black;">
                                 <img src="<?php echo get_avatar_url( get_the_author_meta( 'ID' ) ); ?>" alt="...">
                             </figure>
