@@ -78,7 +78,9 @@
             <div class="mb-2 pb-2">
                 <span class="text-light text-bold h4">Discuss with our community</span>
             </div>
+            <?php if ( comments_open() ) : ?>
             <div class="mb-2 pb-2"><?php comments_template();?></div>
+            <?php endif;?>
             <?php get_template_part( 'related_posts' ); ?>
             </div>
         </div>
