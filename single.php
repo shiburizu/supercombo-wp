@@ -75,9 +75,12 @@
             <?php if ( has_post_thumbnail() ): ?>
             <div class="divider pb-2"></div>
             <?php endif; ?>
+            <div>
+                <span class="text-light text-bold h4">Comments</span>
+                <?php comments_template();?>
+            </div>
             <?php get_template_part( 'related_posts' ); ?>
             </div>
-            <div><?php comments_template();?></div>
         </div>
     </article>
     <?php endwhile; ?>

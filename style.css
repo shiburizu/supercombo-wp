@@ -433,7 +433,7 @@ body > .container {
   justify-content: center;
 }
 
-.sc-rounded, .sc-panel {
+.sc-rounded, #flarum-iframe, .sc-panel {
   outline: 1px solid #2C2C2C;
   border-radius: 8px;
   transition: 0.2s;
