@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+    <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/scfont/poppins/Poppins-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <?php if (is_page() or is_single()) : ?>
         <meta name="description" content="<?php wp_strip_all_tags(get_the_excerpt()) ?>">
