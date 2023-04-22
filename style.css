@@ -3939,8 +3939,8 @@ p {
 
 #flarum-iframe {
   border: none !important;
-  max-height: 70vh !important;
-  min-height: 70vh !important;
+  max-height: 75vh !important;
+  min-height: 75vh !important;
 }
 
 /*# sourceMappingURL=style.css.map */
