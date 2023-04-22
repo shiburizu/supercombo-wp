@@ -42,11 +42,7 @@
                 <div class="p-2 col-12 d-flex" style="flex-direction: column; justify-content: center;"> 
                     <h5 class="text-bold mb-0"><a class="text-light" href="<?php the_permalink($featured[$i]) ?>"><?php echo $featured[$i]->post_title; ?></a></h5>
                     <span class="mt-1">
-                        <?php if ($post_age < $timelimit) : ?>
-                            <p class="text-gray d-inline mb-1"><a class="text-bold text-tiny" href="<?php echo get_author_posts_url( $featured[$i]->post_author ) ?>"><?php echo the_author_meta( 'display_name' , $featured[$i]->post_author ); ?></a><span class="text-tiny"> | <?php echo esc_html( human_time_diff( get_the_time('U', $featured[$i]), current_time('timestamp') ) ) . ' ago'; ?></span></p>
-                        <?php else: ?>
-                            <p class="text-gray d-inline mb-1"><a class="text-bold text-tiny" href="<?php echo get_author_posts_url( $featured[$i]->post_author ) ?>"><?php echo the_author_meta( 'display_name' , $featured[$i]->post_author ); ?></a><span class="text-tiny"> | <?php echo get_the_date('',$featured[$i]) ?></span></p>
-                        <?php endif; ?>
+                        <p class="text-gray d-inline mb-1"><a class="text-bold text-tiny" href="<?php echo get_author_posts_url( $featured[$i]->post_author ) ?>"><?php echo the_author_meta( 'display_name' , $featured[$i]->post_author ); ?></a><span class="text-tiny"> | <?php echo get_the_date('',$featured[$i]) ?></span></p>
                     </span>
                 </div>
                 </div>
