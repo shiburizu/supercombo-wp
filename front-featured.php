@@ -1,10 +1,6 @@
 <?php $first = False; ?>
 <?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<?php
-$timelimit=1 * 86400; //days * seconds per day
-$post_age = date('U') - get_post_time('U');
-?>
-<?php if ( has_post_thumbnail() and wcount() > 250 and is_front_page() and $first == False and !is_paged() ) : ?>
+<?php if ( has_post_thumbnail() and wcount() > 150 and is_front_page() and $first == False and !is_paged() ) : ?>
     <div class="columns bg-dark" style="align-items: center;">
         <div class="column col-7 col-lg-12">
             <article class="sc-article-box columns col-gapless">
@@ -18,11 +14,7 @@ $post_age = date('U') - get_post_time('U');
                         <figure class="avatar avatar-sm mr-1" data-initial="SC" style="background-color: black;">
                             <img src="<?php echo get_avatar_url( get_the_author_meta( 'ID' ) ); ?>" alt="...">
                         </figure>
-                        <?php if ($post_age < $timelimit) : ?>
-                            <p class="text-small text-gray d-inline mb-1"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>" class="text-bold"><?php the_author() ?></a> | <?php echo esc_html( human_time_diff( get_the_time('U'), current_time('timestamp') ) ) . ' ago'; ?></p>
-                        <?php else: ?>
-                            <p class="text-small text-gray d-inline mb-1"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>" class="text-bold"><?php the_author() ?></a> | <?php echo get_the_date() ?></p>
-                        <?php endif; ?>
+                        <p class="text-small text-gray d-inline mb-1"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>" class="text-bold"><?php the_author() ?></a> | <?php echo get_the_date() ?></p>
                     </span>
                     </div>
                 </div>
@@ -40,11 +32,7 @@ $post_age = date('U') - get_post_time('U');
                 <div class="p-2 col-9 d-flex" style="flex-direction: column; justify-content: center;"> 
                     <h5 class="text-bold mb-0"><a class="text-light" href="<?php the_permalink($featured[$i]) ?>"><?php echo $featured[$i]->post_title; ?></a></h5>
                     <span class="mt-1">
-                        <?php if ($post_age < $timelimit) : ?>
-                            <p class="text-tiny text-gray d-inline mb-1"><a href="<?php echo get_author_posts_url( $featured[$i]->post_author ) ?>" class="text-bold"><?php echo the_author_meta( 'display_name' , $featured[$i]->post_author ); ?></a> | <?php echo esc_html( human_time_diff( get_the_time('U', $featured[$i]), current_time('timestamp') ) ) . ' ago'; ?></p>
-                        <?php else: ?>
                             <p class="text-tiny text-gray d-inline mb-1"><a href="<?php echo get_author_posts_url( $featured[$i]->post_author ) ?>" class="text-bold"><?php echo the_author_meta( 'display_name' , $featured[$i]->post_author ); ?></a> | <?php echo get_the_date('',$featured[$i]) ?></p>
-                        <?php endif; ?>
                     </span>
                 </div>
                 <a href="<?php the_permalink($featured[$i]) ?>" class="column col-3 sc-thumb-top" style="background: url('<?php echo get_the_post_thumbnail_url($featured[$i]->ID,'medium') ?>')">   

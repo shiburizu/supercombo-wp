@@ -307,6 +307,7 @@ body > .container {
 }
 
 .sc-thumb-bg-big {
+    @extend .sc-rounded;
     background-position: center !important;
     background-size: cover !important;
     border-radius: $border-radius !important;
