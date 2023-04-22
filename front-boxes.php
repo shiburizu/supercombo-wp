@@ -59,7 +59,7 @@ $post_age = date('U') - get_post_time('U');
             <h2 class="h4 my-2"><a class="text-light text-bold" href="<?php the_permalink() ?>"><?php the_title() ?></a> <i class="sc-link fas fa-link" onclick="copyLink(event,'<?php the_permalink() ?>')"></i></h2>
         <?php endif; ?>
         <div class="pt-1 text-light">
-            <?php if ( wcount() > 250 and has_excerpt() ) : ?>
+            <?php if ( wcount() > 250 ) : ?>
             <a class="text-light" href="<?php the_permalink() ?>"><?php echo get_the_excerpt() ?></a>
             <?php else : ?>
             <?php the_content() ?>
