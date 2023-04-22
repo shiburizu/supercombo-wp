@@ -79,7 +79,7 @@
                 <span class="text-light text-bold h4">Discuss with our community</span>
             </div>
             <?php comments_template();?> 
-            <?php get_template_part( 'related_posts' ); ?>
+            <div class="pb-2"><?php get_template_part( 'related_posts' ); ?></div>
             </div>
         </div>
     </article>
