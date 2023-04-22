@@ -77,8 +77,8 @@
             <?php endif; ?>
             <div class="mb-2 pb-2">
                 <span class="text-light text-bold h4">Discuss with our community</span>
-                <?php comments_template();?>
             </div>
+            <?php comments_template();?> 
             <?php get_template_part( 'related_posts' ); ?>
             </div>
         </div>
