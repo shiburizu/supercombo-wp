@@ -53,7 +53,7 @@ $post_age = date('U') - get_post_time('U');
                 <p class="text-small text-gray d-inline mb-1"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>" class="text-bold"><?php the_author() ?></a> | <?php echo get_the_date() ?></p>
             <?php endif; ?>
         </span>
-        <?php if ( wcount() > 250 and has_excerpt() ) : ?>
+        <?php if ( wcount() > 250 ) : ?>
             <h2 class="h4 my-2"><a class="text-light text-bold" href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
         <?php else : ?>
             <h2 class="h4 my-2"><a class="text-light text-bold" href="<?php the_permalink() ?>"><?php the_title() ?></a> <i class="sc-link fas fa-link" onclick="copyLink(event,'<?php the_permalink() ?>')"></i></h2>
