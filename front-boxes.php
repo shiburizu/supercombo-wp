@@ -6,7 +6,7 @@ $post_age = date('U') - get_post_time('U');
 $comments = null;
 $json = file_get_contents( 'https://forums.supercombo.gg/api/discussions?filter%5Bq%5D=wordpressid:' . strval(get_the_ID()) );
 $obj = json_decode($json);
-if ($obj->data != []) {
+if (count($obj->data) != 0) {
     $comments = $obj->data[0]->attributes->commentCount;
 }
 ?>
