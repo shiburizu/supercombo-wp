@@ -77,6 +77,7 @@
             <?php endif; ?>
             <?php get_template_part( 'related_posts' ); ?>
             </div>
+            <div><?php comments_template();?></div>
         </div>
     </article>
     <?php endwhile; ?>
