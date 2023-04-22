@@ -12,7 +12,7 @@ if ( comments_open() ) {
     }
 }
 ?>
-<div class="d-none"><?php echo get_the_id() ?></div>
+<div class="d-none"><?php echo var_dump($obj) ?></div>
 <?php if ( wcount() > 150 and has_post_thumbnail() ) : ?>
     <?php if ( is_front_page() and $first == False and !is_paged() ) :?>
         <?php $first = True; ?>
