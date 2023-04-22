@@ -564,4 +564,6 @@ p {
 #flarum-iframe {
     @extend .sc-rounded;
     border: none !important;
+    max-height: 70vh !important;
+    min-height: 70vh !important;
 }
