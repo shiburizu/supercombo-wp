@@ -5,7 +5,7 @@ $timelimit=1 * 86400; //days * seconds per day
 $post_age = date('U') - get_post_time('U');
 $comments = null;
 if ( comments_open() ) {
-    $json = file_get_contents( 'https://forums.supercombo.gg/api/discussions?filter%5Bq%5D=wordpressid:' . strva(get_the_ID()) );
+    $json = file_get_contents( 'https://forums.supercombo.gg/api/discussions?filter%5Bq%5D=wordpressid:' . strval(get_the_ID()) );
     $obj = json_decode($json);
     if ($obj->data != []) {
         $comments = $obj->data[0]->attributes->commentCount;
