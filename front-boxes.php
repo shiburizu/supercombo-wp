@@ -4,6 +4,7 @@
 $timelimit=1 * 86400; //days * seconds per day
 $post_age = date('U') - get_post_time('U');
 ?>
+<div class="d-none"><?php echo wcount() ?></div>
 <?php if ( wcount() > 150 and has_post_thumbnail() ) : ?>
     <?php if ( is_front_page() and $first == False and !is_paged() ) :?>
         <?php $first = True; ?>
