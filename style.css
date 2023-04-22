@@ -318,6 +318,9 @@ body > .container {
     min-height: 340px;
   }
 }
+.sc-thumb-bg-big:hover {
+  outline-width: 1px !important;
+}
 
 .sc-featured-border {
   border-left: 4px solid #039BE5;
