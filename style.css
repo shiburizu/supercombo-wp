@@ -3937,4 +3937,8 @@ p {
   margin: 0 0 0.8rem;
 }
 
+#flarum-iframe {
+  border: none;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -76,7 +76,6 @@
             <div class="divider pb-2"></div>
             <?php endif; ?>
             <div>
-                <span class="text-light text-bold h4">Comments</span>
                 <?php comments_template();?>
             </div>
             <?php get_template_part( 'related_posts' ); ?>
