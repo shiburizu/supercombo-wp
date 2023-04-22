@@ -6,10 +6,9 @@ function custom_theme_assets() {
     wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js');
 }
 function wcount(){
-    ob_start();
-    the_content();
-    $content = ob_get_clean();
-    return sizeof(explode(" ", $content));
+    $text = trim( strip_tags( get_the_content() ) );
+    $word_number = substr_count( "$text ", ' ' );
+    return $word_number;
 }
 function category_labels() {
     $categories = get_the_category();
