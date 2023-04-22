@@ -563,5 +563,5 @@ p {
 
 #flarum-iframe {
     @extend .sc-rounded;
-    border: none;
+    border: none !important;
 }

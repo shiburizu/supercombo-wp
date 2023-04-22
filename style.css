@@ -3938,7 +3938,7 @@ p {
 }
 
 #flarum-iframe {
-  border: none;
+  border: none !important;
 }
 
 /*# sourceMappingURL=style.css.map */
