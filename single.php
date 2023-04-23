@@ -24,7 +24,7 @@
                     <div class="column col-md-12 text-right text-gray" style="display: flex; flex-direction: column; justify-content: center;">
                         <div><?php category_labels(); ?></div>
                         <div><?php tag_labels(); ?></div>
-                        <div><?php if (intval(get_comments_number()) > 0) : echo "<a href='#comments'>" . get_comments_number() . " comment</a>"; else if intval(get_comments_number() > 1): echo "<a href='#comments'>" . get_comments_number() . " comments</a>"; else: echo "<a href='#comments'>Discuss</a>"; endif; ?></div>
+                        <div><?php if (intval(get_comments_number()) > 0) : echo "<a href='#comments'>" . get_comments_number() . " comment</a>"; elseif (intval(get_comments_number()) > 1): echo "<a href='#comments'>" . get_comments_number() . " comments</a>"; else: echo "<a href='#comments'>Discuss</a>"; endif; ?></div>
                     </div>
                     </div>
                     <div class="divider"></div>
@@ -73,7 +73,7 @@
                         <div class="column col-md-12 text-right" style="display: flex; flex-direction: column; justify-content: center;">
                             <div><?php category_labels(); ?></div>
                             <div><?php tag_labels(); ?></div>
-                            <div><?php if (intval(get_comments_number()) > 0) : echo "<a href='#comments'>" . get_comments_number() . " comment</a>"; else if intval(get_comments_number() > 1): echo "<a href='#comments'>" . get_comments_number() . " comments</a>"; else: echo "<a href='#comments'>Discuss</a>"; endif; ?></div>
+                            <div><?php if (intval(get_comments_number()) > 0) : echo "<a href='#comments'>" . get_comments_number() . " comment</a>"; elseif (intval(get_comments_number()) > 1): echo "<a href='#comments'>" . get_comments_number() . " comments</a>"; else: echo "<a href='#comments'>Discuss</a>"; endif; ?></div>
                         </div>
                         </div>
                     <?php endif; ?>
