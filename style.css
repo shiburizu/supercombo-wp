@@ -436,7 +436,7 @@ body > .container {
   justify-content: center;
 }
 
-.sc-rounded, #flarum-iframe, .sc-panel, .sc-thumb-bg-big {
+.sc-rounded, #sc-comments-modal #flarum-iframe, #flarum-iframe, .sc-panel, .sc-thumb-bg-big {
   outline: 1px solid #2C2C2C;
   border-radius: 8px;
   transition: 0.2s;
@@ -3944,6 +3944,15 @@ p {
   border: none !important;
   max-height: 75vh !important;
   min-height: 75vh !important;
+}
+
+#sc-comments-modal #flarum-iframe {
+  border: none !important;
+  height: 100%;
+}
+
+#sc-comments-modal #comments {
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

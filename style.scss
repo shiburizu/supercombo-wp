@@ -572,6 +572,16 @@ p {
     min-height: 75vh !important;
 }
 
+#sc-comments-modal #flarum-iframe {
+    @extend .sc-rounded;
+    border: none !important;
+    height: 100%;
+}
+
+#sc-comments-modal #comments {
+    height: 100%;
+}
+
 .gallery img {
     @extend .img-responsive;
 }
