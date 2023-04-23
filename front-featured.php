@@ -3,14 +3,9 @@
 <?php if ( has_post_thumbnail() and wcount() > 150 and is_front_page() and $first == False and !is_paged() ) : ?>
     <?php 
         if (get_comments_number() > 0) {
-            $comments = get_comments_number();
-            if ( $comments > 0 ) {
-                $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'"><i class="fas fa-comment-alt"></i> ' . $comments . '</a>';
-            } else {
-                $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'">Discuss</a>';
-            }
+            $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'"><i class="fas fa-comment-alt"></i> ' . $comments . '</a>';
         } else {
-            $comment_link = '';
+            $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'">Discuss</a>';
         }
     ?>
     <div class="columns bg-dark" style="align-items: center;">
