@@ -11,17 +11,17 @@
                     <?php if ( has_post_thumbnail() ) : ?>
                     <div class="sc-post-thumb sc-rounded" style="background-image: url('<?php echo get_the_post_thumbnail_url(get_the_ID(),'post-thumb') ?>')"></div>
                     <?php endif; ?>
-                    <?php if ( has_excerpt() ) : ?>
-                    <p class="p-2 mt-2 mb-0 sc-featured-border text-light text-bold"><?php echo get_the_excerpt() ?></p>
-                    <?php endif; ?>
                     <div class="columns pt-2">
-                    <span class="column col-md-12 py-2">
+                    <div class="column col-8 col-md-12 py-2">
+                        <?php if ( has_excerpt() ) : ?>
+                            <p class="p-2 sc-featured-border text-light text-bold"><?php echo get_the_excerpt() ?></p>
+                        <?php endif; ?>
                         <figure class="avatar avatar-lg mr-1" data-initial="SC" style="background-color: black;">
                             <img src="<?php echo get_avatar_url( get_the_author_meta( 'ID' ) ); ?>" alt="...">
                         </figure>
                         <p class="text-gray d-inline"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>" class="text-bold">By <?php the_author() ?></a> | <?php echo get_the_date() ?></p>
-                    </span>
-                    <div class="column col-md-12 text-right text-gray" style="display: flex; flex-direction: column; justify-content: center;">
+                    </div>
+                    <div class="column col-4 col-md-12 text-right text-gray" style="display: flex; flex-direction: column; justify-content: center;">
                         <div><?php category_labels(); ?></div>
                         <div><?php tag_labels(); ?></div>
                         <div><?php if (intval(get_comments_number()) > 0) : echo "<a href='#sc-comments'>" . get_comments_number() . " comment</a>"; elseif (intval(get_comments_number()) > 1): echo "<a href='#sc-comments'>" . get_comments_number() . " comments</a>"; else: echo "<a href='#sc-comments'>Discuss</a>"; endif; ?></div>
