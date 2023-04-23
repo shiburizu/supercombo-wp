@@ -2,12 +2,12 @@
 <?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php if ( has_post_thumbnail() and wcount() > 150 and is_front_page() and $first == False and !is_paged() ) : ?>
     <?php 
-        $json = file_get_contents( 'https://forums.supercombo.gg/api/discussions?filter%5Bq%5D=wordpressid:' . strval(get_the_ID()) );
-        $obj = json_decode($json);
-        if (count($obj->data) > 0) {
-            $comments = $obj->data[0]->attributes->commentCount;
+        if (get_comments_number() > 0) {
+            $comments = get_comments_number();
             if ( $comments > 0 ) {
                 $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'"><i class="fas fa-comment-alt"></i> ' . $comments . '</a>';
+            } else {
+                $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'">Discuss</a>';
             }
         } else {
             $comment_link = '';
