@@ -571,3 +571,7 @@ p {
     max-height: 75vh !important;
     min-height: 75vh !important;
 }
+
+.gallery img {
+    @extend .img-responsive;
+}

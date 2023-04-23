@@ -1854,7 +1854,7 @@ code {
   width: 100%;
 }
 
-.img-responsive, .wp-caption {
+.img-responsive, .gallery img, .wp-caption {
   display: block;
   height: auto;
   max-width: 100%;

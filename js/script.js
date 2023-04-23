@@ -29,3 +29,11 @@ function openMenu() {
 function closeMenu() {
   document.getElementById('sc-modal').classList.remove('active');
 }
+
+function openCommentsMenu() {
+  document.getElementById('sc-comments-modal').classList.add('active');
+}
+
+function closeCommentsMenu() {
+  document.getElementById('sc-comments-modal').classList.remove('active');
+}

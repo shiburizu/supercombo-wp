@@ -70,13 +70,19 @@
                         </div>
                         </div>
                     <?php endif; ?>
+                <?php if ( comments_open() ) : ?>
+                <div class="show-lg">
+                    <button class="btn btn-primary" onclick="openCommentsMenu()">Comments</button>
+                </div>
+                <?php endif; ?>
             </div>
             <div class="card-footer px-0">
             <?php if ( has_post_thumbnail() ): ?>
             <div class="divider pb-2"></div>
             <?php endif; ?>
             <?php if ( comments_open() ) : ?>
-            <div class="mb-2 pb-2">
+            <?php get_template_part( 'mobile-comments' ); ?>
+            <div class="mb-2 pb-2 hide-lg">
                 <span class="text-light text-bold h4">Discuss with our community</span>
             </div>
             <div class="mb-2 pb-2"><?php comments_template();?></div>
