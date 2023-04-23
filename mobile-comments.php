@@ -2,10 +2,9 @@
   <a href="#close" class="modal-overlay bg-dark" aria-label="Close"></a>
   <div class="modal-container bg-dark">
     <div class="modal-header bg-dark px-0">
-        <h5>Discuss with our community</h5>
         <button class="btn btn-primary btn-lg btn-action float-right" onclick="closeCommentsMenu()"><i class="fas fa-times"></i></button>
     </div>
-    <div class="modal-body p-0">
+    <div class="modal-body p-0" style="overflow-y: visible;">
         <?php comments_template();?>
     </div>
     <div class="modal-footer py-0">
