@@ -9,16 +9,16 @@ if (count($obj->data) > 0) {
     $comments = $obj->data[0]->attributes->commentCount;
     if ( $comments > 1 ): {
         $comment_link = ' | <a href="' . the_permalink() .'">' . $comments . ' comments</a>';
-    elseif ( $comments == 1 ):
+    } else if ( $comments == 1 ) {
         $comment_link = ' | <a href="' . the_permalink() .'">' . $comments . ' comment</a>';
-    elseif ( $comments == 0 ):
+    } else if ( $comments == 0 ) {
         $comment_link = ' | <a href="' . the_permalink() .'">Discuss</a>';
     }
 } else {
     $comment_link = '';
 }
 ?>
-<div class="d-none"><?php echo var_dump($comment_link) ?></div>
+<div class="d-none"><?php echo var_dump($comment_link); ?></div>
 <?php if ( wcount() > 150 and has_post_thumbnail() ) : ?>
     <?php if ( is_front_page() and $first == False and !is_paged() ) :?>
         <?php $first = True; ?>
