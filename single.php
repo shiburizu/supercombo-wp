@@ -75,7 +75,7 @@
                     <?php endif; ?>
             </div>
             <div class="card-footer px-0">
-            <?php if ( has_post_thumbnail() ): ?>
+            <?php if ( wcount() <= 150 ): ?>
             <div class="divider pb-2"></div>
             <?php endif; ?>
             <?php if ( comments_open() ) : ?>
