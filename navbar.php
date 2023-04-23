@@ -22,4 +22,7 @@
             </section>
     </header>
 </div>
+<?php if ( comments_open() ) : ?>
+    <?php get_template_part( 'mobile-comments' ); ?>
+<?php endif; ?>
 <?php get_template_part( 'mobile-menu' ); ?>

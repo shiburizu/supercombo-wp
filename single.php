@@ -55,6 +55,11 @@
             </div>
             <div class="card-body <?php if ( wcount() <= 150 ) : echo "sc-rounded pb-2"; else: echo "px-0"; endif;?>">
                 <?php the_content() ?>
+                <?php if ( comments_open() ) : ?>
+                    <div class="show-lg">
+                        <button class="btn btn-primary" onclick="openCommentsMenu()">Comments</button>
+                    </div>
+                <?php endif; ?>
                     <?php if ( wcount() <= 150 ): ?>
                         <div class="divider"></div>
                         <div class="columns">
@@ -70,18 +75,12 @@
                         </div>
                         </div>
                     <?php endif; ?>
-                <?php if ( comments_open() ) : ?>
-                <div class="show-lg">
-                    <button class="btn btn-primary" onclick="openCommentsMenu()">Comments</button>
-                </div>
-                <?php endif; ?>
             </div>
             <div class="card-footer px-0">
             <?php if ( has_post_thumbnail() ): ?>
             <div class="divider pb-2"></div>
             <?php endif; ?>
             <?php if ( comments_open() ) : ?>
-            <?php get_template_part( 'mobile-comments' ); ?>
             <div class="mb-2 pb-2 hide-lg">
                 <span class="text-light text-bold h4">Discuss with our community</span>
             </div>
