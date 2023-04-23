@@ -7,8 +7,15 @@ $json = file_get_contents( 'https://forums.supercombo.gg/api/discussions?filter%
 $obj = json_decode($json);
 if (count($obj->data) > 0) {
     $comments = $obj->data[0]->attributes->commentCount;
+    if ( $comments > 1 ): {
+        $comment_link = ' | <a href="' . the_permalink() .'">' . $comments . ' comments</a>';
+    elseif ( $comments == 1 ):
+        $comment_link = ' | <a href="' . the_permalink() .'">' . $comments . ' comment</a>';
+    elseif ( $comments == 0 ):
+        $comment_link = ' | <a href="' . the_permalink() .'">Discuss</a>';
+    }
 } else {
-    $comments = $null;
+    $comment_link = '';
 }
 ?>
 <div class="d-none"><?php echo var_dump($comments) ?></div>
@@ -32,12 +39,12 @@ if (count($obj->data) > 0) {
                             <p class="text-small text-gray d-inline mb-1">
                                 <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>" class="text-bold">
                                     <?php the_author() ?>
-                                </a> - <?php echo $post_time ?><?php if (!empty($comments)) :?> - <a href="<?php the_permalink() ?>"><?php if ($comments > 1) : echo $comments . " comments"; elseif ($comments == 1): echo $comments . " comment"; else: echo "Discuss"; endif;?> <?php endif;?></p>
+                                </a> - <?php echo $post_time ?><?php echo $comment_link; ?></p>
                         <?php else: ?>
                             <p class="text-small text-gray d-inline mb-1">
                                 <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>" class="text-bold">
                                     <?php the_author() ?>
-                                </a> - <?php echo get_the_date() ?><?php if (!empty($comments)) :?> - <a href="<?php the_permalink() ?>"><?php if ($comments > 1) : echo $comments . " comments"; elseif ($comments == 1): echo $comments . " comment"; else: echo "Discuss"; endif;?> <?php endif;?></p>
+                                </a> - <?php echo get_the_date() ?><?php echo $comment_link; ?></p>
                         <?php endif; ?>
                     </span>
                     <h2 class="h4 my-2"><a class="text-light text-bold" href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
@@ -62,9 +69,9 @@ if (count($obj->data) > 0) {
                         $post_time = "Just now";
                     }
                 ?>
-                <p class="text-small text-gray d-inline mb-1"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>" class="text-bold"><?php the_author() ?></a> - <?php echo $post_time ?><?php if (!empty($comments)) :?> - <a href="<?php the_permalink() ?>"><?php if ($comments > 1) : echo $comments . " comments"; elseif ($comments == 1) : echo $comments . " comment"; else: echo "Discuss"; endif;?><?php endif;?></p>
+                <p class="text-small text-gray d-inline mb-1"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>" class="text-bold"><?php the_author() ?></a> - <?php echo $post_time ?><?php echo $comment_link; ?></p>
             <?php else: ?>
-                <p class="text-small text-gray d-inline mb-1"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>" class="text-bold"><?php the_author() ?></a> - <?php echo get_the_date() ?><?php if (!empty($comments)) :?> - <a href="<?php the_permalink() ?>"><?php if ($comments > 1) : echo $comments . " comments"; elseif ($comments == 1) : echo $comments . " comment"; else: echo "Discuss"; endif;?><?php endif;?></p>
+                <p class="text-small text-gray d-inline mb-1"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>" class="text-bold"><?php the_author() ?></a> - <?php echo get_the_date() ?><?php echo $comment_link; ?></p>
             <?php endif; ?>
         </span>
         <?php if ( wcount() > 150 ) : ?>
