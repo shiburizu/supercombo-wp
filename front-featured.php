@@ -2,7 +2,7 @@
 <?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php if ( has_post_thumbnail() and wcount() > 150 and is_front_page() and $first == False and !is_paged() ) : ?>
     <?php 
-        if (get_comments_number() > 0) {
+        if (intval(get_comments_number()) > 0) {
             $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'"><i class="fas fa-comment-alt"></i> ' . $comments . '</a>';
         } else {
             $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'">Discuss</a>';
