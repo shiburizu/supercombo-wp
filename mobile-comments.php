@@ -1,14 +1,12 @@
 <div class="modal modal-lg bg-dark" id="sc-comments-modal">
   <a href="#close" class="modal-overlay bg-dark" aria-label="Close"></a>
   <div class="modal-container bg-dark">
-    <div class="modal-header bg-dark">
-            <button class="btn btn-primary btn-lg btn-action" onclick="closeCommentsMenu()"><i class="fas fa-times"></i></button>
-        </div>
+    <div class="modal-header bg-dark px-0">
+        <h5>Discuss with our community</h5>
+        <button class="btn btn-primary btn-lg btn-action float-right" onclick="closeCommentsMenu()"><i class="fas fa-times"></i></button>
     </div>
-    <div class="modal-body pt-2 sc-rounded">
-        <div class="content">
-            <?php comments_template();?>
-        </div>
+    <div class="modal-body p-0">
+        <?php comments_template();?>
     </div>
     <div class="modal-footer py-0">
     </div>
