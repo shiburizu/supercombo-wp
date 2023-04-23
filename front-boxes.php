@@ -7,11 +7,9 @@ $json = file_get_contents( 'https://forums.supercombo.gg/api/discussions?filter%
 $obj = json_decode($json);
 if (count($obj->data) > 0) {
     $comments = $obj->data[0]->attributes->commentCount;
-    if ( $comments > 1 ) {
-        $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'">' . $comments . ' comments</a>';
-    } else if ( $comments == 1 ) {
-        $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'">' . $comments . ' comment</a>';
-    } else if ( $comments == 0 ) {
+    if ( $comments > 0 ) {
+        $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'"><i class="fas fa-comment-alt"></i> ' . $comments . '</a>';
+    } else {
         $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'">Discuss</a>';
     }
 } else {
