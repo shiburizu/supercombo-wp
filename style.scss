@@ -225,6 +225,17 @@ body > .container {
     margin-bottom: 0.8rem !important;
 }
 
+.sc-author-meta {
+    @media only screen and (max-width: 960px) {
+        text-align: center;
+    }
+}
+.sc-author-meta-tags {
+    @media only screen and (min-width: 960px) {
+        text-align: right;
+    }
+}
+
 .sc-article-titling {
     @media only screen and (max-width: 1280px) {
         text-align: center;

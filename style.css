@@ -211,6 +211,18 @@ body > .container {
   margin-bottom: 0.8rem !important;
 }
 
+@media only screen and (max-width: 960px) {
+  .sc-author-meta {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .sc-author-meta-tags {
+    text-align: right;
+  }
+}
+
 .sc-article-titling {
   display: flex;
   flex-direction: column;
