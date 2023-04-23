@@ -10,7 +10,7 @@ if (count($obj->data) > 0) {
     $comments = $obj->data[0]->attributes->commentCount;
 }
 ?>
-<div class="d-none"><?php echo count($comments) ?></div>
+<div class="d-none"><?php echo var_dump($comments) ?></div>
 <?php if ( wcount() > 150 and has_post_thumbnail() ) : ?>
     <?php if ( is_front_page() and $first == False and !is_paged() ) :?>
         <?php $first = True; ?>
