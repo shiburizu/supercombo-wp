@@ -24,6 +24,7 @@
                     <div class="column col-md-12 text-right text-gray" style="display: flex; flex-direction: column; justify-content: center;">
                         <div><?php category_labels(); ?></div>
                         <div><?php tag_labels(); ?></div>
+                        <div><?php if (intval(get_comments_number()) > 0) : echo "<a href='#comments'>" . get_comments_number() . "omments</a>"; else: echo "<a href='#comments'>Discuss</a>"; ?></div>
                     </div>
                     </div>
                     <div class="divider"></div>
@@ -72,6 +73,7 @@
                         <div class="column col-md-12 text-right" style="display: flex; flex-direction: column; justify-content: center;">
                             <div><?php category_labels(); ?></div>
                             <div><?php tag_labels(); ?></div>
+                            <div><?php if (intval(get_comments_number()) > 0) : echo "<a href='#comments'>" . get_comments_number() . "omments</a>"; else: echo "<a href='#comments'>Discuss</a>"; ?></div>
                         </div>
                         </div>
                     <?php endif; ?>
