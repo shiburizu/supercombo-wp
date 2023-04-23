@@ -8,7 +8,7 @@ $json = file_get_contents('https://supercombo.gg/wp-content/frontstreams.json');
 $json = json_decode($json);
 foreach($json as $key => $value): ?>
 <div class="divider my-0"></div>
-<div class="stream-box columns col-gapless p-2">
+<div class="stream-box columns col-gapless p-2" style="overflow-x: hidden;">
     <div class="column col-6 col-xl-12 p-2">
         <a target="__blank" href="https://twitch.tv/<?php echo $key ?>">
         <img loading="lazy" src="<?php echo $value->thumb ?>" class="sc-rounded img-fit-contain img-responsive">

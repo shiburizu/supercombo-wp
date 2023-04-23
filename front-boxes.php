@@ -3,10 +3,8 @@
 <?php
 $timelimit=1 * 86400; //days * seconds per day
 $post_age = date('U') - get_post_time('U');
-$json = file_get_contents( 'https://forums.supercombo.gg/api/discussions?filter%5Bq%5D=wordpressid:' . strval(get_the_ID()) );
-$obj = json_decode($json);
-if (count($obj->data) > 0) {
-    $comments = $obj->data[0]->attributes->commentCount;
+if (get_comments_number() > 0) {
+    $comments = get_comments_number();
     if ( $comments > 0 ) {
         $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'"><i class="fas fa-comment-alt"></i> ' . $comments . '</a>';
     } else {
