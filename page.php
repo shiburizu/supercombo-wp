@@ -15,9 +15,6 @@
             </div>
             <div class="card-body <?php if (wcount() < 150) : echo "sc-rounded"; else: echo "p-0"; endif;?>">
                 <?php the_content() ?>
-                    <?php if ( wcount() < 150 ): ?>
-                        <div class="divider"></div>
-                    <?php endif; ?>
             </div>
             <div class="card-footer px-0">
             </div>
