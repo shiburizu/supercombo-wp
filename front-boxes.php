@@ -18,7 +18,7 @@ if (count($obj->data) > 0) {
     $comment_link = '';
 }
 ?>
-<div class="d-none"><?php echo var_dump($comments) ?></div>
+<div class="d-none"><?php echo var_dump($comment_link) ?></div>
 <?php if ( wcount() > 150 and has_post_thumbnail() ) : ?>
     <?php if ( is_front_page() and $first == False and !is_paged() ) :?>
         <?php $first = True; ?>
