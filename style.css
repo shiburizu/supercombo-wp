@@ -3949,6 +3949,7 @@ p {
 #sc-comments-modal #flarum-iframe {
   border: none !important;
   height: 100%;
+  max-height: none !important;
 }
 
 #sc-comments-modal #comments {
