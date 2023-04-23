@@ -73,7 +73,7 @@
                         <div class="column col-md-12 text-right" style="display: flex; flex-direction: column; justify-content: center;">
                             <div><?php category_labels(); ?></div>
                             <div><?php tag_labels(); ?></div>
-                            <div><?php if (intval(get_comments_number()) > 0) : echo "<a href='#comments'>" . get_comments_number() . " comment</a>"; elseif (intval(get_comments_number()) > 1): echo "<a href='#comments'>" . get_comments_number() . " comments</a>"; else: echo "<a href='#comments'>Discuss</a>"; endif; ?></div>
+                            <div><?php if (intval(get_comments_number()) > 0) : echo "<a href='#sc-comments'>" . get_comments_number() . " comment</a>"; elseif (intval(get_comments_number()) > 1): echo "<a href='#comments'>" . get_comments_number() . " comments</a>"; else: echo "<a href='#comments'>Discuss</a>"; endif; ?></div>
                         </div>
                         </div>
                     <?php endif; ?>
@@ -83,7 +83,7 @@
             <div class="divider pb-2"></div>
             <?php endif; ?>
             <?php if ( comments_open() ) : ?>
-            <section id="comments" class="mb-2 pb-2 hide-lg">
+            <section id="sc-comments" class="mb-2 pb-2 hide-lg">
                 <span class="text-light text-bold h4">Discuss with our community</span>
             </section>
             <div class="mb-2 pb-2 hide-lg"><?php comments_template();?></div>
