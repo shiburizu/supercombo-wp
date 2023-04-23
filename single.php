@@ -56,8 +56,8 @@
             <div class="card-body <?php if ( wcount() <= 150 ) : echo "sc-rounded pb-2"; else: echo "px-0"; endif;?>">
                 <?php the_content() ?>
                 <?php if ( comments_open() ) : ?>
-                    <div class="show-lg">
-                        <button class="btn btn-primary" onclick="openCommentsMenu()">Comments</button>
+                    <div class="show-lg py-2">
+                        <button class="btn btn-primary text-bold" onclick="openCommentsMenu()">Comments</button>
                     </div>
                 <?php endif; ?>
                     <?php if ( wcount() <= 150 ): ?>
