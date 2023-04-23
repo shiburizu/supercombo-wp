@@ -13,7 +13,7 @@
                     <?php endif; ?>
                 <?php endif; ?>
             </div>
-            <div class="card-body <?php if (wcount() < 150) : echo "sc-rounded"; else: echo "p-0"; endif;?>">
+            <div class="card-body <?php if (wcount() < 150) : echo "sc-rounded pb-2"; else: echo "p-0"; endif;?>">
                 <?php the_content() ?>
             </div>
             <div class="card-footer px-0">
