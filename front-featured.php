@@ -35,10 +35,10 @@
             <div class="px-2">
             <?php $featured = get_most_viewed_posts(); for ($i = 0; $i <= 4; $i++) : ?>
                 <?php 
-                    if (intval(get_comments_number()) > 0) {
-                        $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'#sc-comments"><i class="fas fa-comment-alt"></i> ' . intval(get_comments_number()) . '</a>';
+                    if (intval($featured[$i]->comment_count) > 0) {
+                        $comment_link = ' - <a class="text-bold" href="' . get_the_permalink($featured[$i]) .'#sc-comments"><i class="fas fa-comment-alt"></i> ' . intval($featured[$i]->comment_count) . '</a>';
                     } else {
-                        $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'#sc-comments">Discuss</a>';
+                        $comment_link = ' - <a class="text-bold" href="' . get_the_permalink($featured[$i]) .'#sc-comments">Discuss</a>';
                     }
                 ?>
                 <div class="columns sc-featured-border">
