@@ -35,15 +35,10 @@
             <div class="px-2">
             <?php $featured = get_most_viewed_posts(); for ($i = 0; $i <= 4; $i++) : ?>
                 <?php 
-                    $json = file_get_contents( 'https://forums.supercombo.gg/api/discussions?filter%5Bq%5D=wordpressid:' . strval($featured[$i]->ID) );
-                    $obj = json_decode($json);
-                    if (count($obj->data) > 0) {
-                        $comments = $obj->data[0]->attributes->commentCount;
-                        if ( $comments > 0 ) {
-                            $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'"><i class="fas fa-comment-alt"></i> ' . $comments . '</a>';
-                        }
+                    if (intval(get_comments_number()) > 0) {
+                        $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'#sc-comments"><i class="fas fa-comment-alt"></i> ' . intval(get_comments_number()) . '</a>';
                     } else {
-                        $comment_link = '';
+                        $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'#sc-comments">Discuss</a>';
                     }
                 ?>
                 <div class="columns sc-featured-border">
