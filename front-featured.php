@@ -38,7 +38,7 @@
                     if (intval($featured[$i]->comment_count) > 0) {
                         $comment_link = ' - <a class="text-bold" href="' . get_the_permalink($featured[$i]) .'#sc-comments"><i class="fas fa-comment-alt"></i> ' . intval($featured[$i]->comment_count) . '</a>';
                     } else {
-                        $comment_link = ' - <a class="text-bold" href="' . get_the_permalink($featured[$i]) .'#sc-comments">Discuss</a>';
+                        $comment_link = '';
                     }
                 ?>
                 <div class="columns sc-featured-border">
