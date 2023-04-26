@@ -4,7 +4,7 @@
     <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/scfont/poppins/Poppins-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <?php if (is_page() or is_single()) : ?>
-        <!-- <meta name="description" content="<?php # wp_strip_all_tags(get_the_excerpt()) ?>"> -->
+        <meta name="description" content="<?php wp_strip_all_tags(get_the_excerpt()) ?>">
         <meta property="og:type" content="article" />
         <meta property="og:updated_time" content="<?php echo get_post_timestamp(null,'modified') ?>" />
         <meta property="article:published_time" content="<?php echo get_post_timestamp() ?>" />
