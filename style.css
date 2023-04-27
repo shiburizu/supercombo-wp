@@ -318,20 +318,6 @@ body > .container {
   border-radius: 8px;
 }
 
-.sc-thumb-ambox {
-  background-position: center !important;
-  background-size: cover !important;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  min-height: 75px;
-  border-radius: 8px;
-}
-@media only screen and (max-width: 1280px) {
-  .sc-thumb-ambox {
-    min-height: 160px;
-  }
-}
-
 .sc-thumb-bg-big {
   background-position: center !important;
   background-size: cover !important;

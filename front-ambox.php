@@ -8,7 +8,7 @@
         <p class="d-inline mb-1"><a class="text-bold text-light text-tiny" href="https://www.start.gg/tournament/defend-the-north-2023-powered-by-msi/details"> Use code "SUPERCOMBO" at registration to get $5 off!</a></p>
     </span>
 </div>
-<a href="https://www.start.gg/tournament/defend-the-north-2023-powered-by-msi/details" class="column col-2 hide-lg px-2 sc-thumb-ambox" style="background: url('<?php echo get_template_directory_uri(); ?>/images/ambox/dtn2023.png')">   
+<a href="https://www.start.gg/tournament/defend-the-north-2023-powered-by-msi/details" class="column col-2 hide-lg px-2 sc-thumb-top" style="background: url('<?php echo get_template_directory_uri(); ?>/images/ambox/dtn2023.png')">   
 </a>
 </div>
 </div>
