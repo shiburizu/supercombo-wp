@@ -6,6 +6,7 @@
     <?php get_template_part( 'front-featured' ); ?>
     </div>
     <?php if (is_home()) : ?>
+    <?php get_template_part( 'front-ambox' ); ?>
     <h2 class="text-bold text-light">Latest Stories</h2>
     <?php endif; ?>
     <div class="columns bg-dark sc-front-columns">
