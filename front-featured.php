@@ -8,7 +8,7 @@
             $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'#sc-comments">Discuss</a>';
         }
     ?>
-    <div class="columns bg-dark" style="align-items: center;">
+    <div class="columns bg-dark">
         <div class="column col-7 col-lg-12">
             <article class="sc-article-box columns col-gapless">
                 <div class="col-12 p-2 mx-2">
