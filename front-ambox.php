@@ -1,5 +1,4 @@
 <?php if ( "2023-07-14" > date('Y-m-d')) : ?>
-<div class="divider show-lg"></div>
 <div class="d-flex py-2" style="justify-content: center;">
 <div class="featured-ambox mx-0 columns sc-rounded p-2">
 <div class="p-2 col-10 col-lg-12 d-flex" style="flex-direction: column; justify-content: center;"> 
@@ -12,5 +11,4 @@
 </a>
 </div>
 </div>
-<div class="divider show-lg"></div>
 <?php endif; ?>

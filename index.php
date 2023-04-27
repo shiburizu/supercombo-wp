@@ -7,7 +7,7 @@
     </div>
     <?php if (is_home()) : ?>
     <?php get_template_part( 'front-ambox' ); ?>
-    <h2 class="text-bold text-light">Latest Stories</h2>
+    <h2 class="mt-2 text-bold text-light">Latest Stories</h2>
     <?php endif; ?>
     <div class="columns bg-dark sc-front-columns">
         <div class="column col-8 col-md-12 sc-posts mb-2 pb-2" id="sc-posts">
