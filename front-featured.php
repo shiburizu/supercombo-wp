@@ -63,6 +63,8 @@
                 <?php endif; ?>
                 <?php if ($i != 4) :?>
                 <div class="divider"></div>
+                <?php else: ?>
+                    <?php get_template_part( 'front-ambox' ); ?>
                 <?php endif; ?>
             <?php endfor; ?>
             </div>

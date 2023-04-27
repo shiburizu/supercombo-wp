@@ -202,6 +202,10 @@ body > .container {
   margin-top: 0.8rem;
 }
 
+.featured-ambox {
+  max-width: 600px;
+}
+
 .sc-archive {
   margin-top: 0.8rem;
 }
