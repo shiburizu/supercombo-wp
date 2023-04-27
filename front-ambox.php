@@ -1,5 +1,5 @@
 <?php if ( "2023-07-14" > date('Y-m-d')) : ?>
-<div class="d-flex pb-2" style="justify-content: center;">
+<div class="d-flex py-2" style="justify-content: center;">
 <div class="featured-ambox mx-0 mb-2 columns sc-featured-border">
 <div class="p-2 col-10 col-xl-12 d-flex" style="flex-direction: column; justify-content: center;"> 
     <span class="text-gray text-bold text-small">#Sponsored</span>
