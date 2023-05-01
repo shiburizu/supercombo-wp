@@ -599,3 +599,8 @@ p {
 .gallery img {
     @extend .img-responsive;
 }
+
+dt.gallery-icon {
+    display: flex;
+    justify-content: center;
+}

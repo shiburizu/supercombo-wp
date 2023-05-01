@@ -3970,4 +3970,9 @@ p {
   height: 100%;
 }
 
+dt.gallery-icon {
+  display: flex;
+  justify-content: center;
+}
+
 /*# sourceMappingURL=style.css.map */
