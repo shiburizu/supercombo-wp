@@ -1877,24 +1877,24 @@ code {
   object-fit: contain;
 }
 
-.video-responsive, p:has(iframe), .wp-block-embed-youtube > .wp-block-embed__wrapper {
+.video-responsive, p:has(iframe:not(.airtable-embed)), .wp-block-embed-youtube > .wp-block-embed__wrapper {
   display: block;
   overflow: hidden;
   padding: 0;
   position: relative;
   width: 100%;
 }
-.video-responsive::before, p:has(iframe)::before, .wp-block-embed-youtube > .wp-block-embed__wrapper::before {
+.video-responsive::before, p:has(iframe:not(.airtable-embed))::before, .wp-block-embed-youtube > .wp-block-embed__wrapper::before {
   content: "";
   display: block;
   padding-bottom: 56.25%;
 }
-.video-responsive iframe, p:has(iframe) iframe, .wp-block-embed-youtube > .wp-block-embed__wrapper iframe,
+.video-responsive iframe, p:has(iframe:not(.airtable-embed)) iframe, .wp-block-embed-youtube > .wp-block-embed__wrapper iframe,
 .video-responsive object,
-p:has(iframe) object,
+p:has(iframe:not(.airtable-embed)) object,
 .wp-block-embed-youtube > .wp-block-embed__wrapper object,
 .video-responsive embed,
-p:has(iframe) embed,
+p:has(iframe:not(.airtable-embed)) embed,
 .wp-block-embed-youtube > .wp-block-embed__wrapper embed {
   border: 0;
   bottom: 0;
