@@ -547,7 +547,7 @@ a.text-primary:visited {
     margin-bottom: 0.8rem;
 }
 
-p:has(iframe), .wp-block-embed-youtube > .wp-block-embed__wrapper {
+p:has(iframe:not(.airtable-embed)), .wp-block-embed-youtube > .wp-block-embed__wrapper {
     @extend .video-responsive;
 }
 
