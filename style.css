@@ -3944,12 +3944,6 @@ blockquote {
   height: 100% !important;
 }
 
-body {
-  background-image: url(images/graffiti.webp);
-  background-position: top;
-  background-repeat: no-repeat;
-}
-
 p {
   margin: 0 0 0.8rem;
 }
