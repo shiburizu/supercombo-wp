@@ -64,7 +64,7 @@ $link-color: $primary-color;
 $link-color-dark: $primary-color;
 $link-color-light: $primary-color;
 
-.btn-primary {
+.btn-primary, .btn > .text-light {
     color: #fff !important;
 }
 
