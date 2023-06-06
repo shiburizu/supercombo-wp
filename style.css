@@ -45,7 +45,7 @@ Version: 1.0
   font-weight: bold;
   font-style: italic;
 }
-.btn > .text-light {
+.btn-primary {
   color: #fff !important;
 }
 
