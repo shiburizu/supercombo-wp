@@ -29,11 +29,36 @@ Version: 1.0
     font-style: italic;
 }
 
+@font-face {
+    font-family: roboto;
+    src: url('scfont/roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: roboto;
+    src: url("scfont/roboto/Roboto-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url("scfont/roboto/Roboto-Italic.ttf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url("scfont/roboto/Roboto-BoldItalic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+
+$light-color: #D1D5DB;
 $dark-color: #121212;
 $primary-color: #039BE5;
 $bg-color: #2C2C2C;
 $border-color: $dark-color;
-$body-font-family: poppins;
+$body-font-family: roboto;
 $border-radius: 8px;
 $link-color: $primary-color;
 $link-color-dark: $primary-color;
@@ -415,7 +440,7 @@ body > .container {
 }
 
 .nav-item > a {
-    color: #fff !important;
+    color: #D1D5DB !important;
 }
 
 .dropdown-toggle:focus + .menu {
