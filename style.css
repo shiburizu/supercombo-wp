@@ -45,6 +45,10 @@ Version: 1.0
   font-weight: bold;
   font-style: italic;
 }
+.btn > .text-light {
+  color: #fff !important;
+}
+
 *::-webkit-scrollbar {
   width: 1em;
 }

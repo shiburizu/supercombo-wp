@@ -64,6 +64,10 @@ $link-color: $primary-color;
 $link-color-dark: $primary-color;
 $link-color-light: $primary-color;
 
+.btn > .text-light {
+    color: #fff !important;
+}
+
 *::-webkit-scrollbar {
     width: 1em;
 }
