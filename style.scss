@@ -183,6 +183,7 @@ footer {
     margin: 0px !important;
     padding: 0.6rem 0.6rem 0.6rem 0.6rem !important;
     border-color: $primary-color;
+    white-space: nowrap;
     &::marker{
         content: "";
     }
