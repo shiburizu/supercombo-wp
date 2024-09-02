@@ -6,7 +6,7 @@
 <div class="divider my-0"></div>
 <div class="px-1 pt-2">
 <iframe src="https://radio.fgcast.com/public/fgc_radio/embed" frameborder="0" allowtransparency="true" style="width: 100%; height: 150px; border: 0;"></iframe>
-<div class="btn-group btn-group-block">
+<div class="px-1 pb-1 btn-group btn-group-block">
 <a class="btn btn-sm btn-primary" href="https://radio.fgcast.com/public/fgc_radio">Radio Home</a>
 <a class="btn btn-sm btn-primary" href="https://bsky.app/profile/fgcradio.bsky.social">BSky Feed</a>
 <a class="btn btn-sm btn-primary" href="https://call.fgcast.com">Discord</a>
