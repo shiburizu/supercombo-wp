@@ -1,6 +1,6 @@
 <div class="panel sc-panel bg-dark">
 <div class="panel-header pb-2 px-0">
-    <h4 class="panel-title text-center mb-2 text-bold">Streaming Now</h4>
+    <h4 class="panel-title text-center mb-2 text-bold">FGC Livestreams</h4>
 </div>
 <div class="panel-body mb-2 px-0">
 <?php

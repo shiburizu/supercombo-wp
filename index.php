@@ -15,7 +15,7 @@
             <?php echo get_next_posts_link('<div class="bg-primary p-2 sc-rounded text-large text-center text-bold">More Stories</div>') ?>
         </div>
         <div class="column col-4 col-md-12">
-            <?php get_template_part( 'front-events' ); ?>
+            <?php get_template_part( 'front-radio-player' ); ?>
             <?php get_template_part( 'front-streams' ); ?>
             <?php get_template_part( 'front-community' ); ?>
         </div>

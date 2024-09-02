@@ -1,9 +1,9 @@
 <div class="panel sc-panel bg-dark">
 <div class="panel-header px-0 pb-0">
-    <h4 class="panel-title text-center mb-2 text-bold">Community</h4>
+    <h4 class="panel-title text-center mb-2 text-bold">SuperCombo Community</h4>
     <ul class="tab tab-block">
         <li class="tab-item active" onclick="openTab(event, 'discussions')">
-            <a>Discussions</a>
+            <a>Forum Posts</a>
         </li>
         <li class="tab-item" onclick="openTab(event, 'edits')">
             <a>Wiki Edits</a>
