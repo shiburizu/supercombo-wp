@@ -9,7 +9,7 @@ if (intval(get_comments_number()) > 0) {
     $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'#sc-comments">Discuss</a>';
 }
 ?>
-<?php if ( wcount() > 150 and has_post_thumbnail() ) : ?>
+<?php if ( wcount() > 150 and has_post_thumbnail() or $pos=strpos($post->post_content, '<!--more-->') != False) : ?>
     <?php if ( is_front_page() and $first == False and !is_paged() ) :?>
         <?php $first = True; ?>
     <?php else : ?>
