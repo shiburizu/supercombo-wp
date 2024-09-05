@@ -51,9 +51,9 @@
                     </div>
                 <?php endif; ?>
             </div>
-            <a id="discussion" class="text-no-hover">
             <div class="card-body <?php if ( wcount() <= 150 ) : echo "sc-rounded pb-2"; else: echo "px-0"; endif;?>">
                 <?php the_content() ?>
+                <a id="discussion" class="text-no-hover"></a>
                 <?php if ( comments_open() ) : ?>
                     <div class="show-lg py-2">
                         <span class="text-light text-bold h4">Discuss with our community</span><br>
