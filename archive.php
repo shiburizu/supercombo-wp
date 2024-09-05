@@ -19,10 +19,11 @@
             </div>
         </div>
         <div class="column col-4 col-lg-12">
-            <?php get_template_part( 'sidebar-top' ); ?>
-            <?php get_template_part( 'front-events' ); ?>
+            <?php get_template_part( 'front-radio-player' ); ?>
+            <?php get_template_part( 'front-bsky' ); ?>
             <?php get_template_part( 'front-streams' ); ?>
             <?php get_template_part( 'front-community' ); ?>
+            <?php get_template_part( 'front-youtube-sidebar' ); ?>
         </div>
     </div>
 </div>

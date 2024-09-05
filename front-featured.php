@@ -36,7 +36,7 @@
             <?php $featured = get_most_viewed_posts(); for ($i = 0; $i <= 4; $i++) : ?>
                 <?php 
                     if (intval(get_comments_number($featured[$i])) > 0) {
-                        $comment_link = '-&nbsp;&nbsp;<a class="text-bold" href="' . get_the_permalink($featured[$i]) .'#discussion"><i class="fas fa-comment-alt"></i> ' . get_comments_number($featured[$i]) . '</a>';
+                        $comment_link = ' -&nbsp;&nbsp;<a class="text-bold" href="' . get_the_permalink($featured[$i]) .'#discussion"><i class="fas fa-comment-alt"></i> ' . get_comments_number($featured[$i]) . '</a>';
                     } else {
                         $comment_link =  '';
                     }
