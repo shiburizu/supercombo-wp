@@ -56,6 +56,7 @@
                 <?php the_content() ?>
                 <?php if ( comments_open() ) : ?>
                     <div class="show-lg py-2">
+                        <span class="text-light text-bold h4">Discuss with our community</span>
                         <button class="btn btn-primary text-bold" onclick="openCommentsMenu()">Open Discussion Section</button>
                     </div>
                 <?php endif; ?>
