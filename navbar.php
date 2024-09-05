@@ -15,6 +15,7 @@
                 <a href="https://supercombo.gg/discord"><span class="hide-lg mx-2 text-light fab fa-discord "></span></a>
                 <a href="https://twitch.com/supercombogg"><span class="hide-lg mx-2 text-light fab fa-twitch"></span></a>
                 <a href="https://twitter.com/supercombogg"><span class="hide-lg mx-2 text-light fab fa-twitter"></span></a>
+                <a href="https://bsky.app/profile/supercombo.gg"><span class="hide-lg mx-2 text-light fab fa-bluesky"></span></a>
                 <a href="https://youtube.com/@supercombogg"><span class="hide-lg mx-2 text-light fab fa-youtube"></span></a>
                 <button class="mx-2 btn btn-sm btn-primary"><a class="text-light text-bold" href="https://supercombo.gg/patreon">Become a Patron</a></button>
                 <div class="hide-lg"><?php get_search_form(); ?></div>

@@ -6,11 +6,13 @@
 <div class="divider my-0"></div>
 <div class="px-1 pt-2">
 <iframe src="https://radio.fgcast.com/public/fgc_radio/embed" frameborder="0" allowtransparency="true" style="width: 100%; height: 150px; border: 0;"></iframe>
-<div class="px-1 pb-1 btn-group btn-group-block">
-<a class="btn btn-sm btn-primary" href="https://radio.fgcast.com/public/fgc_radio">Radio Home</a>
-<a class="btn btn-sm btn-primary" href="https://bsky.app/profile/fgcradio.bsky.social">BSky Feed</a>
-<a class="btn btn-sm btn-primary" href="https://call.fgcast.com">Radio Discord</a>
 </div>
 </div>
+<div class="panel-footer m-0 py-1 px-0" style="border-top: 1px solid #2c2c2c;">
+    <div class="px-1 py-0 btn-group btn-group-block text-bold">
+        <a class="btn btn-sm btn-link" href="https://radio.fgcast.com/public/fgc_radio">Radio Home</a>
+        <a class="btn btn-sm btn-link" href="https://bsky.app/profile/fgcradio.bsky.social">BSky Feed</a>
+        <a class="btn btn-sm btn-link" href="https://call.fgcast.com">Radio Discord</a>
+    </div>
 </div>
 </div>

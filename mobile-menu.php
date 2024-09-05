@@ -2,7 +2,7 @@
   <a href="#close" class="modal-overlay bg-dark" aria-label="Close"></a>
   <div class="modal-container bg-dark">
     <div class="modal-header bg-dark">
-        <img class="hide-md img-responsive p-2 mb-2 p-centered" style="max-width: 300px; width 100%;" src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'custom_logo' ) ) ); ?>">
+        <img class="img-responsive p-2 mb-2 p-centered" style="max-width: 300px; width 100%;" src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'custom_logo' ) ) ); ?>">
         <div class="columns">
             <form role="search" class="pr-2" style="flex: 1;" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <div class="input-group">
@@ -25,7 +25,12 @@
             ?>
         </div>
     </div>
-    <div class="modal-footer py-0">
+    <div class="modal-footer text-large pb-0" style="text-align: center !important;">
+        <a href="https://supercombo.gg/discord"><span class="mx-2 text-light fab fa-discord "></span></a>
+        <a href="https://twitch.com/supercombogg"><span class="mx-2 text-light fab fa-twitch"></span></a>
+        <a href="https://twitter.com/supercombogg"><span class="mx-2 text-light fab fa-twitter"></span></a>
+        <a href="https://bsky.app/profile/supercombo.gg"><span class="mx-2 text-light fab fa-bluesky"></span></a>
+        <a href="https://youtube.com/@supercombogg"><span class="mx-2 text-light fab fa-youtube"></span></a>
     </div>
   </div>
 </div>

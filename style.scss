@@ -505,6 +505,10 @@ h2 > a:visited,h3 > a:visited,h4 > a:visited,h5 > a:visited,h6 > a:visited { tex
 h1 > a:hover, h2 > a:hover,h3 > a:hover,h4 > a:hover,h5 > a:hover,h6 > a:hover { text-decoration: none; }
 h2 > a:active,h3 > a:active,h4 > a:active,h5 > a:active,h6 > a:active { text-decoration: none; }
 
+.text-no-hover:hover {
+    text-decoration: none !important;
+}
+
 a:has(.bg-gray):hover {
     text-decoration: none;
 }

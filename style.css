@@ -511,6 +511,10 @@ h2 > a:active, h3 > a:active, h4 > a:active, h5 > a:active, h6 > a:active {
   text-decoration: none;
 }
 
+.text-no-hover:hover {
+  text-decoration: none !important;
+}
+
 a:has(.bg-gray):hover {
   text-decoration: none;
 }
