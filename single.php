@@ -55,7 +55,7 @@
                 <?php the_content() ?>
                 <?php if ( comments_open() ) : ?>
                     <div class="show-lg py-2">
-                        <button class="btn btn-primary text-bold" onclick="openCommentsMenu()">Comments</button>
+                        <button class="btn btn-primary text-bold" onclick="openCommentsMenu()">Open Discussion Section</button>
                     </div>
                 <?php endif; ?>
                     <?php if ( wcount() <= 150 ): ?>
@@ -80,7 +80,7 @@
             <?php endif; ?>
             <?php if ( comments_open() ) : ?>
             <a id="discussion" class="text-no-hover">
-            <section class="mb-2 pb-2 hide-lg">
+            <section class="mb-2 pb-2">
                 <span class="text-light text-bold h4">Discuss with our community</span>
             </section>
             </a>
