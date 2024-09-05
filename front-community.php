@@ -10,7 +10,7 @@
         </li>
     </ul>
 </div>
-<div class="panel-body py-2 px-0" style="max-height: 600px; overflow-y: scroll">
+<div class="panel-body py-2 px-0 masked-overflow" style="max-height: 600px;">
 <div id="discussions" class="tab-content">
     <?php get_template_part( 'front-forums' ); ?>
 </div>
