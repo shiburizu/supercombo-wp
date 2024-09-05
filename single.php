@@ -83,6 +83,7 @@
             <section class="mb-2 pb-2 hide-lg">
                 <span class="text-light text-bold h4">Discuss with our community</span>
             </section>
+            </a>
             <div class="mb-2 pb-2 hide-lg"><?php comments_template();?></div>
             <?php endif;?>
             <?php get_template_part( 'related_posts' ); ?>
