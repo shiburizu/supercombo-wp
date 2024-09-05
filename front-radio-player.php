@@ -1,9 +1,8 @@
 <div class="panel sc-panel bg-dark">
-<div class="panel-header pb-2 px-0">
+<div class="panel-header pb-2 px-0" style="border-bottom: 1px solid #2c2c2c;">
     <h4 class="panel-title text-center mb-2 text-bold">FGC Radio Player</h4>
 </div>
 <div class="panel-body mb-2 px-0">
-<div class="divider my-0"></div>
 <div class="px-1 pt-2">
 <iframe src="https://radio.fgcast.com/public/fgc_radio/embed" frameborder="0" allowtransparency="true" style="width: 100%; height: 150px; border: 0;"></iframe>
 </div>
