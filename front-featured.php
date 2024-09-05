@@ -3,7 +3,7 @@
 <?php if ( has_post_thumbnail() and wcount() > 150 and is_front_page() and $first == False and !is_paged() ) : ?>
     <?php 
         if (intval(get_comments_number()) > 0) {
-            $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'#discussion"><i class="fas fa-comment-alt"></i> ' . get_comments_number() . '</a>';
+            $comment_link = ' -&nbsp;&nbsp;<a class="text-bold" href="' . get_permalink() .'#discussion"><i class="fas fa-comment-alt"></i> ' . get_comments_number() . '</a>';
         } else {
             $comment_link = '';
         }
