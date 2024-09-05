@@ -79,7 +79,8 @@
             <div class="divider pb-2"></div>
             <?php endif; ?>
             <?php if ( comments_open() ) : ?>
-            <section id="sc-comments" class="mb-2 pb-2 hide-lg">
+            <a id="sc-comments">
+            <section class="mb-2 pb-2 hide-lg">
                 <span class="text-light text-bold h4">Discuss with our community</span>
             </section>
             <div class="mb-2 pb-2 hide-lg"><?php comments_template();?></div>
