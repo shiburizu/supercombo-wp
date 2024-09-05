@@ -3972,11 +3972,11 @@ blockquote {
   max-height: 100vh !important;
 }
 
-.sc-comments-modal {
+#sc-comments-modal {
   align-items: start;
 }
 
-.sc-comments-modal > .modal-container {
+#sc-comments-modal > .modal-container {
   max-height: 100vh !important;
   height: 100% !important;
 }
