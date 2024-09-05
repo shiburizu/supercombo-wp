@@ -51,6 +51,7 @@
                     </div>
                 <?php endif; ?>
             </div>
+            <a id="discussion" class="text-no-hover">
             <div class="card-body <?php if ( wcount() <= 150 ) : echo "sc-rounded pb-2"; else: echo "px-0"; endif;?>">
                 <?php the_content() ?>
                 <?php if ( comments_open() ) : ?>
@@ -79,11 +80,9 @@
             <div class="divider pb-2"></div>
             <?php endif; ?>
             <?php if ( comments_open() ) : ?>
-            <a id="discussion" class="text-no-hover">
-            <section class="mb-2 pb-2">
+            <section class="mb-2 pb-2 hide-lg">
                 <span class="text-light text-bold h4">Discuss with our community</span>
             </section>
-            </a>
             <div class="mb-2 pb-2 hide-lg"><?php comments_template();?></div>
             <?php endif;?>
             <?php get_template_part( 'related_posts' ); ?>
