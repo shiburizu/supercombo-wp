@@ -5,7 +5,7 @@
         if (intval(get_comments_number()) > 0) {
             $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'#discussion"><i class="fas fa-comment-alt"></i> ' . get_comments_number() . '</a>';
         } else {
-            $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'#discussion">Discuss</a>';
+            $comment_link = '';
         }
     ?>
     <div class="columns bg-dark">
@@ -38,7 +38,7 @@
                     if (intval(get_comments_number($featured[$i])) > 0) {
                         $comment_link = '&nbsp;&nbsp;<a class="text-bold" href="' . get_the_permalink($featured[$i]) .'#discussion"><i class="fas fa-comment-alt"></i> ' . get_comments_number($featured[$i]) . '</a>';
                     } else {
-                        $comment_link =  '&nbsp;&nbsp;<a class="text-bold" href="' . get_the_permalink($featured[$i]) .'#discussion"><i class="fas fa-comment-alt"></i></a>';
+                        $comment_link =  '';
                     }
                 ?>
                 <div class="columns sc-featured-border">
