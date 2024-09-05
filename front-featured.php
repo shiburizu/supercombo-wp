@@ -3,7 +3,7 @@
 <?php if ( has_post_thumbnail() and wcount() > 150 and is_front_page() and $first == False and !is_paged() ) : ?>
     <?php 
         if (intval(get_comments_number()) > 0) {
-            $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'#discussion"><i class="fas fa-comment-alt"></i> ' . intval(get_comments_number()) . '</a>';
+            $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'#discussion"><i class="fas fa-comment-alt"></i> ' . get_comments_number() . '</a>';
         } else {
             $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'#discussion">Discuss</a>';
         }
@@ -35,9 +35,10 @@
             <div class="px-2">
             <?php $featured = get_most_viewed_posts(); for ($i = 0; $i <= 4; $i++) : ?>
                 <?php 
-                    $comment_link =  '&nbsp;&nbsp;<a class="text-bold" href="' . get_the_permalink($featured[$i]) .'#discussion"><i class="fas fa-comment-alt"></i></a>';
                     if (intval(get_comments_number()) > 0) {
-                        $comment_link = '&nbsp;&nbsp;<a class="text-bold" href="' . get_the_permalink($featured[$i]) .'comments"><i class="fas fa-comment-alt"></i> ' . intval(get_comments_number()) . '</a>';
+                        $comment_link = '&nbsp;&nbsp;<a class="text-bold" href="' . get_the_permalink($featured[$i]) .'#discussion"><i class="fas fa-comment-alt"></i> ' . get_comments_number() . '</a>';
+                    } else {
+                        $comment_link =  '&nbsp;&nbsp;<a class="text-bold" href="' . get_the_permalink($featured[$i]) .'#discussion"><i class="fas fa-comment-alt"></i></a>';
                     }
                 ?>
                 <div class="columns sc-featured-border">
