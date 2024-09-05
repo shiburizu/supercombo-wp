@@ -22,7 +22,8 @@
             </div>
         </div>
     </div>
-    <div class="modal-body pt-2 sc-rounded masked-overflow" style="max-height: 60vh;">
+    <div class="sc-rounded">
+    <div class="modal-body p-2 masked-overflow" style="max-height: 60vh;">
         <div class="content">
             <?php wp_nav_menu( array( 
             'theme_location' => 'mobile-menu',
@@ -31,6 +32,7 @@
             ) ); 
             ?>
         </div>
+    </div>
     </div>
   </div>
 </div>
