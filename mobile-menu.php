@@ -22,7 +22,7 @@
             </div>
         </div>
     </div>
-    <div class="modal-body py-2 mb-2 sc-rounded">
+    <div class="modal-body sc-rounded" style="max-height: 60vh;">
         <div class="content">
             <?php wp_nav_menu( array( 
             'theme_location' => 'mobile-menu',
