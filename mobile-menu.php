@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="sc-rounded">
-    <div class="modal-body p-2 masked-overflow" style="max-height: 60vh;">
+    <div class="modal-body px-2 pb-2 pt-0 masked-overflow" style="max-height: 60vh;">
         <div class="content">
             <?php wp_nav_menu( array( 
             'theme_location' => 'mobile-menu',
