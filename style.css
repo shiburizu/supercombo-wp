@@ -223,10 +223,14 @@ body > .container {
 }
 
 .sc-featured {
-  margin-bottom: 0.8rem;
   margin-top: 0.8rem;
 }
 
+@media only screen and (max-width: 960px) {
+  .sc-featured {
+    margin-bottom: 0.8rem;
+  }
+}
 .featured-ambox {
   max-width: 600px;
 }

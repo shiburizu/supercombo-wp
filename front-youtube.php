@@ -1,6 +1,6 @@
 <div class="hide-sm">
 <h2 class="text-bold text-light">Latest Videos</h2>
-<div class="container pb-2">
+<div class="container">
 <div class="columns">
 <?php $yt_feed = simplexml_load_file("https://www.youtube.com/feeds/videos.xml?channel_id=UC2VN-QpZ49XvWBGiz97lvQA");
 for ( $i = 0; $i < 4; $i++ ) : 
@@ -17,4 +17,5 @@ $video = str_replace("https://www.youtube.com/watch?v=","",$videourl[0]); ?>
 <?php endfor; ?>
 </div>
 </div>
+<div class="divider mt-0 mb-2"></div>
 </div>
