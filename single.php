@@ -79,7 +79,7 @@
             <div class="divider pb-2"></div>
             <?php endif; ?>
             <?php if ( comments_open() ) : ?>
-            <a id="comments">
+            <a id="comments" class="text-no-hover">
             <section class="mb-2 pb-2 hide-lg">
                 <span class="text-light text-bold h4">Discuss with our community</span>
             </section>
