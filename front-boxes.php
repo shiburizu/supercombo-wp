@@ -4,9 +4,9 @@
 $timelimit=1 * 86400; //days * seconds per day
 $post_age = date('U') - get_post_time('U');
 if (intval(get_comments_number()) > 0) {
-    $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'#comments"><i class="fas fa-comment-alt"></i> ' . intval(get_comments_number()) . '</a>';
+    $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'#discussion"><i class="fas fa-comment-alt"></i> ' . intval(get_comments_number()) . '</a>';
 } else {
-    $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'#comments">Discuss</a>';
+    $comment_link = ' - <a class="text-bold" href="' . get_permalink() .'#discussion">Discuss</a>';
 }
 ?>
 <?php if ( wcount() > 150 and has_post_thumbnail() or $pos=strpos($post->post_content, '<!--more-->') != False) : ?>
