@@ -2,7 +2,7 @@
   <a href="#close" class="modal-overlay bg-dark" aria-label="Close"></a>
   <div class="modal-container bg-dark p-0">
     <div class="modal-header bg-dark px-0 pt-0 pb-2">
-        <h4 class="text-light text-bold float-left">Join the conversation!</h4>
+        <h4 class="my-1 text-light text-bold float-left">Join the conversation!</h4>
         <button class="btn btn-primary btn-action float-right" onclick="closeCommentsMenu()"><i class="fas fa-times"></i></button>
     </div>
     <div class="modal-body p-0" style="overflow-y: visible; height: 100%;">
