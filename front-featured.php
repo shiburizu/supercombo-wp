@@ -36,8 +36,8 @@
             <?php $featured = get_most_viewed_posts(); for ($i = 0; $i <= 4; $i++) : ?>
                 <?php 
                     $comment_link =  '&nbsp;&nbsp;<a class="text-bold" href="' . get_the_permalink($featured[$i]) .'#sc-comments"><i class="fas fa-comment-alt"></i></a>';
-                    if (get_comment_count($featured[$i]->post_id)['all'] > 0) {
-                        $comment_link = '&nbsp;&nbsp;<a class="text-bold" href="' . get_the_permalink($featured[$i]) .'#sc-comments"><i class="fas fa-comment-alt"></i> ' . get_comment_count($featured[$i]->post_id)['all'] . '</a>';
+                    if (intval(get_comments_number()) > 0) {
+                        $comment_link = '&nbsp;&nbsp;<a class="text-bold" href="' . get_the_permalink($featured[$i]) .'#sc-comments"><i class="fas fa-comment-alt"></i> ' . intval(get_comments_number()) . '</a>';
                     }
                 ?>
                 <div class="columns sc-featured-border">
