@@ -602,7 +602,7 @@ blockquote {
     max-height: 80vh !important;
 }
 
-#sc-comments-modal .modal-container {
+#comments-modal .modal-container {
     max-height: 100vh !important;
     height: 100% !important;
 }
@@ -618,14 +618,14 @@ p {
     min-height: 75vh !important;
 }
 
-#sc-comments-modal #flarum-iframe {
+#comments-modal #flarum-iframe {
     @extend .sc-rounded;
     border: none !important;
     height: 100% !important;
     max-height: none !important;
 }
 
-#sc-comments-modal #comments {
+#comments-modal #comments {
     height: 100%;
 }
 

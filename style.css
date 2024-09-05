@@ -474,7 +474,7 @@ body > .container {
   justify-content: center;
 }
 
-.sc-rounded, #sc-comments-modal #flarum-iframe, #flarum-iframe, .sc-panel, .sc-thumb-bg-big {
+.sc-rounded, #comments-modal #flarum-iframe, #flarum-iframe, .sc-panel, .sc-thumb-bg-big {
   outline: 1px solid #2C2C2C;
   border-radius: 8px;
   transition: 0.2s;
@@ -3972,7 +3972,7 @@ blockquote {
   max-height: 80vh !important;
 }
 
-#sc-comments-modal .modal-container {
+#comments-modal .modal-container {
   max-height: 100vh !important;
   height: 100% !important;
 }
@@ -3987,13 +3987,13 @@ p {
   min-height: 75vh !important;
 }
 
-#sc-comments-modal #flarum-iframe {
+#comments-modal #flarum-iframe {
   border: none !important;
   height: 100% !important;
   max-height: none !important;
 }
 
-#sc-comments-modal #comments {
+#comments-modal #comments {
   height: 100%;
 }
 

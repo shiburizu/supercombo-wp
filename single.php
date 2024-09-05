@@ -21,7 +21,7 @@
                     <div class="column col-4 col-md-12 text-gray sc-author-meta-tags" style="display: flex; flex-direction: column; justify-content: center;">
                         <div><?php category_labels(); ?></div>
                         <div><?php tag_labels(); ?></div>
-                        <div><?php if (intval(get_comments_number()) > 0) : echo "<a href='#sc-comments'>" . get_comments_number() . " comment</a>"; elseif (intval(get_comments_number()) > 1): echo "<a href='#sc-comments'>" . get_comments_number() . " comments</a>"; else: echo "<a href='#sc-comments'>Discuss</a>"; endif; ?></div>
+                        <div><?php if (intval(get_comments_number()) > 0) : echo "<a href='#comments'>" . get_comments_number() . " comment</a>"; elseif (intval(get_comments_number()) > 1): echo "<a href='#comments'>" . get_comments_number() . " comments</a>"; else: echo "<a href='#comments'>Discuss</a>"; endif; ?></div>
                     </div>
                     </div>
                     <div class="divider"></div>
@@ -79,7 +79,7 @@
             <div class="divider pb-2"></div>
             <?php endif; ?>
             <?php if ( comments_open() ) : ?>
-            <a id="sc-comments">
+            <a id="comments">
             <section class="mb-2 pb-2 hide-lg">
                 <span class="text-light text-bold h4">Discuss with our community</span>
             </section>
