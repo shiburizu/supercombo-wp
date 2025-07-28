@@ -4,6 +4,7 @@
 <div class="sc-body container sc-front-columns">
     <?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <article class="sc-article p-centered">
+        <?php get_template_part( 'front-ambox' ); ?>
         <div class="card bg-dark sc-article-body p-centered">
             <div class="card-header px-0 mb-2">
                 <h1 class="h2 mb-2 pb-2 text-center"><a class="text-light text-bold" href="<?php the_permalink() ?>"><?php the_title() ?></a></h1>

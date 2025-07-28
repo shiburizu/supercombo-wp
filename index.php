@@ -2,11 +2,11 @@
 <body <?php body_class('sc-bg'); ?>>
 <?php get_template_part( 'navbar' ); ?>
 <div class="sc-body container">
+    <?php get_template_part( 'front-ambox' ); ?>
     <div class="sc-featured">
     <?php get_template_part( 'front-featured' ); ?>
     </div>
     <?php if (is_home()) : ?>
-    <?php get_template_part( 'front-ambox' ); ?>
     <?php get_template_part( 'front-youtube' ); ?>
     <?php endif; ?>
     <h2 class="pt-2 text-bold text-light">Latest Stories</h2>
