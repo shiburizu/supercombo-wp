@@ -1,4 +1,4 @@
-<?php if ( "2023-07-14" < date('Y-m-d')) : ?>
+<?php if ( "2023-07-14" > date('Y-m-d')) : ?>
 <div class="d-flex py-2" style="justify-content: center;">
 <div class="featured-ambox mx-0 columns sc-rounded">
 <a class="column px-2 sc-thumb-bg-left" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/ambox/JFA_Locals.jpg'); min-width: 250px;" href="https://x.com/junkfoodarcades/status/1948525034068218149?utm_source=supercombogg" target="_blank"></a>
