@@ -205,38 +205,4 @@ function get_most_viewed_posts_old() {
 	);
 	return $r->posts;
 }
-
-function get_koko_analytics_top_posts( $number_of_posts = 5, $days_back = 30 ) {
-    global $wpdb;
-    
-    $stats_table = $wpdb->prefix . 'koko_analytics_post_stats';
-    $results = $wpdb->get_results( $wpdb->prepare(
-        "SELECT id, SUM(visitors) AS visits 
-         FROM $stats_table 
-         WHERE date >= DATE_SUB(CURDATE(), INTERVAL %d DAY)
-         GROUP BY id 
-         ORDER BY visits DESC 
-         LIMIT %d",
-        $days_back,
-        $number_of_posts
-    ) );
-
-    $post_ids = array();
-    foreach ( $results as $post_stats ) {
-        $post_ids[] = $post_stats->id;
-    }
-
-    if ( ! empty( $post_ids ) ) {
-    $res = new WP_Query (
-        array(
-        'post_type'      => 'post', // Adjust as needed
-        'post__in'       => $top_post_ids,
-        'orderby'        => 'post__in', // Maintain the order from the stats query
-        'posts_per_page' => count( $top_post_ids ),
-        )
-        );
-    return $res->$posts;
-    }
-    return [];
-}
 ?>
