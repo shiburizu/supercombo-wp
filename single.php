@@ -22,7 +22,9 @@
                     <div class="column col-4 col-md-12 text-gray sc-author-meta-tags" style="display: flex; flex-direction: column; justify-content: center;">
                         <div><?php category_labels(); ?></div>
                         <div><?php tag_labels(); ?></div>
+                        <?php if ( comments_open() ) : ?>
                         <div><?php if (intval(get_comments_number()) == 1) : echo "<a href='#discussion'>" . get_comments_number() . " comment</a>"; elseif (intval(get_comments_number()) > 1): echo "<a href='#discussion'>" . get_comments_number() . " comments</a>"; else: echo "<a href='#discussion'>Discuss</a>"; endif; ?></div>
+                        <?php endif; ?>
                     </div>
                     </div>
                     <div class="divider"></div>
