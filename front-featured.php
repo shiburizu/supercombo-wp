@@ -33,7 +33,7 @@
         <div class="column col-5 col-lg-12">
             <h2 class="text-bold">Top Stories</h2>
             <div class="px-2">
-            <?php $featured = get_most_viewed_posts(); for ($i = 0; $i <= 4; $i++) : ?>
+            <?php $featured = get_koko_analytics_top_posts(); for ($i = 0; $i < count($featured); $i++) : ?>
                 <?php 
                     if (intval(get_comments_number($featured[$i])) > 0) {
                         $comment_link = ' -&nbsp;<a class="text-bold" href="' . get_the_permalink($featured[$i]) .'#discussion"><i class="fas fa-comment-alt"></i> ' . get_comments_number($featured[$i]) . '</a>';
