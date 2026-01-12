@@ -2,6 +2,36 @@
 <body <?php body_class('sc-bg'); ?>>
 <?php get_template_part( 'navbar' ); ?>
 <div class="sc-body container">
+    <div id="top-banner"></div>
+    <script>
+    window['nitroAds'].createAd('top-banner', {
+    "sizes": [
+        [
+        "970",
+        "90"
+        ],
+        [
+        "728",
+        "90"
+        ],
+        [
+        "320",
+        "50"
+        ],
+        [
+        "320",
+        "100"
+        ]
+    ],
+    "report": {
+        "enabled": true,
+        "icon": true,
+        "wording": "Report Ad",
+        "position": "bottom-right"
+    }
+    });
+    </script>
+    
     <?php get_template_part( 'front-ambox' ); ?>
     <div class="sc-featured">
     <?php get_template_part( 'front-featured' ); ?>

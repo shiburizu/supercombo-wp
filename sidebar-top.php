@@ -1,6 +1,6 @@
 <h2 class="pt-2 text-light text-bold">Top Stories</h2>
 <div class="px-2 pb-2 mb-2">
-<?php $featured = get_most_viewed_posts(); for ($i = 0; $i <= 4; $i++) : ?>
+<?php $featured = koko_analytics_get_most_viewed_posts([ 'number' => 5, 'days' => 30, 'post_type' => ['post'] ]); for ($i = 0; $i < count($featured); $i++) : ?>
     <div class="columns sc-featured-border">
     <?php if (has_post_thumbnail($featured[$i])) : ?>
     <div class="p-2 col-9 d-flex" style="flex-direction: column; justify-content: center;"> 
