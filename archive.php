@@ -22,11 +22,11 @@
         <div class="column col-4 col-lg-12">
             <?php get_template_part( 'sidebar-top' ); ?>
             <?php get_template_part( 'front-streams' ); ?>
-            <div id="sidebar-banner-1"></div>
+            <div style="margin: 0.2rem 0rem;"><div id="sidebar-banner-1"></div></div>
             <?php get_template_part( 'front-community' ); ?>
-            <div id="sidebar-banner-2"></div>
+            <div style="margin: 0.2rem 0rem;"><div id="sidebar-banner-2"></div></div>
             <?php get_template_part( 'front-youtube-sidebar' ); ?>
-            <div id="sidebar-banner-3"></div>
+            <div style="margin: 0.2rem 0rem;"><div id="sidebar-banner-3"></div></div>
         </div>
     </div>
     <div style="padding-top: 0.4rem; max-height: 270px;">
