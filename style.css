@@ -3992,6 +3992,10 @@ blockquote {
   border-color: #5f5f5f;
 }
 
+#sc-modal {
+  z-index: 99999 !important;
+}
+
 #sc-modal .modal-container {
   max-height: 100vh !important;
 }

@@ -618,6 +618,10 @@ blockquote {
     border-color: lighten($bg-color,20%);
 }
 
+#sc-modal {
+    z-index: 99999 !important;
+}
+
 #sc-modal .modal-container {
     max-height: 100vh !important;
 }
