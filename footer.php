@@ -1,4 +1,4 @@
-<footer class="bg-dark d-flex" style="justify-content: center;">
+<footer class="bg-dark d-flex" style="justify-content: center; align-items: start; min-height: 50vh;">
     <div class="sc-footer columns">
         <div class="column col-8 col-md-12 text-center d-flex p-2" style="flex-direction: column; justify-content: center;">
             <img class="img-responsive p-2" src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'custom_logo' ) ) ); ?>">
