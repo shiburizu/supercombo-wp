@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+    <!--
     <script data-cfasync="false">window.nitroAds=window.nitroAds||{createAd:function(){return new Promise(e=>{window.nitroAds.queue.push(["createAd",arguments,e])})},addUserToken:function(){window.nitroAds.queue.push(["addUserToken",arguments])},queue:[]};</script>
     <script data-cfasync="false" async src="https://s.nitropay.com/ads-2280.js"></script>
+    -->
     <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/scfont/poppins/Poppins-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <?php if (is_page() or is_single()) : ?>
