@@ -14,7 +14,7 @@
                     <?php endif; ?>
                 <?php endif; ?>
             </div>
-            <div class="p-0">
+            <div class="p-0 sc-rounded">
                 <?php the_content() ?>
             </div>
             <div class="card-footer px-0">
