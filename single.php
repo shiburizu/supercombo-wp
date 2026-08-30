@@ -109,46 +109,4 @@
 </div>
 <?php get_footer();?>
 </body>
-
-<script>
-    window['nitroAds'].createAd('news-anchor', {
-        "format": "anchor-v2",
-        "anchor": "bottom",
-        "anchorBgColor": "rgb(0 0 0 / 40%)",
-        "anchorClose": true,
-        "anchorPersistClose": false,
-        "anchorStickyOffset": 0,
-        "mediaQuery": "(min-width: 0px)"
-        });
-
-    window['nitroAds'].createAd('top-banner', {
-        "delayLoading" : true,
-        "report": {
-            "enabled": true,
-            "icon": true,
-            "wording": "Report Ad",
-            "position": "bottom-right-side"
-        }
-        });
-
-    window['nitroAds'].createAd('article-end-banner', {
-    "delayLoading": true,
-    "report": {
-        "enabled": true,
-        "icon": true,
-        "wording": "Report Ad",
-        "position": "bottom-right-side"
-    }
-    });
-
-    window['nitroAds'].createAd('bottom-banner', {
-    "delayLoading": true,
-    "report": {
-        "enabled": true,
-        "icon": true,
-        "wording": "Report Ad",
-        "position": "bottom-right"
-    }
-    });
-</script>
 </html>

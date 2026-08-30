@@ -8,7 +8,7 @@
     </div>
     <?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <article class="sc-article p-centered">
-        <div class="card bg-dark sc-article-body p-centered">
+        <div class="card bg-dark p-centered">
             <div class="card-header px-0 pb-2 mb-2">
                 <h1 class="h2 mb-2 pb-2 text-center"><a class="text-light text-bold" href="<?php the_permalink() ?>"><?php the_title() ?></a></h1>
                 <?php if ( wcount() >= 150 ) : ?>
@@ -34,36 +34,4 @@
 </div>
 <?php get_footer();?>
 </body>
-
-<script>
-    window['nitroAds'].createAd('news-anchor', {
-        "format": "anchor-v2",
-        "anchor": "bottom",
-        "anchorBgColor": "rgb(0 0 0 / 40%)",
-        "anchorClose": true,
-        "anchorPersistClose": false,
-        "anchorStickyOffset": 0,
-        "mediaQuery": "(min-width: 0px)"
-        });
-
-    window['nitroAds'].createAd('top-banner', {
-        "delayLoading" : true,
-        "report": {
-            "enabled": true,
-            "icon": true,
-            "wording": "Report Ad",
-            "position": "bottom-right-side"
-        }
-        });
-
-    window['nitroAds'].createAd('bottom-banner', {
-    "delayLoading": true,
-    "report": {
-        "enabled": true,
-        "icon": true,
-        "wording": "Report Ad",
-        "position": "bottom-right"
-    }
-    });
-</script>
 </html>
