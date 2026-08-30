@@ -2,9 +2,6 @@
 <body <?php body_class('sc-bg'); ?>>
 <?php get_template_part( 'navbar' ); ?>
 <div class="sc-body container sc-front-columns">
-    <div style="min-height: 100px; max-height: 100px;">
-        <div id="top-banner"></div>
-    </div>
     <?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <article class="sc-article p-centered">
         <?php get_template_part( 'front-ambox' ); ?>
@@ -84,9 +81,6 @@
             </div>
             <div class="card-footer px-0">
             <?php if ( wcount() > 150 ): ?>
-            <div style="min-height: 100px; max-height: 100px;">
-                <div id="article-end-banner"></div>
-            </div>
             <div class="divider pb-2"></div>
             <?php endif; ?>
             <?php if ( comments_open() ) : ?>
@@ -103,9 +97,6 @@
     <?php else : ?>
     <p>There's nothing here.</p>
     <?php endif; ?>
-    <div style="padding-top: 0.4rem; max-height: 270px;">
-        <div id="bottom-banner"></div>
-    </div>
 </div>
 <?php get_footer();?>
 </body>

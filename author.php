@@ -2,9 +2,6 @@
 <body <?php body_class('sc-bg'); ?>>
 <?php get_template_part( 'navbar' ); ?>
 <div class="sc-body container sc-front-columns">
-    <div style="min-height: 100px; max-height: 100px;">
-        <div id="top-banner"></div>
-    </div>
     <div class="columns sc-archive">
         <div class="column col-lg-10 col-md-12 p-centered">
             <div class="text-light">
@@ -37,9 +34,6 @@
             <?php get_template_part( 'front-youtube-sidebar' ); ?>
             <div style="margin: 0.8rem 0rem;"><div id="sidebar-banner-3"></div></div>
         </div>
-    </div>
-    <div style="padding-top: 0.4rem; max-height: 270px;">
-        <div id="bottom-banner"></div>
     </div>
 </div>
 <?php get_footer();?>

@@ -2,9 +2,6 @@
 <body <?php body_class('sc-bg'); ?>>
 <?php get_template_part( 'navbar' ); ?>
 <div class="sc-body container">
-    <div style="min-height: 100px; max-height: 100px;">
-        <div id="top-banner"></div>
-    </div>
     <?php get_template_part( 'front-ambox' ); ?>
     <div class="sc-featured">
     <?php get_template_part( 'front-featured' ); ?>
@@ -12,7 +9,6 @@
     <?php if (is_home()) : ?>
     <?php get_template_part( 'front-youtube' ); ?>
     <?php endif; ?>
-    <div id="below-fold-banner"></div>
     <h2 class="pt-2 text-bold text-light">Latest Stories</h2>
     <div class="columns bg-dark sc-front-columns">
         <div class="column col-8 col-lg-12 sc-posts mb-2 pb-2" id="sc-posts">
@@ -29,9 +25,6 @@
             <?php get_template_part( 'front-youtube-sidebar' ); ?>
             <div style="margin: 0.8rem 0rem;"><div id="sidebar-banner-3"></div></div>
         </div>
-    </div>
-    <div style="padding-top: 0.4rem; max-height: 270px;">
-        <div id="bottom-banner"></div>
     </div>
 </div>
 <?php get_footer();?>
