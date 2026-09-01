@@ -1,5 +1,4 @@
 <?php
-add_filter( 'wpseo_schema_needs_author', '__return_false' );
 function custom_theme_assets() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
     wp_enqueue_style( 'style-fa', get_template_directory_uri() . '/fontawesome/css/all.css' );
