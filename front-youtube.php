@@ -1,8 +1,10 @@
+<?php $yt_feed = simplexml_load_file("https://www.youtube.com/feeds/videos.xml?channel_id=UC2VN-QpZ49XvWBGiz97lvQA"); ?>
+<?php if ($yt_feed != false): ?>
 <div class="hide-sm">
 <h2 class="text-bold text-light">Latest Videos</h2>
 <div class="container">
 <div class="columns">
-<?php $yt_feed = simplexml_load_file("https://www.youtube.com/feeds/videos.xml?channel_id=UC2VN-QpZ49XvWBGiz97lvQA");
+<?php
 for ( $i = 0; $i < 4; $i++ ) : 
 $url = $yt_feed->entry[$i]->link->attributes();
 $videourl = explode("&amp;",$url['href']);
@@ -19,3 +21,4 @@ $video = str_replace("https://www.youtube.com/watch?v=","",$videourl[0]); ?>
 </div>
 <div class="divider mt-0 mb-2"></div>
 </div>
+<?php endif; ?>
